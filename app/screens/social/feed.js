@@ -34,7 +34,7 @@ export class Feed extends React.Component {
         <View rkCardHeader>
           <Avatar rkType='small'
                   style={styles.avatar}
-                  img={info.item.user.photo}/>
+                  img={info.item.icon}/>
           <View>
             <RkText rkType='header4'>{`${info.item.user.firstName} ${info.item.user.lastName}`}</RkText>
             <RkText rkType='secondary2 hintColor'>{moment().add(info.item.time, 'seconds').fromNow()}</RkText>

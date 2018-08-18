@@ -1,5 +1,6 @@
 const articles = [{
   'id': 1,
+  'icon': require('../img/photo1.png'),
   'photo': require('../img/photo1.png'),
   'type': 'article',
   'time': -300,
@@ -40,6 +41,7 @@ const articles = [{
   }]
 }, {
   'id': 2,
+  'icon': require('../img/photo2.png'),
   'photo': require('../img/photo2.png'),
   'type': 'article',
   'time': -1373,
@@ -54,6 +56,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 3,
+  'icon': require('../img/photo3.png'),
   'photo': require('../img/photo3.png'),
   'type': 'article',
   'time': -2446,
@@ -63,6 +66,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 4,
+  'icon': require('../img/photo4.png'),
   'photo': require('../img/photo4.png'),
   'type': 'article',
   'time': -3519,
@@ -73,6 +77,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 5,
+  'icon': require('../img/photo5.png'),
   'photo': require('../img/photo5.png'),
   'type': 'article',
   'time': -4592,
@@ -84,6 +89,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 6,
+  'icon': require('../img/photo6.png'),
   'photo': require('../img/photo6.png'),
   'type': 'article',
   'time': -5665,
@@ -95,6 +101,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 7,
+  'icon': require('../img/photo45.png'),
   'photo': require('../img/photo45.png'),
   'type': 'fact',
   'time': -5665,
@@ -103,6 +110,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 8,
+  'icon': require('../img/photo46.png'),
   'photo': require('../img/photo46.png'),
   'type': 'fact',
   'time': -8373,
@@ -111,6 +119,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 9,
+  'icon': require('../img/photo47.png'),
   'photo': require('../img/photo47.png'),
   'type': 'fact',
   'time': -565,
@@ -119,6 +128,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 10,
+  'icon': require('../img/photo48.png'),
   'photo': require('../img/photo48.png'),
   'type': 'fact',
   'time': -52365,
@@ -127,6 +137,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 11,
+  'icon': require('../img/photo49.png'),
   'photo': require('../img/photo49.png'),
   'type': 'fact',
   'time': -1295,
@@ -135,6 +146,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 12,
+  'icon': require('../img/photo17.png'),
   'photo': require('../img/photo17.png'),
   'type': 'post',
   'time': -300,
@@ -145,6 +157,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 13,
+  'icon': require('../img/photo18.png'),
   'photo': require('../img/photo18.png'),
   'type': 'post',
   'time': -1373,
@@ -153,6 +166,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 14,
+  'icon': require('../img/photo19.png'),
   'photo': require('../img/photo19.png'),
   'type': 'post',
   'time': -2446,
@@ -161,11 +175,12 @@ const articles = [{
   'comments': []
 }, {
   'id': 15,
+  'icon': require('../img/photo20.png'),
   'photo': require('../img/photo20.png'),
   'type': 'post',
   'time': -3519,
   'header': 'Exciting Adventure',
-  'text': 'My trip to Spain last summer. I think that it was the most interesting trip in my life.',
+  'text': 'My trip to Morocco last summer. I think that it was the most interesting trip in my life.',
   'comments': []
 },
 ];

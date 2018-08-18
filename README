@@ -1,0 +1,21 @@
+ - Hardcoded test data is in: app/data/raw/
+
+
+
+
+What's in common on each card in the feed?
+
+ - Type (Icon)
+ - Title
+ - Subtitle/Description
+ - Image (e.g. chart)
+ - Button to say Done
+ - Button to say Later
+
+
+
+
+Types of cards
+ - Learn kanji/vocab
+ - Revise kanji/vocab
+ - Progress update
