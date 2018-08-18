@@ -147,7 +147,6 @@ const articles = [{
 }, {
   'id': 12,
   'icon': require('../img/photo17.png'),
-  'photo': require('../img/photo17.png'),
   'type': 'post',
   'time': -300,
   'title': 'My Little Kitten',
@@ -160,17 +159,16 @@ const articles = [{
 }, {
   'id': 13,
   'icon': require('../img/photo18.png'),
-  'photo': require('../img/photo18.png'),
+  'photo': require('../img/memory-game.gif'),
   'type': 'post',
   'time': -1373,
-  'subtitle': 'You know enough to learn how to write a new word using kanji',
-  'header': 'Learn Word',
+  'subtitle': 'See how well you can remember these kanji by playing this game of memory.',
+  'header': 'Revise',
   'text': 'One chef prepared a delicious cake with apples and named it in honor of his beloved Charlotte.',
   'comments': []
 }, {
   'id': 14,
   'icon': require('../img/photo19.png'),
-  'photo': require('../img/photo19.png'),
   'type': 'post',
   'time': -2446,
   'subtitle': 'Based on the building blocks you now have, you can learn this kanji',

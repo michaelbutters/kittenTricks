@@ -11,6 +11,8 @@ import {
 import {Avatar} from '../../components/avatar';
 import {SocialBar} from '../../components/socialBar';
 import {data} from '../../data';
+import {FontAwesome} from '../../assets/icons';
+
 let moment = require('moment');
 
 export class Feed extends React.Component {
@@ -29,18 +31,35 @@ export class Feed extends React.Component {
   }
 
   _renderItem(info) {
+
+    let image;
+    if(info.item.photo){
+      image = <Image rkCardImg source={info.item.photo}/>           
+    }
+    else {
+      image = <RkText />
+    }
+
+    let description;
+    if(info.item.text){
+      description = <View rkCardContent><RkText rkType='primary3'>{info.item.text}</RkText></View>
+
+    }
+    else {
+      description = <RkText />
+    }
+
+
     return (
       <RkCard style={styles.card}>
         <View rkCardHeader>
           <View>
-            <Avatar rkType='small' style={styles.avatar} img={info.item.icon}/>
-            <RkText rkType='header4'>{info.item.header}</RkText>
+            <RkText rkType='header4'>{FontAwesome.check} {info.item.header}</RkText>
             <RkText rkType='primary3'>{info.item.subtitle}</RkText>
           </View>
         </View>
-        <View rkCardContent>
-          <RkText rkType='primary3'>{info.item.text}</RkText>
-        </View>
+        { description }
+        { image }
         <View rkCardFooter>
           <SocialBar/>
         </View >
