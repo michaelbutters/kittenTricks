@@ -5,7 +5,7 @@ import {
   Image,
 } from 'react-native';
 import {
-  RkCard,
+  RkCard, RkButton,
   RkText, RkStyleSheet
 } from 'react-native-ui-kitten';
 import {Avatar} from '../../components/avatar';
@@ -32,15 +32,12 @@ export class Feed extends React.Component {
     return (
       <RkCard style={styles.card}>
         <View rkCardHeader>
-          <Avatar rkType='small'
-                  style={styles.avatar}
-                  img={info.item.icon}/>
           <View>
-            <RkText rkType='header4'>{`${info.item.user.firstName} ${info.item.user.lastName}`}</RkText>
-            <RkText rkType='secondary2 hintColor'>{moment().add(info.item.time, 'seconds').fromNow()}</RkText>
+            <Avatar rkType='small' style={styles.avatar} img={info.item.icon}/>
+            <RkText rkType='header4'>{info.item.header}</RkText>
+            <RkText rkType='primary3'>{info.item.subtitle}</RkText>
           </View>
         </View>
-        <Image rkCardImg source={info.item.photo}/>
         <View rkCardContent>
           <RkText rkType='primary3'>{info.item.text}</RkText>
         </View>

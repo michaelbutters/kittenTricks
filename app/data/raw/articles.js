@@ -151,6 +151,8 @@ const articles = [{
   'type': 'post',
   'time': -300,
   'title': 'My Little Kitten',
+  'subtitle': 'Based on the building blocks you now have, you can learn this kanji',
+  'header': 'Learn Kanji',
   'text': 'I have got a cat. Her name is Matilda. She is quite old for a cat. She is eleven years old. Matilda is very' +
   ' fluffy. Her back is black and her belly and chest are white. She also has a black muzzle with long white whiskers. ' +
   'Her legs and paws are white. Matilda has big eyes. Her eyes are light green, but they become yellow in bright sunlight. I love my cat.',
@@ -161,7 +163,8 @@ const articles = [{
   'photo': require('../img/photo18.png'),
   'type': 'post',
   'time': -1373,
-  'header': 'Interesting Fact',
+  'subtitle': 'You know enough to learn how to write a new word using kanji',
+  'header': 'Learn Word',
   'text': 'One chef prepared a delicious cake with apples and named it in honor of his beloved Charlotte.',
   'comments': []
 }, {
@@ -170,7 +173,8 @@ const articles = [{
   'photo': require('../img/photo19.png'),
   'type': 'post',
   'time': -2446,
-  'header': 'Music In Our Life',
+  'subtitle': 'Based on the building blocks you now have, you can learn this kanji',
+  'header': 'Learn Kanji',
   'text': 'The scientists say that they can define your character if they know what music you like.',
   'comments': []
 }, {
@@ -179,7 +183,8 @@ const articles = [{
   'photo': require('../img/photo20.png'),
   'type': 'post',
   'time': -3519,
-  'header': 'Exciting Adventure',
+  'subtitle': 'You know enough to learn how to write a new word using kanji',
+  'header': 'Learn Word',
   'text': 'My trip to Morocco last summer. I think that it was the most interesting trip in my life.',
   'comments': []
 },

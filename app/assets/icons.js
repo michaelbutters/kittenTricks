@@ -13,6 +13,8 @@ export const FontIcons = {
 };
 
 export const FontAwesome = {
+  forward: String.fromCharCode(61518),
+  check: String.fromCharCode(61452),
   heart: String.fromCharCode(61444),
   comment: String.fromCharCode(61669),
   user: String.fromCharCode(62144),
