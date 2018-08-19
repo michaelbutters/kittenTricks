@@ -149,22 +149,20 @@ const articles = [{
   'icon': require('../img/photo17.png'),
   'type': 'post',
   'time': -300,
-  'title': 'My Little Kitten',
   'subtitle': 'Based on the building blocks you now have, you can learn this kanji',
   'header': 'Learn Kanji',
-  'text': 'I have got a cat. Her name is Matilda. She is quite old for a cat. She is eleven years old. Matilda is very' +
-  ' fluffy. Her back is black and her belly and chest are white. She also has a black muzzle with long white whiskers. ' +
-  'Her legs and paws are white. Matilda has big eyes. Her eyes are light green, but they become yellow in bright sunlight. I love my cat.',
+  'kanji': '日',
+  'meaning': 'sun, day',
+  'story': "Think of a square looking SUN that rises and sets.\nWhat do you think the line across the middle is?",
   'comments': []
 }, {
   'id': 13,
   'icon': require('../img/photo18.png'),
-  'photo': require('../img/memory-game.gif'),
+  'photo': require('../img/match-game.png'),
   'type': 'post',
   'time': -1373,
-  'subtitle': 'See how well you can remember these kanji by playing this game of memory.',
+  'subtitle': 'Practice kanji you learnt recently by playing this matching game.',
   'header': 'Revise',
-  'text': 'One chef prepared a delicious cake with apples and named it in honor of his beloved Charlotte.',
   'comments': []
 }, {
   'id': 14,
@@ -173,17 +171,29 @@ const articles = [{
   'time': -2446,
   'subtitle': 'Based on the building blocks you now have, you can learn this kanji',
   'header': 'Learn Kanji',
-  'text': 'The scientists say that they can define your character if they know what music you like.',
+  'kanji': '今',
+  'meaning': 'now',
+  'story': 'Right NOW is when the COVER needs to be put on the POT.',
   'comments': []
 }, {
   'id': 15,
   'icon': require('../img/photo20.png'),
-  'photo': require('../img/photo20.png'),
   'type': 'post',
   'time': -3519,
   'subtitle': 'You know enough to learn how to write a new word using kanji',
   'header': 'Learn Word',
-  'text': 'My trip to Morocco last summer. I think that it was the most interesting trip in my life.',
+  'kanji': '今日',
+  'meaning': 'today',
+  'story': "Put NOW and DAY together and it makes TODAY - makes sense, right?",
+  'comments': []
+}, {
+  'id': 16,
+  'icon': require('../img/photo18.png'),
+  'photo': require('../img/memory-game.png'),
+  'type': 'post',
+  'time': -1373,
+  'subtitle': 'Practice kanji you learnt recently by playing this game of memory.',
+  'header': 'Revise',
   'comments': []
 },
 ];

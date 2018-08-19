@@ -40,6 +40,14 @@ export class Feed extends React.Component {
       image = <RkText />
     }
 
+    let kanji;
+    if(info.item.kanji){
+      kanji = <RkText rkType='superhero center bold red'>{info.item.kanji}</RkText>
+    }
+    else {
+      kanji = <RkText />
+    }
+
     let description;
     if(info.item.text){
       description = <View rkCardContent><RkText rkType='primary3'>{info.item.text}</RkText></View>
@@ -49,6 +57,14 @@ export class Feed extends React.Component {
       description = <RkText />
     }
 
+    let story;
+    if(info.item.story){
+      story = <View rkCardContent><RkText rkType='primary3'>{info.item.story}</RkText></View>
+
+    }
+    else {
+      story = <RkText />
+    }
 
     return (
       <RkCard style={styles.card}>
@@ -58,6 +74,8 @@ export class Feed extends React.Component {
             <RkText rkType='primary3'>{info.item.subtitle}</RkText>
           </View>
         </View>
+        { kanji }
+        { story }
         { description }
         { image }
         <View rkCardFooter>
