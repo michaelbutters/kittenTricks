@@ -10,6 +10,7 @@ import {
 } from 'react-native-ui-kitten';
 import {Avatar} from '../../components/avatar';
 import {SocialBar} from '../../components/socialBar';
+import {YesNoBar} from '../../components/yesNoBar';
 import {data} from '../../data';
 import {FontAwesome} from '../../assets/icons';
 import {
@@ -24,7 +25,7 @@ let moment = require('moment');
 
 export class Feed extends React.Component {
   static navigationOptions = {
-    title: 'Feed'.toUpperCase()
+    title: 'Study'.toUpperCase()
   };
 
   constructor(props) {
@@ -42,13 +43,6 @@ export class Feed extends React.Component {
     let chartBlockStyles = [styles.chartBlock, {backgroundColor: RkTheme.current.colors.control.background}];
     let card;
 
-  // <View style={chartBlockStyles}>
-  //   <AreaChart/>
-  // </View>
-  // <View style={chartBlockStyles}>
-  //   <AreaSmoothedChart/>
-  // </View>
-
     if(info.item.subtype == 'learn-kanji'){
 
       card =         
@@ -59,11 +53,13 @@ export class Feed extends React.Component {
               <RkText rkType='primary3'>{'Based on the building blocks you now have, you can learn this kanji'}</RkText>
             </View>
           </View>
-          <RkText rkType='superhero center bold red'>{info.item.kanji}</RkText>
+          <RkText rkType='superhero center bold redColor'>{info.item.kanji}</RkText>
           <View rkCardContent>
-            <RkText rkType='primary3'>{info.item.meaning}</RkText>
+            <RkText rkType='heading4 center'>Meaning</RkText>
+            <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
           </View>
-          <View rkCardContent>
+          <View>
+            <RkText rkType='heading4'>Story</RkText>
             <RkText rkType='primary3'>{info.item.story}</RkText>
           </View>
           <View rkCardFooter>
@@ -83,9 +79,11 @@ export class Feed extends React.Component {
           </View>
           <RkText rkType='superhero center bold red'>{info.item.vocab}</RkText>
           <View rkCardContent>
-            <RkText rkType='primary3'>{info.item.meaning}</RkText>
+            <RkText rkType='heading4 center'>Meaning</RkText>
+            <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
           </View>
-          <View rkCardContent>
+          <View>
+            <RkText rkType='heading4'>Story</RkText>
             <RkText rkType='primary3'>{info.item.story}</RkText>
           </View>
           <View rkCardFooter>
@@ -108,6 +106,27 @@ export class Feed extends React.Component {
           </View>
           <View rkCardFooter>
             <SocialBar/>
+          </View >
+        </RkCard>
+    }
+    else if(info.item.subtype == 'prime'){
+
+      card =         
+      <RkCard style={styles.card}>
+          <View rkCardHeader>
+            <View>
+              <RkText rkType='header4'>{FontAwesome.check} {'Prime'}</RkText>
+              <RkText rkType='primary3'>Do you know this word?</RkText>
+              <RkText rkType='primary4'>Telling us what you already know helps prime the algorithm to teach you words in the best possible order.</RkText>
+            </View>
+          </View>
+          <View rkCardContent>
+            <RkText rkType='superhero center bold red'>{info.item.vocab}</RkText>
+            <RkText rkType='heading4 center'>Meaning</RkText>
+            <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
+          </View>
+          <View rkCardFooter>
+            <YesNoBar/>
           </View >
         </RkCard>
     }
@@ -138,7 +157,7 @@ export class Feed extends React.Component {
           <View rkCardHeader>
             <View>
               <RkText rkType='header4'>{FontAwesome.check} {'Your Progress'}</RkText>
-              <RkText rkType='primary3'>{'See how much effort you have been putting in recently.'}</RkText>
+              <RkText rkType='primary3'>{'You have been putting in a great effort recently. Keep it up!'}</RkText>
             </View>
           </View>
           <View rkCardContent>

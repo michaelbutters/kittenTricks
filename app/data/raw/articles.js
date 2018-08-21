@@ -161,7 +161,42 @@ const articles = [{
 
 
 }, {
-  'id': 12,
+  'id': 20,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'きょう',
+  'meaning': 'today',
+  'comments': []
+}, {
+  'id': 21,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'こうえん',
+  'meaning': 'park, playground',
+  'comments': []
+}, {
+  'id': 22,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'しんぶん',
+  'meaning': 'newspaper',
+  'comments': []
+}, {
+  'id': 23,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'でんしゃ',
+  'meaning': 'train',
+  'comments': []
+}, {
+  'id': 24,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'きゅうりょう',
+  'meaning': 'salary, wage',
+  'comments': []
+}, {
+  'id': 30,
   'type': 'post',
   'subtype': 'learn-kanji',
   'kanji': '日',
@@ -169,13 +204,13 @@ const articles = [{
   'story': "Think of a square looking SUN that rises and sets.\nWhat do you think the line across the middle is?",
   'comments': []
 }, {
-  'id': 13,
+  'id': 50,
   'type': 'post',
   'subtype': 'revise',
   'photo': require('../img/match-game.png'),
   'comments': []
 }, {
-  'id': 14,
+  'id': 31,
   'type': 'post',
   'subtype': 'learn-kanji',
   'kanji': '今',
@@ -183,7 +218,7 @@ const articles = [{
   'story': 'Right NOW is when the COVER needs to be put on the POT.',
   'comments': []
 }, {
-  'id': 15,
+  'id': 40,
   'type': 'post',
   'subtype': 'learn-vocab',
   'vocab': '今日',
@@ -191,17 +226,17 @@ const articles = [{
   'story': "Put NOW and DAY together and it makes TODAY - makes sense, right?",
   'comments': []
 }, {
-  'id': 16,
+  'id': 60,
   'type': 'post',
   'subtype': 'progress-percentage',
   'comments': []
 }, {
-  'id': 17,
+  'id': 61,
   'type': 'post',
   'subtype': 'progress-time',
   'comments': []
 }, {
-  'id': 18,
+  'id': 51,
   'type': 'post',
   'subtype': 'revise',
   'photo': require('../img/memory-game.png'),

@@ -8,6 +8,7 @@ import {AvatarTypes} from '../components/avatar/types';
 import {GradientButtonTypes} from '../components/gradientButton/types';
 import {SwitchTypes} from '../components/switch/types';
 import {SocialBarTypes} from '../components/socialBar/types';
+import {YesNoBarTypes} from '../components/yesNoBar/types';
 import {scale, scaleModerate, scaleVertical} from '../utils/scale';
 
 export let bootstrap = () => {
@@ -494,6 +495,7 @@ export let bootstrap = () => {
   RkTheme.registerComponent('GradientButton', GradientButtonTypes);
   RkTheme.registerComponent('RkSwitch', SwitchTypes);
   RkTheme.registerComponent('SocialBar', SocialBarTypes);
+  RkTheme.registerComponent('YesNoBar', YesNoBarTypes);
 
   StatusBar.setBarStyle('dark-content', true);
 };
