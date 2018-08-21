@@ -1,3 +1,22 @@
+Tasks for UI demo:
+ - Clicking Done greys out card
+ - Clicking Skip greys out card
+ - Copy in dashboard widget
+ - Image of another game
+ - Feed straight off main page
+ - Rename things to be RK
+ - Get icon working properly
+ - Lots more data
+ - Get stories off Joy o' Kanji site
+ - Prime card - including Yes/No button (instead of Skip/Done)
+ - 
+
+ - Click to popup and play game?
+ - 
+
+
+
+
  - Hardcoded test data is in: app/data/raw/
 
 

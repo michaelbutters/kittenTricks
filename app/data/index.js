@@ -24,6 +24,10 @@ class DataProvider {
     return _.filter(articles, x => x.type == type);
   }
 
+  getAllArticles() {
+    return _;
+  }
+
   getArticle(id) {
     return _.find(articles, x => x.id == id);
   }

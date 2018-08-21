@@ -32,28 +32,28 @@ export class DoughnutChart extends RkComponent {
           x: 1,
           y: 240,
           title: '24%',
-          name: 'Likes',
+          name: 'Recently Learnt',
           color: RkTheme.current.colors.charts.doughnut[0],
         },
         {
           x: 2,
           y: 270,
           title: '27%',
-          name: 'Comments',
+          name: 'Revised Once',
           color: RkTheme.current.colors.charts.doughnut[1],
         },
         {
           x: 3,
           y: 170,
           title: '17%',
-          name: 'Shares',
+          name: 'Revised Twice',
           color: RkTheme.current.colors.charts.doughnut[2],
         },
         {
           x: 4,
           y: 320,
           title: '32%',
-          name: 'People',
+          name: 'Long Term Memory',
           color: RkTheme.current.colors.charts.doughnut[3],
         }
       ]
@@ -73,7 +73,7 @@ export class DoughnutChart extends RkComponent {
   render() {
     return (
       <View>
-        <RkText rkType='header4'>AUDIENCE OVERVIEW</RkText>
+        <RkText rkType='header4'>Spaced Repetition</RkText>
         <View style={{alignSelf: 'center'}}>
           <Svg width={scale(this.size)} height={scale(this.size)}>
             <VictoryPie

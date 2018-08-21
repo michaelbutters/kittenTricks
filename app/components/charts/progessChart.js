@@ -52,7 +52,6 @@ export class ProgressChart extends RkComponent {
   render() {
     return (
       <View>
-        <RkText rkType='header4'>FOLLOWERS</RkText>
         <View style={styles.chartContainer}>
           <Svg width={scale(this.size)} height={scale(this.size)}>
             <VictoryPie
@@ -86,9 +85,10 @@ export class ProgressChart extends RkComponent {
             </SvgText>
           </Svg>
           <View>
-            <RkText rkType='header4'>REACH</RkText>
-            <RkText rkType='header2'>1 500 356</RkText>
-            <RkText rkType='secondary2'>+6 per day in average</RkText>
+            <RkText rkType='secondary2'>You have learned</RkText>
+            <RkText rkType='header2'>1,172 kanji</RkText>
+            <RkText rkType='secondary2'>towards your goal of</RkText>
+            <RkText rkType='header4'>2,000</RkText>
           </View>
         </View>
       </View>

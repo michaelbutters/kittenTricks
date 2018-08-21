@@ -144,56 +144,62 @@ const articles = [{
   'header': 'Our Eyes',
   'text': 'You blink over 10,000,000 times a year.',
   'comments': []
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }, {
   'id': 12,
-  'icon': require('../img/photo17.png'),
   'type': 'post',
-  'time': -300,
-  'subtitle': 'Based on the building blocks you now have, you can learn this kanji',
-  'header': 'Learn Kanji',
+  'subtype': 'learn-kanji',
   'kanji': '日',
   'meaning': 'sun, day',
   'story': "Think of a square looking SUN that rises and sets.\nWhat do you think the line across the middle is?",
   'comments': []
 }, {
   'id': 13,
-  'icon': require('../img/photo18.png'),
-  'photo': require('../img/match-game.png'),
   'type': 'post',
-  'time': -1373,
-  'subtitle': 'Practice kanji you learnt recently by playing this matching game.',
-  'header': 'Revise',
+  'subtype': 'revise',
+  'photo': require('../img/match-game.png'),
   'comments': []
 }, {
   'id': 14,
-  'icon': require('../img/photo19.png'),
   'type': 'post',
-  'time': -2446,
-  'subtitle': 'Based on the building blocks you now have, you can learn this kanji',
-  'header': 'Learn Kanji',
+  'subtype': 'learn-kanji',
   'kanji': '今',
   'meaning': 'now',
   'story': 'Right NOW is when the COVER needs to be put on the POT.',
   'comments': []
 }, {
   'id': 15,
-  'icon': require('../img/photo20.png'),
   'type': 'post',
-  'time': -3519,
-  'subtitle': 'You know enough to learn how to write a new word using kanji',
-  'header': 'Learn Word',
-  'kanji': '今日',
+  'subtype': 'learn-vocab',
+  'vocab': '今日',
   'meaning': 'today',
   'story': "Put NOW and DAY together and it makes TODAY - makes sense, right?",
   'comments': []
 }, {
   'id': 16,
-  'icon': require('../img/photo18.png'),
-  'photo': require('../img/memory-game.png'),
   'type': 'post',
-  'time': -1373,
-  'subtitle': 'Practice kanji you learnt recently by playing this game of memory.',
-  'header': 'Revise',
+  'subtype': 'progress',
+  'comments': []
+}, {
+  'id': 17,
+  'type': 'post',
+  'subtype': 'revise',
+  'photo': require('../img/memory-game.png'),
   'comments': []
 },
 ];
