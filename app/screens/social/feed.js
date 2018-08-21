@@ -111,7 +111,7 @@ export class Feed extends React.Component {
           </View >
         </RkCard>
     }
-    else if(info.item.subtype == 'progress'){
+    else if(info.item.subtype == 'progress-percentage'){
 
       card =         
         <RkCard style={styles.card}>
@@ -124,6 +124,26 @@ export class Feed extends React.Component {
           <View rkCardContent>
             <View style={chartBlockStyles}>
               <ProgressChart/>
+            </View>
+          </View>
+          <View rkCardFooter>
+            <SocialBar/>
+          </View >
+        </RkCard>
+    }
+    else if(info.item.subtype == 'progress-time'){
+
+      card =         
+        <RkCard style={styles.card}>
+          <View rkCardHeader>
+            <View>
+              <RkText rkType='header4'>{FontAwesome.check} {'Your Progress'}</RkText>
+              <RkText rkType='primary3'>{'See how much effort you have been putting in recently.'}</RkText>
+            </View>
+          </View>
+          <View rkCardContent>
+            <View style={chartBlockStyles}>
+              <AreaChart/>
             </View>
           </View>
           <View rkCardFooter>

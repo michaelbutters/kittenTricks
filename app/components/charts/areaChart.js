@@ -26,15 +26,15 @@ export class AreaChart extends RkComponent {
     this.state = {
       data: [
         {x: 1, y: 1},
-        {x: 2, y: 2},
-        {x: 3, y: 1},
-        {x: 4, y: 2},
-        {x: 5, y: 3},
-        {x: 6, y: 3},
-        {x: 7, y: 4},
-        {x: 8, y: 3},
-        {x: 9, y: 2},
-        {x: 10, y: 4},
+        {x: 2, y: 1},
+        {x: 3, y: 2},
+        {x: 4, y: 4},
+        {x: 5, y: 7},
+        {x: 6, y: 7},
+        {x: 7, y: 9},
+        {x: 8, y: 10},
+        {x: 9, y: 10},
+        {x: 10, y: 11},
       ]
     }
   }
@@ -43,35 +43,34 @@ export class AreaChart extends RkComponent {
     this.size = Dimensions.get('window').width;
   }
 
-  componentDidMount() {
-    this.setStateInterval = setInterval(() => {
-      let positive = Math.random() > 0.5;
-      let newValue = this.state.data[this.state.data.length - 1].y;
-      if (newValue > 3) {
-        positive = false
-      } else if (newValue < 2) {
-        positive = true
-      }
-      newValue = positive ? newValue + 1 : newValue - 1;
-      let newData = this.state.data.map((d, i) => {
-        let x = d.x;
-        let y = i == this.state.data.length - 1 ? newValue : this.state.data[i + 1].y;
-        return {x, y}
-      });
-      this.setState({
-        data: newData
-      });
-    }, 3000);
-  }
+  // componentDidMount() {
+  //   this.setStateInterval = setInterval(() => {
+  //     let positive = Math.random() > 0.5;
+  //     let newValue = this.state.data[this.state.data.length - 1].y;
+  //     if (newValue > 3) {
+  //       positive = false
+  //     } else if (newValue < 2) {
+  //       positive = true
+  //     }
+  //     newValue = positive ? newValue + 1 : newValue - 1;
+  //     let newData = this.state.data.map((d, i) => {
+  //       let x = d.x;
+  //       let y = i == this.state.data.length - 1 ? newValue : this.state.data[i + 1].y;
+  //       return {x, y}
+  //     });
+  //     this.setState({
+  //       data: newData
+  //     });
+  //   }, 3000);
+  // }
 
-  componentWillUnmount() {
-    clearInterval(this.setStateInterval);
-  }
+  // componentWillUnmount() {
+  //   clearInterval(this.setStateInterval);
+  // }
 
   render() {
     return (
       <View>
-        <RkText rkType='header4'>REAL TIME VISITORS</RkText>
         <VictoryChart padding={{top: 20, left: 40, right: 5, bottom: 5}} width={this.size - 60}>
           <VictoryAxis
             tickValues={[]}
@@ -81,7 +80,7 @@ export class AreaChart extends RkComponent {
           />
           <VictoryAxis
             dependentAxis
-            tickValues={['50', '100', '150', '200']}
+            tickValues={['2', '4', '6', '8', '10', '12', '14', '15', '16', '18', '20']}
             style={{
               axis: {stroke: 'transparent'},
               grid: {stroke: RkTheme.current.colors.disabled, strokeWidth: 0.5},

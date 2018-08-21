@@ -193,10 +193,15 @@ const articles = [{
 }, {
   'id': 16,
   'type': 'post',
-  'subtype': 'progress',
+  'subtype': 'progress-percentage',
   'comments': []
 }, {
   'id': 17,
+  'type': 'post',
+  'subtype': 'progress-time',
+  'comments': []
+}, {
+  'id': 18,
   'type': 'post',
   'subtype': 'revise',
   'photo': require('../img/memory-game.png'),
