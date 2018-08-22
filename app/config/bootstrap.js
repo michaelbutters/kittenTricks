@@ -49,7 +49,19 @@ export let bootstrap = () => {
   });
 
   RkTheme.setType('RkText', 'superhero', {
-    fontSize: scale(66)
+    fontSize: scale(44)
+  });
+
+  RkTheme.setType('RkText', 'largevocab', {
+    fontSize: scale(44)
+  });
+
+  RkTheme.setType('RkText', 'largervocab', {
+    fontSize: scale(77)
+  });
+
+  RkTheme.setType('RkText', 'largekanji', {
+    fontSize: scale(88)
   });
 
   RkTheme.setType('RkText', 'menuIcon', {

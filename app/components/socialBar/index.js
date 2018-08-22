@@ -41,13 +41,13 @@ export class SocialBar extends RkComponent {
         <View style={section}>
           <RkButton rkType='clear'>
             <RkText rkType='awesome hintColor' style={icon}>{FontAwesome.forward}</RkText>
-            <RkText rkType='info small'> Skip</RkText>
+            <RkText rkType='hintColor small'> Skip</RkText>
           </RkButton>
         </View>
         <View style={section}>
           <RkButton rkType='clear' onPress={updateDone}>
             <RkText rkType='awesome success' style={icon}>{FontAwesome.check}</RkText>
-            <RkText rkType='info small'> Done</RkText>
+            <RkText rkType='hintColor small'> Done</RkText>
           </RkButton>
         </View>
       </View>

@@ -40,14 +40,14 @@ export class YesNoBar extends RkComponent {
       <View style={container}>
         <View style={section}>
           <RkButton rkType='clear'>
-            <RkText rkType='awesome hintColor' style={icon}>{FontAwesome.slashEye}</RkText>
-            <RkText rkType='info small'> No</RkText>
+            <RkText rkType='awesome hintColor' style={icon}>{FontAwesome.cross}</RkText>
+            <RkText rkType='hintColor small'> No, I dont know it</RkText>
           </RkButton>
         </View>
         <View style={section}>
           <RkButton rkType='clear' onPress={updateDone}>
             <RkText rkType='awesome success' style={icon}>{FontAwesome.plus}</RkText>
-            <RkText rkType='info small'> Yes</RkText>
+            <RkText rkType='hintColor small'> Yes, I know it</RkText>
           </RkButton>
         </View>
       </View>

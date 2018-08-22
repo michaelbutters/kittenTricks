@@ -13,7 +13,7 @@ export const FontIcons = {
 };
 
 export const FontAwesome = {
-  forward: String.fromCharCode(61518),
+  forward: String.fromCharCode(61701),
   check: String.fromCharCode(61452),
   heart: String.fromCharCode(61444),
   comment: String.fromCharCode(61669),
@@ -29,4 +29,5 @@ export const FontAwesome = {
   bars: String.fromCharCode(61641),
   slashEye: String.fromCharCode(61552),
   github: String.fromCharCode(61595),
+  cross: String.fromCharCode(61453),
 };

@@ -60,8 +60,14 @@ export const MainRoutes = [
     screen: Screens.LoginMenu,
     children: [
       {
+        id: 'SignUp',
+        title: 'Sign Up',
+        screen: Screens.SignUp,
+        children: []
+      },
+      {
         id: 'Login1',
-        title: 'Login V1',
+        title: 'Login',
         screen: Screens.LoginV1,
         children: []
       },
@@ -71,12 +77,6 @@ export const MainRoutes = [
       //   screen: Screens.LoginV2,
       //   children: []
       // },
-      {
-        id: 'SignUp',
-        title: 'Sign Up',
-        screen: Screens.SignUp,
-        children: []
-      },
       {
         id: 'password',
         title: 'Password Recovery',

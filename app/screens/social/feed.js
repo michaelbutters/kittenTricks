@@ -53,14 +53,14 @@ export class Feed extends React.Component {
               <RkText rkType='primary3'>{'Based on the building blocks you now have, you can learn this kanji'}</RkText>
             </View>
           </View>
-          <RkText rkType='superhero center bold redColor'>{info.item.kanji}</RkText>
           <View rkCardContent>
+            <RkText rkType='largekanji center warning'>{info.item.kanji}</RkText>
             <RkText rkType='heading4 center'>Meaning</RkText>
-            <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
-          </View>
-          <View>
-            <RkText rkType='heading4'>Story</RkText>
-            <RkText rkType='primary3'>{info.item.story}</RkText>
+            <RkText rkType='primary3 center italic'>{info.item.meaning}</RkText>
+            <View>
+              <RkText rkType='heading4'>Story</RkText>
+              <RkText rkType='primary3'>{info.item.story}</RkText>
+            </View>
           </View>
           <View rkCardFooter>
             <SocialBar/>
@@ -77,10 +77,10 @@ export class Feed extends React.Component {
               <RkText rkType='primary3'>{'You know enough to learn how to write a new word using kanji'}</RkText>
             </View>
           </View>
-          <RkText rkType='superhero center bold red'>{info.item.vocab}</RkText>
           <View rkCardContent>
+            <RkText rkType='largervocab center warning'>{info.item.vocab}</RkText>
             <RkText rkType='heading4 center'>Meaning</RkText>
-            <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
+            <RkText rkType='primary3 center italic'>{info.item.meaning}</RkText>
           </View>
           <View>
             <RkText rkType='heading4'>Story</RkText>
@@ -121,9 +121,9 @@ export class Feed extends React.Component {
             </View>
           </View>
           <View rkCardContent>
-            <RkText rkType='superhero center bold red'>{info.item.vocab}</RkText>
+            <RkText rkType='largevocab center info'>{info.item.vocab}</RkText>
             <RkText rkType='heading4 center'>Meaning</RkText>
-            <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
+            <RkText rkType='primary3 center italic'>{info.item.meaning}</RkText>
           </View>
           <View rkCardFooter>
             <YesNoBar/>
