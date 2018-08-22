@@ -11,6 +11,7 @@ import {
 import {Avatar} from '../../components/avatar';
 import {SocialBar} from '../../components/socialBar';
 import {YesNoBar} from '../../components/yesNoBar';
+import {OkBar} from '../../components/okBar';
 import {data} from '../../data';
 import {FontAwesome} from '../../assets/icons';
 import {
@@ -49,7 +50,7 @@ export class Feed extends React.Component {
       <RkCard style={styles.card}>
           <View rkCardHeader>
             <View>
-              <RkText rkType='header4'>{FontAwesome.check} {'Learn Kanji'}</RkText>
+              <RkText rkType='header4'>Learn Kanji</RkText>
               <RkText rkType='primary3'>{'Based on the building blocks you now have, you can learn this kanji'}</RkText>
             </View>
           </View>
@@ -73,7 +74,7 @@ export class Feed extends React.Component {
       <RkCard style={styles.card}>
           <View rkCardHeader>
             <View>
-              <RkText rkType='header4'>{FontAwesome.check} {'Learn Word'}</RkText>
+              <RkText rkType='header4'>Learn Word</RkText>
               <RkText rkType='primary3'>{'You know enough to learn how to write a new word using kanji'}</RkText>
             </View>
           </View>
@@ -97,7 +98,7 @@ export class Feed extends React.Component {
       <RkCard style={styles.card}>
           <View rkCardHeader>
             <View>
-              <RkText rkType='header4'>{FontAwesome.check} {'Revise'}</RkText>
+              <RkText rkType='header4'>Revise</RkText>
               <RkText rkType='primary3'>{'Practice kanji you learnt recently by playing this game of memory.'}</RkText>
             </View>
           </View>
@@ -115,7 +116,7 @@ export class Feed extends React.Component {
       <RkCard style={styles.card}>
           <View rkCardHeader>
             <View>
-              <RkText rkType='header4'>{FontAwesome.check} {'Prime'}</RkText>
+              <RkText rkType='header4'>Prime</RkText>
               <RkText rkType='primary3'>Do you know this word?</RkText>
               <RkText rkType='primary4'>Telling us what you already know helps prime the algorithm to teach you words in the best possible order.</RkText>
             </View>
@@ -136,7 +137,7 @@ export class Feed extends React.Component {
         <RkCard style={styles.card}>
           <View rkCardHeader>
             <View>
-              <RkText rkType='header4'>{FontAwesome.check} {'Your Progress'}</RkText>
+              <RkText rkType='header4'>Your Progress</RkText>
               <RkText rkType='primary3'>{'Check out how much progress you are making towards your goal.'}</RkText>
             </View>
           </View>
@@ -146,7 +147,7 @@ export class Feed extends React.Component {
             </View>
           </View>
           <View rkCardFooter>
-            <SocialBar/>
+            <OkBar/>
           </View >
         </RkCard>
     }
@@ -156,7 +157,7 @@ export class Feed extends React.Component {
         <RkCard style={styles.card}>
           <View rkCardHeader>
             <View>
-              <RkText rkType='header4'>{FontAwesome.check} {'Your Progress'}</RkText>
+              <RkText rkType='header4'>Your Progress</RkText>
               <RkText rkType='primary3'>{'You have been putting in a great effort recently. Keep it up!'}</RkText>
             </View>
           </View>
@@ -166,7 +167,7 @@ export class Feed extends React.Component {
             </View>
           </View>
           <View rkCardFooter>
-            <SocialBar/>
+            <OkBar/>
           </View >
         </RkCard>
     }

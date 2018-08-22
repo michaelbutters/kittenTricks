@@ -9,8 +9,8 @@ import {
 } from 'react-native-ui-kitten';
 import {FontAwesome} from '../../assets/icons';
 
-export class SocialBar extends RkComponent {
-  componentName = 'SocialBar';
+export class OkBar extends RkComponent {
+  componentName = 'OkBar';
   typeMapping = {
     container: {},
     section: {},
@@ -35,19 +35,17 @@ export class SocialBar extends RkComponent {
       });
     }
 
+    let doneClass = 'success';
+    if(this.state.done === false){
+      doneClass = 'hintColor';
+    }
 
     return (
       <View style={container}>
         <View style={section}>
-          <RkButton rkType='clear'>
-            <RkText rkType='awesome hintColor' style={icon}>{FontAwesome.forward}</RkText>
-            <RkText rkType='hintColor small'> Skip for now</RkText>
-          </RkButton>
-        </View>
-        <View style={section}>
           <RkButton rkType='clear' onPress={updateDone}>
-            <RkText rkType='awesome success' style={icon}>{FontAwesome.check}</RkText>
-            <RkText rkType='hintColor small'> Done</RkText>
+            <RkText rkType={'awesome ' + doneClass} style={icon}>{FontAwesome.check}</RkText>
+            <RkText rkType={'small ' + doneClass}> OK</RkText>
           </RkButton>
         </View>
       </View>
