@@ -30,4 +30,5 @@ export const FontAwesome = {
   slashEye: String.fromCharCode(61552),
   github: String.fromCharCode(61595),
   cross: String.fromCharCode(61453),
+  question: String.fromCharCode(61736),
 };

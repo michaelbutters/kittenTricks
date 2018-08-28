@@ -104,7 +104,7 @@ export class Feed extends React.Component {
               </View>
             </View>
             <View rkCardContent>
-              <MemoryGame/>
+              <MemoryGame list={info.item.list} />
             </View>
             <View rkCardFooter>
               <SocialBar/>
