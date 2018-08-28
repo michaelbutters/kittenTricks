@@ -12,6 +12,7 @@ import {Avatar} from '../../components/avatar';
 import {SocialBar} from '../../components/socialBar';
 import {YesNoBar} from '../../components/yesNoBar';
 import {OkBar} from '../../components/okBar';
+import {MemoryGame} from '../../components/memoryGame';
 import {data} from '../../data';
 import {FontAwesome} from '../../assets/icons';
 import {
@@ -93,22 +94,23 @@ export class Feed extends React.Component {
         </RkCard>
     }
     else if(info.item.subtype == 'revise'){
-
-      card =         
-      <RkCard style={styles.card}>
-          <View rkCardHeader>
-            <View>
-              <RkText rkType='header4'>Revise</RkText>
-              <RkText rkType='primary3'>{'Practice kanji you learnt recently by playing this game of memory.'}</RkText>
+      if(info.item.gametype == 'memory'){        
+        card =         
+        <RkCard style={styles.card}>
+            <View rkCardHeader>
+              <View>
+                <RkText rkType='header4'>Revise</RkText>
+                <RkText rkType='primary3'>{'Practice kanji you learnt recently by playing this game of memory.'}</RkText>
+              </View>
             </View>
-          </View>
-          <View rkCardContent>
-            <Image rkCardImg source={info.item.photo}/>
-          </View>
-          <View rkCardFooter>
-            <SocialBar/>
-          </View >
-        </RkCard>
+            <View rkCardContent>
+              <MemoryGame/>
+            </View>
+            <View rkCardFooter>
+              <SocialBar/>
+            </View >
+          </RkCard>
+      }
     }
     else if(info.item.subtype == 'prime'){
 

@@ -239,6 +239,8 @@ const articles = [{
   'id': 51,
   'type': 'post',
   'subtype': 'revise',
+  'gametype': 'memory',
+  'list': ['日', '新聞', 'いま', '電車', '給料', 'train', '聞', '新', 'にち', 'きく', 'newspaper', 'き', '木', 'salary', 'あたらしい', '今'],
   'photo': require('../img/memory-game.png'),
   'comments': []
 },

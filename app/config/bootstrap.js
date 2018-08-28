@@ -9,6 +9,7 @@ import {GradientButtonTypes} from '../components/gradientButton/types';
 import {SwitchTypes} from '../components/switch/types';
 import {SocialBarTypes} from '../components/socialBar/types';
 import {YesNoBarTypes} from '../components/yesNoBar/types';
+import {MemoryGameTypes} from '../components/memoryGame/types';
 import {scale, scaleModerate, scaleVertical} from '../utils/scale';
 
 export let bootstrap = () => {
@@ -213,6 +214,24 @@ export let bootstrap = () => {
     borderColor: theme => theme.colors.border.base,
     backgroundColor: theme => theme.colors.control.background,
     borderWidth: 1
+  });
+
+  RkTheme.setType('RkButton', 'memorygame', {
+    container: {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+    }
+  });
+
+  RkTheme.setType('RkButton', 'memorycard', {
+    width: scale(88),
+    borderColor: theme => theme.colors.border.base,
+    backgroundColor: theme => theme.colors.control.background,
+    borderWidth: 2,
+    container: {
+      flexDirection: 'row',
+      // flexWrap: 'wrap',
+    }
   });
 
   RkTheme.setType('RkButton', 'highlight', {
@@ -508,6 +527,7 @@ export let bootstrap = () => {
   RkTheme.registerComponent('RkSwitch', SwitchTypes);
   RkTheme.registerComponent('SocialBar', SocialBarTypes);
   RkTheme.registerComponent('YesNoBar', YesNoBarTypes);
+  RkTheme.registerComponent('MemoryGame', MemoryGameTypes);
 
   StatusBar.setBarStyle('dark-content', true);
 };
