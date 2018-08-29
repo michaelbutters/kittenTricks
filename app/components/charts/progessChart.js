@@ -23,26 +23,8 @@ export class ProgressChart extends RkComponent {
     this.size = 120;
     this.fontSize = 25;
     this.state = {
-      percents: 72
+      percents: 59
     }
-  }
-
-  componentDidMount() {
-    this.setStateInterval = setInterval(() => {
-      let positive = Math.random() > 0.5;
-      if (this.state.percents > 95) {
-        positive = false
-      } else if (this.state.percents < 60) {
-        positive = true
-      }
-      this.setState({
-        percents: positive ? this.state.percents + 1 : this.state.percents - 1
-      });
-    }, 1500);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.setStateInterval);
   }
 
   getData() {
