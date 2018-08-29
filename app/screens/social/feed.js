@@ -140,7 +140,7 @@ export class Feed extends React.Component {
           <View rkCardHeader>
             <View>
               <RkText rkType='header4'>Your Progress</RkText>
-              <RkText rkType='primary3'>{'Check out how much progress you are making towards your goal.'}</RkText>
+              <RkText rkType='primary3'>{'You are making great progress towards your goal.'}</RkText>
             </View>
           </View>
           <View rkCardContent>
