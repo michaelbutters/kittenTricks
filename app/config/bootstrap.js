@@ -9,6 +9,7 @@ import {GradientButtonTypes} from '../components/gradientButton/types';
 import {SwitchTypes} from '../components/switch/types';
 import {SocialBarTypes} from '../components/socialBar/types';
 import {YesNoBarTypes} from '../components/yesNoBar/types';
+import {OkBarTypes} from '../components/okBar/types';
 import {MemoryGameTypes} from '../components/memoryGame/types';
 import {scale, scaleModerate, scaleVertical} from '../utils/scale';
 
@@ -529,6 +530,7 @@ export let bootstrap = () => {
   RkTheme.registerComponent('RkSwitch', SwitchTypes);
   RkTheme.registerComponent('SocialBar', SocialBarTypes);
   RkTheme.registerComponent('YesNoBar', YesNoBarTypes);
+  RkTheme.registerComponent('OkBar', OkBarTypes);
   RkTheme.registerComponent('MemoryGame', MemoryGameTypes);
 
   StatusBar.setBarStyle('dark-content', true);

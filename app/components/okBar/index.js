@@ -22,7 +22,7 @@ export class OkBar extends RkComponent {
     super(props);
 
     this.state = {
-      done: false
+      done: false,
     }
   }
 
@@ -31,24 +31,29 @@ export class OkBar extends RkComponent {
 
     let updateDone = () => {
       this.setState((prevState, props) => {
-        done = !prevState.done;
+        if(prevState.done === false){
+          return {
+            done: true,
+          }
+        }
+        else {
+          return {
+            done: false,
+          }
+        }
       });
-    }
-
-    let doneClass = 'success';
-    if(this.state.done === false){
-      doneClass = 'hintColor';
-    }
+    }    
 
     return (
       <View style={container}>
         <View style={section}>
           <RkButton rkType='clear' onPress={updateDone}>
-            <RkText rkType={'awesome ' + doneClass} style={icon}>{FontAwesome.check}</RkText>
-            <RkText rkType={'small ' + doneClass}> OK</RkText>
+            <RkText rkType={ (this.state.done ? 'awesome success' : 'awesome hintColor') } style={icon}>{FontAwesome.check}</RkText>
+            <RkText rkType={ (this.state.done ? 'success small' : 'info small') }> OK</RkText>
           </RkButton>
         </View>
       </View>
+
     )
   }
 }
