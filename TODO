@@ -4,11 +4,12 @@ Must Do:
  - 
 
 Should Do:
- - Improve Japanese font
  - Make memory game work better (identify, recognise, lock matches; reset cards after each turn)
  - Add an expandable 'More Info' part to each card as a place to put more detailed explanations
+ - Add something to the kanji story card, to engage the user, e.g. clicking 
 
 Could Do:
  - Add Stroke order animation as another revise card type
  - Add another revise card game type
+ - Improve Japanese font (haven't been able to find any that look good and are available for commercial use and easy to install...)
  - 
