@@ -22,7 +22,8 @@ export class SocialBar extends RkComponent {
     super(props);
 
     this.state = {
-      done: false
+      done: false,
+      skip: false
     }
   }
 
@@ -31,23 +32,38 @@ export class SocialBar extends RkComponent {
 
     let updateDone = () => {
       this.setState((prevState, props) => {
-        done = !prevState.done;
+        if(prevState.done === false){
+          return { done: true }
+        }
+        else {
+          return { done: false }
+        }
       });
-    }
+    }    
 
+    let updateSkip = () => {
+      this.setState((prevState, props) => {
+        if(prevState.skip === false){
+          return { skip: true }
+        }
+        else {
+          return { skip: false }
+        }
+      });
+    }    
 
     return (
       <View style={container}>
         <View style={section}>
-          <RkButton rkType='clear'>
-            <RkText rkType='awesome hintColor' style={icon}>{FontAwesome.forward}</RkText>
-            <RkText rkType='hintColor small'> Skip for now</RkText>
+          <RkButton rkType='clear' onPress={updateSkip}>
+            <RkText rkType={ (this.state.skip ? 'awesome success' : 'awesome hintColor') } style={icon}>{FontAwesome.forward}</RkText>
+            <RkText rkType={ (this.state.skip ? 'success small' : 'hintColor small') }> { (this.state.skip ? 'Skipped' : 'Skip for now') }</RkText>
           </RkButton>
         </View>
         <View style={section}>
           <RkButton rkType='clear' onPress={updateDone}>
-            <RkText rkType='awesome success' style={icon}>{FontAwesome.check}</RkText>
-            <RkText rkType='hintColor small'> Done</RkText>
+            <RkText rkType={ (this.state.done ? 'awesome success' : 'awesome hintColor') } style={icon}>{FontAwesome.check}</RkText>
+            <RkText rkType={ (this.state.done ? 'success small' : 'info small') }> { (this.state.done ? 'Done' : 'Mark as Done') }</RkText>
           </RkButton>
         </View>
       </View>
