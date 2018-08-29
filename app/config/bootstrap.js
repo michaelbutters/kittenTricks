@@ -224,10 +224,12 @@ export let bootstrap = () => {
   });
 
   RkTheme.setType('RkButton', 'memorycard', {
-    width: scale(88),
+    width: scale(100),
     borderColor: theme => theme.colors.border.base,
     backgroundColor: theme => theme.colors.control.background,
-    borderWidth: 2,
+    borderWidth: 4,
+    paddingHorizontal: 0,
+    marginHorizontal: 2,
     container: {
       flexDirection: 'row',
       // flexWrap: 'wrap',
