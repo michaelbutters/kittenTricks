@@ -22,41 +22,41 @@ export class YesNoBar extends RkComponent {
     super(props);
 
     this.state = {
-      done: false,
-      skip: false
+      know: false,
+      dontknow: false
     }
   }
 
   render() {
     let {container, section, icon, label} = this.defineStyles();
 
-    let updateDone = () => {
+    let updateknow = () => {
       this.setState((prevState, props) => {
-        if(prevState.done === false){
+        if(prevState.know === false){
           return {
-            done: true,
-            skip: false,
+            know: true,
+            dontknow: false,
           }
         }
         else {
           return {
-            done: false,
+            know: false,
           }
         }
       });
     }    
 
-    let updateSkip = () => {
+    let updatedontknow = () => {
       this.setState((prevState, props) => {
-        if(prevState.skip === false){
+        if(prevState.dontknow === false){
           return {
-            skip: true,
-            done: false,
+            dontknow: true,
+            know: false,
           }
         }
         else {
           return {
-            skip: false,
+            dontknow: false,
           }
         }
       });
@@ -66,20 +66,20 @@ export class YesNoBar extends RkComponent {
     return (
       <View style={container}>
 
-        { this.state.done ? <View/> :
+        { this.state.know ? <View/> :
           <View style={section}>
-            <RkButton rkType='clear' onPress={updateSkip}>
-              <RkText rkType={ (this.state.skip ? 'awesome hintColor' : 'awesome hintColor') } style={icon}>{FontAwesome.cross}</RkText>
-              <RkText rkType={ (this.state.skip ? 'hintColor small' : 'info small') }> { (this.state.skip ? 'Dont know it' : ' No, I dont know it') }</RkText>
+            <RkButton rkType='clear' onPress={updatedontknow}>
+              <RkText rkType={ (this.state.dontknow ? 'awesome hintColor' : 'awesome hintColor') } style={icon}>{FontAwesome.cross}</RkText>
+              <RkText rkType={ (this.state.dontknow ? 'hintColor small' : 'info small') }> { (this.state.dontknow ? 'Dont know it' : ' No, I dont know it') }</RkText>
             </RkButton>
           </View>
         }
 
-        { this.state.skip ? <View/> :
+        { this.state.dontknow ? <View/> :
           <View style={section}>
-            <RkButton rkType='clear' onPress={updateDone}>
-              <RkText rkType={ (this.state.done ? 'awesome success' : 'awesome hintColor') } style={icon}>{ (this.state.done ? FontAwesome.check : FontAwesome.plus) }</RkText>
-              <RkText rkType={ (this.state.done ? 'success small' : 'info small') }> { (this.state.done ? 'Know it' : 'Yes, I know it') }</RkText>
+            <RkButton rkType='clear' onPress={updateknow}>
+              <RkText rkType={ (this.state.know ? 'awesome success' : 'awesome hintColor') } style={icon}>{ (this.state.know ? FontAwesome.check : FontAwesome.plus) }</RkText>
+              <RkText rkType={ (this.state.know ? 'success small' : 'info small') }> { (this.state.know ? 'Know it' : 'Yes, I know it') }</RkText>
             </RkButton>
           </View>
         }
