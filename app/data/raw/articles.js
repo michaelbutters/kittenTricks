@@ -240,7 +240,7 @@ const articles = [{
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'memory',
-  'list': ['日', 'いま', '電車', '給料', 'train', '新', 'にち', 'き', '木', 'salary', 'しん', '今'],
+  'list': [['日', 'にち'], ['いま', '今'], ['電車', 'train'], ['給料', 'salary'], ['新', 'しん'], ['き', '木']],
   'photo': require('../img/memory-game.png'),
   'comments': []
 },

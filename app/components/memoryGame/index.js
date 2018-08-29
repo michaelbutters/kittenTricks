@@ -21,9 +21,41 @@ export class MemoryGame extends RkComponent {
   constructor(props) {
     super(props);
 
+    var answer_map = {}
+    var flat_list = []
+
+    for(var i = 0; i < props.list.length; i++){
+      var pair = props.list[i];
+      var value1 = pair[0];
+      var value2 = pair[1];
+
+      answer_map[value1] = value2;
+      answer_map[value2] = value1;
+      flat_list.push(value1);
+      flat_list.push(value2);
+    }
+
     this.state = {
       list: ['', '', '', '', '', '', '', '', '', '', '', ''],
+      master_list: this.arrayShuffle(flat_list),
+      answers: answer_map
     }
+  }
+
+  arrayShuffle(items: array): Array {
+      var currentIndex = items.length,
+          temporaryValue, randomIndex;
+
+      while (0 !== currentIndex) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+
+          temporaryValue = items[currentIndex];
+          items[currentIndex] = items[randomIndex];
+          items[randomIndex] = temporaryValue;
+      }
+
+      return items;
   }
 
   render() {
@@ -31,7 +63,7 @@ export class MemoryGame extends RkComponent {
 
     handlePress = (id) => {
       this.setState((prevState, props) => {
-        prevState.list[id] = (prevState.list[id] === '' ? props.list[id] : '')
+        prevState.list[id] = (prevState.list[id] === '' ? this.state.master_list[id] : '')
         return {
           list: prevState.list
         }
