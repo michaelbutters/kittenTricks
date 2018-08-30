@@ -237,6 +237,12 @@ export let bootstrap = () => {
     }
   });
 
+  RkTheme.setType('RkButton', 'memorymatched', {
+    backgroundColor: theme => theme.colors.button.underlay,
+    borderColor: theme => theme.colors.border.secondary,
+    color: theme => theme.colors.disabled,
+  });
+
   RkTheme.setType('RkButton', 'highlight', {
     backgroundColor: theme => theme.colors.button.highlight
   });
