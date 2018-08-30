@@ -17,7 +17,6 @@ Should Do:
  		- Learning the kanji is multiple cards, close together, but gradually further apart (SRS) within a minute or two, to properly test it. And you have to indicate if you got it right or wrong to decide whether you need more reminders (the same for the SRS stuff).
 
 Could Do:
- - Add Stroke order animation as another revise card type
  - Add another revise card game type
  - Improve Japanese font (haven't been able to find any that look good and are available for commercial use and easy to install...)
  - You've learnt X new kanji today. At this rate, you'll get to your goal by ...
@@ -29,7 +28,7 @@ Could Do:
 
 
 
-0. See the kanji that you're going to learn - perhaps with stroke order.
+** 0. See the kanji that you're going to learn - perhaps with stroke order.
 0. Remind them of the components that they already know. (Probably don't bother testing on them because they may have just learnt them a card or two ago). Highlight that the only thing they are learning is how to link them together.
 1. READ: Here is a suggested story. Have a read and see if you like it. "I always put my PRECIOUS things into the MIDDLE of a SHELL."
 2. WRITE: Do you have a better story in mind? If so, type it in to help you remember it

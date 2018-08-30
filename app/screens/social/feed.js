@@ -48,18 +48,18 @@ export class Feed extends React.Component {
 
     if(info.item.subtype == 'learn-kanji'){
 
+      kanjiCharacter = (info.item.image ? <View style={styles.imageView}><Image source={info.item.image}/></View> : <RkText rkType='largekanji center warning'>{info.item.kanji}</RkText>)
+
       card =         
       <RkCard style={styles.card}>
           <View rkCardHeader>
             <View>
               <RkText rkType='header4'>Learn Kanji</RkText>
-              <RkText rkType='primary3'>{'Based on the building blocks you now have, you can learn this kanji'}</RkText>
+              <RkText rkType='primary3'>{ info.item.explanation }</RkText>
             </View>
           </View>
           <View rkCardContent>
-            <View style={styles.imageView}>
-              <Image source={info.item.image}/>
-            </View>
+            { kanjiCharacter }
             <RkText rkType='heading4 center'>Meaning</RkText>
             <RkText rkType='primary3 center italic'>{info.item.meaning}</RkText>
             <View>
@@ -79,7 +79,7 @@ export class Feed extends React.Component {
           <View rkCardHeader>
             <View>
               <RkText rkType='header4'>Learn Word</RkText>
-              <RkText rkType='primary3'>{'You know enough to learn how to write a new word using kanji'}</RkText>
+              <RkText rkType='primary3'>{ info.item.explanation }</RkText>
             </View>
           </View>
           <View rkCardContent>

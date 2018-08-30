@@ -203,6 +203,8 @@ const articles = [{
   'image': require('../img/sun_anim.gif'),
   'meaning': 'sun, day',
   'story': "Think of a square looking SUN that rises and sets.\nWhat do you think the line across the middle is?",
+  'explanation': 'This kanji doesnt break down any further so is simple enough to just learn on its own.',
+  'components': [],
   'comments': []
 }, {
   'id': 31,
@@ -211,6 +213,8 @@ const articles = [{
   'kanji': '今',
   'meaning': 'now',
   'story': 'Right NOW is when the COVER needs to be put on the POT.',
+  'explanation': 'Using some of the kanji and radicals that you already know, you can now learn this kanji.',
+  'components': [],
   'comments': []
 }, {
   'id': 40,
@@ -219,6 +223,7 @@ const articles = [{
   'vocab': '今日',
   'meaning': 'today',
   'story': "Put NOW and DAY together and it makes TODAY - makes sense, right?",
+  'explanation': 'You know both of the kanji that you need to learn this word.',
   'comments': []
 }, {
   'id': 60,
