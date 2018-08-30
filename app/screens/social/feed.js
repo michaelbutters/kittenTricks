@@ -57,7 +57,9 @@ export class Feed extends React.Component {
             </View>
           </View>
           <View rkCardContent>
-            <RkText rkType='largekanji center warning'>{info.item.kanji}</RkText>
+            <View style={styles.imageView}>
+              <Image source={info.item.image}/>
+            </View>
             <RkText rkType='heading4 center'>Meaning</RkText>
             <RkText rkType='primary3 center italic'>{info.item.meaning}</RkText>
             <View>
@@ -214,6 +216,10 @@ let styles = RkStyleSheet.create(theme => ({
   },
   card: {
     marginVertical: 8,
+  },
+  imageView: {
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   avatar: {
     marginRight: 16

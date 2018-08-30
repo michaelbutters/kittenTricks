@@ -1,14 +1,129 @@
 Must Do:
- - Add Explanation cards for each card type
+ - Add Explanation cards for each card type (SRS, Mnemonics)
  - Finalise all data - improve existing and add HEAPS more to get the full infinite scroll effect
- - 
+ - Come up with a contrived set of data that I will take people through as part of the demo - using vocab that everyone (from Tyler up to Tim) but where they are unlikely to know the kanji - to see if they actually enjoy learning some new, difficult kanji. Include those words at the beginning (and assume they will choose Yes). 
 
 Should Do:
  - Add an expandable 'More Info' part to each card as a place to put more detailed explanations
+ - Add an 'I already know it' button to a kanji so that it gets counted as a kanji they already knew rather than one they just learnt in their stats
  - Add something to the kanji story card, to engage the user, e.g. clicking 
+ 		- Read the story out loud
+ 		- Close your eyes and picture each part of the story in vivid detail
+ 		- Picture/say the story backwards
+ 		- Type in the story again from memory (or type in your own story)
+ 		- Build your own story (somehow?)
+ 		- All the words of the story are made into cards and shuffled up. You have to click them in order to match the story exactly. (While the story is hidden). Then it shuffles again and you try again.
+ 		- All the words of the story is listed, they are encouraged to close their eyes and picture it, then read it again, then gradually the words disappear and they need to repeat the story out loud. Then after a little gap they get asked the question again, but this time the story is hidden by default.
+ 		- Learning the kanji is multiple cards, close together, but gradually further apart (SRS) within a minute or two, to properly test it. And you have to indicate if you got it right or wrong to decide whether you need more reminders (the same for the SRS stuff).
 
 Could Do:
  - Add Stroke order animation as another revise card type
  - Add another revise card game type
  - Improve Japanese font (haven't been able to find any that look good and are available for commercial use and easy to install...)
- - 
+ - You've learnt X new kanji today. At this rate, you'll get to your goal by ...
+ - A ching sound and animation when click OK or DONE to trigger dopamine.
+ - Add the upsell at the end to see how that goes - You learnt 9 kanji today (and list the kanji so they can be reminded of the ones they learnt). well done! At that rate, you'll get to your goal of 2,000 kanji in just 5 months. Sign up for $3.99/month. That's less than 2 cents per kanji! Or they get another month for free for every friend that signs up and uses it. If it's addictive and actually useful, then the key will be to get as many people as possible actually using it long enough (e.g. a month) to see the benefits. Plus that gives a month's worth of data which they would have then invested in the app, which they'll only need to pay $3.99 to keep for another month, and it compounds and compounds.
+
+
+
+
+
+
+0. See the kanji that you're going to learn - perhaps with stroke order.
+0. Remind them of the components that they already know. (Probably don't bother testing on them because they may have just learnt them a card or two ago). Highlight that the only thing they are learning is how to link them together.
+1. READ: Here is a suggested story. Have a read and see if you like it. "I always put my PRECIOUS things into the MIDDLE of a SHELL."
+2. WRITE: Do you have a better story in mind? If so, type it in to help you remember it
+3. IMAGINE: Close your eyes and picture each of the key parts of the story in detail. 
+4. RESPOND: What colour is the SHELL in your story?. How big is it? Is it slimey, or clean and dry? (Write it down). What is the PRECIOUS thing you are putting in the middle of the shell? How do you work out where the middle is? (Write each of these answers in). [Have little ? questions marks will explanations on why they need to do these steps.]
+5. GUESS: A list of meanings in english - based on the meaning, guess which ones probably use this kanji. They click and it shows them the kanji version of the word with the kanji we're talking about highlighted. They don't need to learn the words (they will learn one coming up that they already know). It's just another simple way to revise the kanji and it's meaning. It doesn't have to be hard. 
+
+SIMILAR: These are some similar kanji - don't get mixed up. Look through and see the differences. Which is the one you just learnt?
+
+
+1. VOCAB: Now learn the vocab that this kanji enables. Adding a new thing to link to will actually help the kanji itself be consolidated.
+
+
+5. RECALL: 
+6. TEST: Click the key component kanji that make up this kanji you just learnt. There are 12 cards showing various characters including the three belonging to this character. They have to click the kanji (in the correct order?) and it will show if they're correct (similar to the memory game). 
+7. RECALL: Write the story that relates to this kanji (this is cumbersome but hedges bets in case choosing from multi-choice isn't fully pushing the brain). Should also write just a word that represents the meaning of the kanji, since the story isn't essential eventually.
+
+
+Any other FUN ways to make the brain WORK to learn/recall a kanji/vocab?
+
+
+Similar kanji: MIT license. Check imiwa for license details.
+Kanji VG can be used for commercial purposes: https://kanjivg.tagaini.net/. Just need to understand the clause about building upon it.
+Use this to find the code of the characters that I want: http://glyphwiki.org/wiki/u65e5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+All WaniKani components!
+https://docs.google.com/spreadsheets/d/1PDY4D8TPz7b-KEFVMyV-uyrEVteopqs6hFoFERfXY-4/edit#gid=1435607905
+
+Kanji Koohi: has community created stories - could be good for inspiration though not automatic download. Shows words that only use kanji that you already know (which is a good start for customisation, but still only limited). 
+Non Commercial use. That's fine. Don't need it. Actually, creative commons license with attribution requirements for the user contributed stories: https://kanji.koohii.com/about
+
+https://github.com/maurimo/kanimaji: follow instructions to create animations. Already downloaded and in projects directory. grep to find the kanji I want.
+
+
+
+
+See: https://docs.google.com/document/d/19BP3K_cwgVlIuFY49TF2pVhq6qqsUAmmLRMfOo7o0f4/edit
+Contrived situation:
+Already know:
+7 dependent kanji: 口,八,金,竹,門,日,食 (do SRS on these as part of the demo)
+1 top order kanji: 書
+Will learn:
+4 dependent radicals: 亠,宀,幺,并,
+4 dependent kanji: 図,聿,官,斗
+6 top order kanji: 鉛,筆,玄,関,図,館
+
+鉛筆
+鉛 (similar to: 沿船)
+金
+八
+口
+筆 (similar to: 書肇箒)
+竹
+聿
+玄関
+玄
+亠 (similar to: 宀)
+幺
+関 (similar to: 開闇閑閏閃)
+門
+并
+大
+図書館
+図 (similar to: 囲団困因)
+囗
+斗
+書 (similar to: 筆事晝肇車昌)
+聿
+日
+館 (similar to: 官棺舘)
+食 (similar to: 良喰飲養)
+官
+宀 (similar to: 亠)
+口
+
+

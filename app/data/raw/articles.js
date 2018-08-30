@@ -200,6 +200,7 @@ const articles = [{
   'type': 'post',
   'subtype': 'learn-kanji',
   'kanji': '日',
+  'image': require('../img/sun_anim.gif'),
   'meaning': 'sun, day',
   'story': "Think of a square looking SUN that rises and sets.\nWhat do you think the line across the middle is?",
   'comments': []
