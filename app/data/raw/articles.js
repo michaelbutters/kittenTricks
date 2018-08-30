@@ -210,11 +210,12 @@ const articles = [{
   'id': 31,
   'type': 'post',
   'subtype': 'learn-kanji',
-  'kanji': '今',
+  'kanji': '鉛',
   'meaning': 'now',
   'story': 'Right NOW is when the COVER needs to be put on the POT.',
   'explanation': 'Using some of the kanji and radicals that you already know, you can now learn this kanji.',
-  'components': [],
+  'components': ['金', '八', '口'],
+  'similar': ['沿','船'],
   'comments': []
 }, {
   'id': 40,

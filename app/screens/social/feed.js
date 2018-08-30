@@ -49,6 +49,7 @@ export class Feed extends React.Component {
     if(info.item.subtype == 'learn-kanji'){
 
       kanjiCharacter = (info.item.image ? <View style={styles.imageView}><Image source={info.item.image}/></View> : <RkText rkType='largekanji center warning'>{info.item.kanji}</RkText>)
+      similar = (info.item.similar === undefined || info.item.similar.length == 0 ? <View/> : <View><RkText rkType='heading4'>Similar Kanji</RkText><RkText rkType='primary3'>Take care to not confuse this kanji with other similar looking kanji like: </RkText><RkText rkType='center header3'>{info.item.similar.join(" ")}</RkText></View> )
 
       card =         
       <RkCard style={styles.card}>
@@ -66,6 +67,7 @@ export class Feed extends React.Component {
               <RkText rkType='heading4'>Story</RkText>
               <RkText rkType='primary3'>{info.item.story}</RkText>
             </View>
+            { similar }
           </View>
           <View rkCardFooter>
             <SocialBar/>
