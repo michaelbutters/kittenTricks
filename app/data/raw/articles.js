@@ -204,12 +204,6 @@ const articles = [{
   'story': "Think of a square looking SUN that rises and sets.\nWhat do you think the line across the middle is?",
   'comments': []
 }, {
-  'id': 50,
-  'type': 'post',
-  'subtype': 'revise',
-  'photo': require('../img/match-game.png'),
-  'comments': []
-}, {
   'id': 31,
   'type': 'post',
   'subtype': 'learn-kanji',
@@ -234,6 +228,16 @@ const articles = [{
   'id': 61,
   'type': 'post',
   'subtype': 'progress-time',
+  'comments': []
+}, {
+  'id': 50,
+  'type': 'post',
+  'subtype': 'revise',
+  'gametype': 'sentence',
+  'sentence': '今日はかようびです。',
+  'meaning': 'Today is Tuesday',
+  'kanji': '今日',
+  'furigana': 'きょう',
   'comments': []
 }, {
   'id': 51,

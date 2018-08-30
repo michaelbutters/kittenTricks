@@ -13,6 +13,7 @@ import {SocialBar} from '../../components/socialBar';
 import {YesNoBar} from '../../components/yesNoBar';
 import {OkBar} from '../../components/okBar';
 import {MemoryGame} from '../../components/memoryGame';
+import {SentencePractice} from '../../components/sentencePractice';
 import {data} from '../../data';
 import {FontAwesome} from '../../assets/icons';
 import {
@@ -110,6 +111,24 @@ export class Feed extends React.Component {
               <SocialBar/>
             </View >
           </RkCard>
+      }
+      else if(info.item.gametype == 'sentence'){
+        card =         
+        <RkCard style={styles.card}>
+            <View rkCardHeader>
+              <View>
+                <RkText rkType='header4'>Revise</RkText>
+                <RkText rkType='primary3'>{'Can you read this entire sentence?'}</RkText>
+              </View>
+            </View>
+            <View rkCardContent>
+              <SentencePractice sentence={info.item.sentence} kanji={info.item.kanji} furigana={info.item.furigana} meaning={info.item.meaning} />
+            </View>
+            <View rkCardFooter>
+              <SocialBar/>
+            </View >
+          </RkCard>
+
       }
     }
     else if(info.item.subtype == 'prime'){
