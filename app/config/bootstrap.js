@@ -11,6 +11,7 @@ import {SocialBarTypes} from '../components/socialBar/types';
 import {YesNoBarTypes} from '../components/yesNoBar/types';
 import {OkBarTypes} from '../components/okBar/types';
 import {MemoryGameTypes} from '../components/memoryGame/types';
+import {SimilarGameTypes} from '../components/similarGame/types';
 import {scale, scaleModerate, scaleVertical} from '../utils/scale';
 
 export let bootstrap = () => {
@@ -221,6 +222,34 @@ export let bootstrap = () => {
     borderColor: theme => theme.colors.border.base,
     backgroundColor: theme => theme.colors.control.background,
     borderWidth: 1
+  });
+
+  RkTheme.setType('RkButton', 'similargame', {
+    container: {
+      flexDirection: 'row',
+      // flexWrap: 'wrap',
+    },
+    backgroundColor: theme => theme.colors.button.underlay,
+    borderColor: theme => theme.colors.border.secondary,
+    color: theme => theme.colors.disabled,
+  });
+
+  RkTheme.setType('RkButton', 'similarsuccess', {
+    backgroundColor: theme => theme.colors.button.underlay,
+    borderColor: theme => theme.colors.border.success,
+    color: theme => theme.colors.background,
+  });
+
+  RkTheme.setType('RkButton', 'similarfail', {
+    backgroundColor: theme => theme.colors.button.underlay,
+    borderColor: theme => theme.colors.border.danger,
+    color: theme => theme.colors.danger,
+  });
+
+  RkTheme.setType('RkButton', 'memoryfailed', {
+    backgroundColor: theme => theme.colors.danger,
+    borderColor: theme => theme.colors.border.secondary,
+    color: theme => theme.colors.danger,
   });
 
   RkTheme.setType('RkButton', 'memorygame', {
@@ -544,6 +573,7 @@ export let bootstrap = () => {
   RkTheme.registerComponent('YesNoBar', YesNoBarTypes);
   RkTheme.registerComponent('OkBar', OkBarTypes);
   RkTheme.registerComponent('MemoryGame', MemoryGameTypes);
+  RkTheme.registerComponent('SimilarGame', SimilarGameTypes);
 
   StatusBar.setBarStyle('dark-content', true);
 };

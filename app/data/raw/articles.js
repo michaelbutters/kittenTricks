@@ -262,7 +262,14 @@ const articles = [{
   'subtype': 'revise',
   'gametype': 'memory',
   'list': [['日', 'にち'], ['いま', '今'], ['電車', 'train'], ['給料', 'salary'], ['新', 'しん'], ['き', '木']],
-  'photo': require('../img/memory-game.png'),
+  'comments': []
+}, {
+  'id': 52,
+  'type': 'post',
+  'subtype': 'revise',
+  'kanji': '鉛',
+  'gametype': 'similar',
+  'list': [['漁船','ぎょせん','fishing boat', false],['鉛毒','えんどく','lead poisoning', true],['鉛筆','えんぴつ','pencil', true],['船員','せんいん','sailor', false],['亜鉛','あえん','zinc', true],['船体','せんたい','ship’s hull', false],['鉛管','えんかん','lead pipe', true],['沿線','えんせん','along railway line', false],['色鉛筆','いろえんぴつ','colored pencil', true],['沿路','えんろ','route', false],['鉛板','えんばん','lead plate', true]],
   'comments': []
 },
 ];

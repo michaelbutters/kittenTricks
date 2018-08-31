@@ -16,6 +16,7 @@ import {OkBar} from '../../components/okBar';
 import {MemoryGame} from '../../components/memoryGame';
 import {SentencePractice} from '../../components/sentencePractice';
 import {StoryPractice} from '../../components/storyPractice';
+import {SimilarGame} from '../../components/similarGame';
 import {data} from '../../data';
 import {FontAwesome} from '../../assets/icons';
 import {
@@ -232,6 +233,24 @@ export class Feed extends React.Component {
             </View>
             <View rkCardContent>
               <SentencePractice sentence={info.item.sentence} kanji={info.item.kanji} furigana={info.item.furigana} meaning={info.item.meaning} />
+            </View>
+            <View rkCardFooter>
+              <SocialBar/>
+            </View >
+          </RkCard>
+
+      }
+      else if(info.item.gametype == 'similar'){
+        card =         
+        <RkCard style={styles.card}>
+            <View rkCardHeader>
+              <View>
+                <RkText rkType='header4'>Revise</RkText>
+                <RkText rkType='primary3'>{'See if you recall the meaning of this kanji by comparing it with the meanings of other similar looking kanji.'}</RkText>
+              </View>
+            </View>
+            <View rkCardContent>
+              <SimilarGame kanji={info.item.kanji} list={info.item.list} meaning={info.item.meaning} />
             </View>
             <View rkCardFooter>
               <SocialBar/>
