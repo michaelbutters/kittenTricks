@@ -15,6 +15,7 @@ import {YesNoBar} from '../../components/yesNoBar';
 import {OkBar} from '../../components/okBar';
 import {MemoryGame} from '../../components/memoryGame';
 import {SentencePractice} from '../../components/sentencePractice';
+import {StoryPractice} from '../../components/storyPractice';
 import {data} from '../../data';
 import {FontAwesome} from '../../assets/icons';
 import {
@@ -36,6 +37,7 @@ export class Feed extends React.Component {
     super(props);
 
     this.data = data.getArticles('post');
+    this.state = { show_story: false }
   }
 
   _keyExtractor(post, index) {
@@ -47,96 +49,135 @@ export class Feed extends React.Component {
     let chartBlockStyles = [styles.chartBlock, {backgroundColor: RkTheme.current.colors.control.background}];
     let card;
 
-    if(info.item.subtype == 'learn-kanji'){
-
-      var hasSimilar = !(info.item.similar === undefined || info.item.similar.length == 0)
-      var hasComponents = !(info.item.components === undefined || info.item.components.length == 0)
+    if(info.item.subtype === 'learn-kanji'){
 
       kanjiCharacter = (info.item.image ? <View style={styles.imageView}><Image source={info.item.image}/></View> : <RkText rkType='largekanji center warning'>{info.item.kanji}</RkText>)
-      components = (hasComponents ? <View><RkText rkType='heading4 center'>Components</RkText><RkText rkType='center warning header2'>{info.item.components.join(" ")}</RkText><RkText rkType='primary3'>Can you see these component kanji within this new kanji?</RkText></View> : <View/> )
 
-      explanationWithTooltip = <PopoverTooltip ref='tooltip1'
-          buttonComponent={
-            <View>
-              <RkText rkType='primary3'>{ info.item.explanation }</RkText>
-              <RkText rkType='primary3 helpLink'> ...More info</RkText>
-              <View><RkText> </RkText></View>
-            </View>
-          }
-          items={[
-            {
-              label: 'The Rapid Kanji algorithm ensures that you never get given a new kanji to learn until you have learned ALL of the kanji and/or radicals that make up that kanji. This is just one way that your learning effort is maximized.',
-              onPress: () => {}
-            }
-          ]}
-          />
+      if(info.item.learntype === 'read'){
 
-      storyBlurbWithTooltip = <PopoverTooltip ref='tooltip2'
-          buttonComponent={
-            <View>
-              <RkText rkType='primary3 helpLink'> ...More info</RkText>
-            </View>
-          }
-          items={[
-            {
-              label: 'Mnemonics - sometimes called Stories, can be extremely effective in assisting your brain to link a number of things together. Rapid Kanji stories link the component kanji together with the meaning of the resulting kanji.',
-              onPress: () => {}
-            },
-            {
-              label: 'This is a suggested story, but you are welcome to come up with your own if you prefer. Remember that the more memorable the story, and the more emotion it evokes when you think of it, the less likely you are to forget it. When learning kanji using a story, take time to clearly picture in your mind the detail of each of the key elements of the story (the words in CAPS). What colour? What texture? How do you feel?',
-              onPress: () => {}
-            },
-          ]}
-          />
+        var hasSimilar = !(info.item.similar === undefined || info.item.similar.length == 0)
+        var hasComponents = !(info.item.components === undefined || info.item.components.length == 0)
 
-      var similarWithTooltip
-      if(hasSimilar){
-        similarWithTooltip = <PopoverTooltip ref='tooltip3'
+        components = (hasComponents ? <View><RkText rkType='heading4 center'>Components</RkText><RkText rkType='center warning header2'>{info.item.components.join(" ")}</RkText><RkText rkType='primary3'>Can you see these component kanji within this new kanji?</RkText></View> : <View/> )
+
+        explanationWithTooltip = <PopoverTooltip ref='tooltip1'
             buttonComponent={
               <View>
-                <RkText rkType='heading4'>Similar Kanji</RkText>
-                <RkText rkType='primary3'>Take care to not confuse this kanji with other similar looking kanji like: </RkText>
+                <RkText rkType='primary3'>{ info.item.explanation }</RkText>
                 <RkText rkType='primary3 helpLink'> ...More info</RkText>
-                <RkText rkType='center header3'>{info.item.similar.join(" ")}</RkText>
+                <View><RkText> </RkText></View>
               </View>
             }
             items={[
               {
-                label: 'Two kanji can be confusingly similar when they have component kanji or radicals in common. To avoid getting confused, look closely at the kanji you are learning and the similar kanji and pick out what makes them different. Replay the story in your mind and make sure the aspects that make this kanji different are as vivid as possible.',
+                label: 'The Rapid Kanji algorithm ensures that you never get given a new kanji to learn until you have learned ALL of the kanji and/or radicals that make up that kanji. This is just one way that your learning effort is maximized.',
+                onPress: () => {}
+              }
+            ]}
+            />
+
+        storyBlurbWithTooltip = <PopoverTooltip ref='tooltip2'
+            buttonComponent={
+              <View>
+                <RkText rkType='primary3 helpLink'> ...More info</RkText>
+              </View>
+            }
+            items={[
+              {
+                label: 'Mnemonics - sometimes called Stories, can be extremely effective in assisting your brain to link a number of things together. Rapid Kanji stories link the component kanji together with the meaning of the resulting kanji.',
+                onPress: () => {}
+              },
+              {
+                label: 'This is a suggested story, but you are welcome to come up with your own if you prefer. Remember that the more memorable the story, and the more emotion it evokes when you think of it, the less likely you are to forget it. When learning kanji using a story, take time to clearly picture in your mind the detail of each of the key elements of the story (the words in CAPS). What colour? What texture? How do you feel?',
                 onPress: () => {}
               },
             ]}
             />
-        }
 
-      card =         
-      <RkCard style={styles.card}>
-          <View rkCardHeader>
-            <View>
-              <RkText rkType='header4'>Learn Kanji</RkText>
-              { explanationWithTooltip }
+        var similarWithTooltip
+        if(hasSimilar){
+          similarWithTooltip = <PopoverTooltip ref='tooltip3'
+              buttonComponent={
+                <View>
+                  <RkText rkType='heading4'>Similar Kanji</RkText>
+                  <RkText rkType='primary3'>Take care to not confuse this kanji with other similar looking kanji like: </RkText>
+                  <RkText rkType='primary3 helpLink'> ...More info</RkText>
+                  <RkText rkType='center header3'>{info.item.similar.join(" ")}</RkText>
+                </View>
+              }
+              items={[
+                {
+                  label: 'Two kanji can be confusingly similar when they have component kanji or radicals in common. To avoid getting confused, look closely at the kanji you are learning and the similar kanji and pick out what makes them different. Replay the story in your mind and make sure the aspects that make this kanji different are as vivid as possible.',
+                  onPress: () => {}
+                },
+              ]}
+              />
+          }
+
+        card =         
+        <RkCard style={styles.card}>
+            <View rkCardHeader>
+              <View>
+                <RkText rkType='header4'>Learn Kanji</RkText>
+                { explanationWithTooltip }
+              </View>
             </View>
-          </View>
-          <View rkCardContent>
-            { kanjiCharacter }
-            <View>
-              <RkText rkType='heading2 center'>Meaning</RkText>
-              <RkText rkType='heading1 center warning'>{info.item.meaning}</RkText>
+            <View rkCardContent>
+              { kanjiCharacter }
+              <View>
+                <RkText rkType='heading2 center'>Meaning</RkText>
+                <RkText rkType='heading1 center warning'>{info.item.meaning}</RkText>
+              </View>
+              { components }
+              <View>
+                <RkText rkType='heading4'> </RkText>
+                <RkText rkType='heading4'>Story</RkText>
+                { storyBlurbWithTooltip }
+                <RkText rkType='primary2 warning'>{info.item.story}</RkText>
+                <RkText rkType='primary3'> </RkText>
+              </View>
+              { hasSimilar ? similarWithTooltip : <View/> }
             </View>
-            { components }
-            <View>
-              <RkText rkType='heading4'> </RkText>
-              <RkText rkType='heading4'>Story</RkText>
-              { storyBlurbWithTooltip }
-              <RkText rkType='primary2 warning'>{info.item.story}</RkText>
-              <RkText rkType='primary3'> </RkText>
+            <View rkCardFooter>
+              <SocialBar/>
+            </View >
+          </RkCard>
+      }
+      else if(info.item.learntype === 'write'){
+
+        explanationWithTooltip = <PopoverTooltip ref='tooltip1'
+            buttonComponent={
+              <View>
+                <RkText rkType='primary3'>Test how well you know the story that you just recently learned by typing it from memory. Then click the button to see how well you did.</RkText>
+                <RkText rkType='primary3 helpLink'> ...More info</RkText>
+                <View><RkText> </RkText></View>
+              </View>
+            }
+            items={[
+              {
+                label: 'Writing down the story that you recently learned will help solidify it in your mind, over and above simply reading the story. As you write the story down, use this as a chance to replay the story in your mind in vivid detail. Remember that the more vivid the colors, textures, sounds and emotions, the better your brain will retain it.',
+                onPress: () => {}
+              }
+            ]}
+            />
+
+        card =         
+        <RkCard style={styles.card}>
+            <View rkCardHeader>
+              <View>
+                <RkText rkType='header4'>Learn Kanji</RkText>
+                { explanationWithTooltip }
+              </View>
             </View>
-            { hasSimilar ? similarWithTooltip : <View/> }
-          </View>
-          <View rkCardFooter>
-            <SocialBar/>
-          </View >
-        </RkCard>
+            <View rkCardContent>
+              { kanjiCharacter }
+              <StoryPractice story={info.item.story}/>
+            </View>
+            <View rkCardFooter>
+              <SocialBar/>
+            </View >
+          </RkCard>        
+      }
     }
     else if(info.item.subtype == 'learn-vocab'){
 

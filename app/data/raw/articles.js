@@ -199,6 +199,7 @@ const articles = [{
   'id': 30,
   'type': 'post',
   'subtype': 'learn-kanji',
+  'learntype': 'read',
   'kanji': '日',
   'image': require('../img/sun_anim.gif'),
   'meaning': 'sun, day',
@@ -210,12 +211,21 @@ const articles = [{
   'id': 31,
   'type': 'post',
   'subtype': 'learn-kanji',
+  'learntype': 'read',
   'kanji': '鉛',
   'meaning': 'lead (the metal)',
   'story': 'It is not commonly known that if you put GOLD in your MOUTH and chew it EIGHT times, it will turn into LEAD. That is in fact why pencils are so expensive. Dont believe me? Have you ever tried it?',
   'explanation': 'Using only kanji and radicals that you already know, you can now learn this kanji.',
   'components': ['金', '八', '口'],
   'similar': ['沿','船'],
+  'comments': []
+}, {
+  'id': 32,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'write',
+  'kanji': '鉛',
+  'story': 'It is not commonly known that if you put GOLD in your MOUTH and chew it EIGHT times, it will turn into LEAD. That is in fact why pencils are so expensive. Dont believe me? Have you ever tried it?',
   'comments': []
 }, {
   'id': 40,
