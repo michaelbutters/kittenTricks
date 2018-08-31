@@ -70,6 +70,12 @@ export let bootstrap = () => {
     fontSize: 44
   });
 
+  RkTheme.setType('RkText', 'helpLink', {
+    fontSize: 11,
+    textAlign: 'right',
+    color: theme => theme.colors.info
+  });
+
   //all font sizes
   for (let key in RkTheme.current.fonts.sizes) {
     RkTheme.setType('RkText', key, {

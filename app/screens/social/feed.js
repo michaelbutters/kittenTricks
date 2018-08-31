@@ -8,6 +8,7 @@ import {
   RkCard, RkButton,
   RkText, RkStyleSheet, RkTheme
 } from 'react-native-ui-kitten';
+import PopoverTooltip from 'react-native-popover-tooltip';
 import {Avatar} from '../../components/avatar';
 import {SocialBar} from '../../components/socialBar';
 import {YesNoBar} from '../../components/yesNoBar';
@@ -56,12 +57,28 @@ export class Feed extends React.Component {
       components = (hasComponents ? <View><RkText rkType='heading4 center'>Components</RkText><RkText rkType='center warning header2'>{info.item.components.join(" ")}</RkText><RkText rkType='primary3'>Can you see these component kanji within this new kanji?</RkText></View> : <View/> )
       storyBlurb = (hasComponents ? <RkText rkType='primary1'>You may want to use this mnemonic (story) as a way of learning this kanji and what it means. [?]</RkText> : <RkText rkType='primary1'>You may want to use this mnemonic (story) as a way of learning this kanji and what it means. [?]</RkText> )
 
+      explanationWithTooltip = <PopoverTooltip ref='tooltip1'
+          buttonComponent={
+            <View>
+              <RkText rkType='primary3'>{ info.item.explanation }</RkText>
+              <RkText rkType='primary3 helpLink'> ...More info</RkText>
+              <View><RkText> </RkText></View>
+            </View>
+          }
+          items={[
+            {
+              label: 'The Rapid Kanji algorithm ensures that you never get given a new kanji to learn until you have learned ALL of the kanji and/or radicals that make up that kanji. This is just one way that your learning effort is maximized.',
+              onPress: () => {}
+            }
+          ]}
+          />
+
       card =         
       <RkCard style={styles.card}>
           <View rkCardHeader>
             <View>
               <RkText rkType='header4'>Learn Kanji</RkText>
-              <RkText rkType='primary3'>{ info.item.explanation }</RkText>
+              { explanationWithTooltip }
             </View>
           </View>
           <View rkCardContent>
@@ -96,7 +113,7 @@ export class Feed extends React.Component {
           <View rkCardContent>
             <RkText rkType='largervocab center warning'>{info.item.vocab}</RkText>
             <RkText rkType='heading4 center'>Meaning</RkText>
-            <RkText rkType='primary3 center italic'>{info.item.meaning}</RkText>
+            <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
           </View>
           <View>
             <RkText rkType='heading4'>Story</RkText>
@@ -158,7 +175,7 @@ export class Feed extends React.Component {
           <View rkCardContent>
             <RkText rkType='largevocab center info'>{info.item.vocab}</RkText>
             <RkText rkType='heading4 center'>Meaning</RkText>
-            <RkText rkType='primary3 center italic'>{info.item.meaning}</RkText>
+            <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
           </View>
           <View rkCardFooter>
             <YesNoBar/>
