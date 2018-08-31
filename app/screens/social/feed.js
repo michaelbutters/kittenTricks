@@ -246,10 +246,13 @@ export class Feed extends React.Component {
             <View rkCardHeader>
               <View>
                 <RkText rkType='header4'>Revise</RkText>
-                <RkText rkType='primary3'>{'See if you recall the meaning of this kanji by comparing it with the meanings of other similar looking kanji.'}</RkText>
+                <RkText rkType='primary3'>{'Test your knowledge of this kanji. Based on your knowledge of the meaning of this kanji, determine the words that use this kanji vs. the words that use other similar-looking kanji.'}</RkText>
               </View>
             </View>
             <View rkCardContent>
+              <View >
+                <RkText rkType='largekanji center warning'>{info.item.kanji}</RkText>
+              </View>
               <SimilarGame kanji={info.item.kanji} list={info.item.list} meaning={info.item.meaning} />
             </View>
             <View rkCardFooter>

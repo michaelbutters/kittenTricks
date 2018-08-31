@@ -67,31 +67,30 @@ export class SimilarGame extends RkComponent {
       var isYesSelected = this.selectedYes(i);
       var isNoSelected = this.selectedNo(i);
 
-      var button_style
-      var text_type = 'info'
+      var text_type = 'primary1'
       var text_value = kana_word + ' (' + meaning_word + ')'
 
-      yes_button_style = 'similargame basic square'
-      no_button_style = 'similargame basic square'
+      yes_button_style = 'similargame'
+      no_button_style = 'similargame'
       text_value = kana_word + ' (' + meaning_word + ')'
 
       if(correct){
         if(isYesSelected){
-          yes_button_style = 'similargame basic square success'
+          yes_button_style = 'similargame similarsuccess'
           text_value = kanji_word + ' (' + meaning_word + ')'
         }
         else if(isNoSelected){
-          no_button_style = 'similargame basic square memoryfailed'
+          no_button_style = 'similargame similarfail'
           text_value = kanji_word + ' (' + meaning_word + ')'
         }        
       }
       else {
         if(isYesSelected){
-          yes_button_style = 'similargame basic square memoryfailed'
+          yes_button_style = 'similargame similarfail'
           text_value = kanji_word + ' (' + meaning_word + ')'
         }
         else if(isNoSelected){
-          no_button_style = 'similargame basic square success'
+          no_button_style = 'similargame similarsuccess'
           text_value = kanji_word + ' (' + meaning_word + ')'
         }        
       }
@@ -99,11 +98,11 @@ export class SimilarGame extends RkComponent {
       rows.push(
           <View key={ kanji_word} >
             <RkText rkType={ text_type }>{ text_value }</RkText>
-            <RkButton rkType={ yes_button_style } containerViewStyle={{width: '100%', marginLeft: 0}} onPress={() => this.handlePress(i, true)}>
-              <RkText rkType={ text_type }>{ this.state.overall_kanji }</RkText>
+            <RkButton rkType={ yes_button_style } onPress={() => this.handlePress(i, true)}>
+              <RkText rkType={ text_type }>✔</RkText>
             </RkButton>
-            <RkButton rkType={ no_button_style } containerViewStyle={{width: '100%', marginLeft: 0}} onPress={() => this.handlePress(i, false)}>
-              <RkText rkType={ text_type }> ? </RkText>
+            <RkButton rkType={ no_button_style } onPress={() => this.handlePress(i, false)}>
+              <RkText rkType={ text_type }>✗</RkText>
             </RkButton>
           </View>
         )

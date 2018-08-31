@@ -227,22 +227,25 @@ export let bootstrap = () => {
   RkTheme.setType('RkButton', 'similargame', {
     container: {
       flexDirection: 'row',
-      // flexWrap: 'wrap',
+      flexWrap: 'wrap',
     },
-    backgroundColor: theme => theme.colors.button.underlay,
-    borderColor: theme => theme.colors.border.secondary,
+    height: scale(56),
+    width: scale(56),
+    borderColor: theme => theme.colors.border.base,
+    backgroundColor: theme => theme.colors.control.background,
+    borderWidth: 4,
     color: theme => theme.colors.disabled,
   });
 
   RkTheme.setType('RkButton', 'similarsuccess', {
     backgroundColor: theme => theme.colors.button.underlay,
-    borderColor: theme => theme.colors.border.success,
-    color: theme => theme.colors.background,
+    borderColor: theme => theme.colors.success,
+    color: theme => theme.colors.success,
   });
 
   RkTheme.setType('RkButton', 'similarfail', {
     backgroundColor: theme => theme.colors.button.underlay,
-    borderColor: theme => theme.colors.border.danger,
+    borderColor: theme => theme.colors.danger,
     color: theme => theme.colors.danger,
   });
 
