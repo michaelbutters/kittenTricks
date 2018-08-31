@@ -72,38 +72,41 @@ export class SimilarGame extends RkComponent {
 
       yes_button_style = 'similargame'
       no_button_style = 'similargame'
-      text_value = kana_word + ' (' + meaning_word + ')'
+      text_value = kana_word
 
       if(correct){
         if(isYesSelected){
           yes_button_style = 'similargame similarsuccess'
-          text_value = kanji_word + ' (' + meaning_word + ')'
+          text_value = kanji_word
         }
         else if(isNoSelected){
           no_button_style = 'similargame similarfail'
-          text_value = kanji_word + ' (' + meaning_word + ')'
+          text_value = kanji_word
         }        
       }
       else {
         if(isYesSelected){
           yes_button_style = 'similargame similarfail'
-          text_value = kanji_word + ' (' + meaning_word + ')'
+          text_value = kanji_word
         }
         else if(isNoSelected){
           no_button_style = 'similargame similarsuccess'
-          text_value = kanji_word + ' (' + meaning_word + ')'
+          text_value = kanji_word
         }        
       }
 
       rows.push(
-          <View key={ kanji_word} >
-            <RkText rkType={ text_type }>{ text_value }</RkText>
+          <View style={section} key={ kanji_word} >
             <RkButton rkType={ yes_button_style } onPress={() => this.handlePress(i, true)}>
-              <RkText rkType={ text_type }>✔</RkText>
+              <RkText rkType={ text_type } style={ icon }>✔</RkText>
             </RkButton>
+            <RkText> </RkText>
             <RkButton rkType={ no_button_style } onPress={() => this.handlePress(i, false)}>
-              <RkText rkType={ text_type }>✗</RkText>
+              <RkText rkType={ text_type } style={ icon }>✗</RkText>
             </RkButton>
+            <RkText> </RkText>
+            <RkText rkType={ text_type }>{ text_value }</RkText>
+            <RkText rkType={ text_type }>{ meaning_word }</RkText>
           </View>
         )
     }

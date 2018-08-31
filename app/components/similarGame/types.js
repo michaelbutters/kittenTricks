@@ -8,12 +8,14 @@ export const SimilarGameTypes = (theme) => {
         flex: 1
       },
       section: {
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         flexDirection: 'row',
         flex: 1,
       },
       icon: {
-        fontSize: 20
+        fontSize: 15,
+        // padding: 13,
+        // marginLeft: 128,
       },
       label: {
         marginLeft: 8,
