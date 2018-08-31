@@ -213,7 +213,7 @@ const articles = [{
   'kanji': '鉛',
   'meaning': 'now',
   'story': 'Right NOW is when the COVER needs to be put on the POT.',
-  'explanation': 'Using some of the kanji and radicals that you already know, you can now learn this kanji.',
+  'explanation': 'Using only kanji and radicals that you already know, you can now learn this kanji.',
   'components': ['金', '八', '口'],
   'similar': ['沿','船'],
   'comments': []

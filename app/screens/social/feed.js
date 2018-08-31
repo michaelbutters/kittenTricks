@@ -48,8 +48,13 @@ export class Feed extends React.Component {
 
     if(info.item.subtype == 'learn-kanji'){
 
+      var hasSimilar = !(info.item.similar === undefined || info.item.similar.length == 0)
+      var hasComponents = !(info.item.components === undefined || info.item.components.length == 0)
+
       kanjiCharacter = (info.item.image ? <View style={styles.imageView}><Image source={info.item.image}/></View> : <RkText rkType='largekanji center warning'>{info.item.kanji}</RkText>)
-      similar = (info.item.similar === undefined || info.item.similar.length == 0 ? <View/> : <View><RkText rkType='heading4'>Similar Kanji</RkText><RkText rkType='primary3'>Take care to not confuse this kanji with other similar looking kanji like: </RkText><RkText rkType='center header3'>{info.item.similar.join(" ")}</RkText></View> )
+      similar = (hasSimilar ? <View><RkText rkType='heading4'>Similar Kanji</RkText><RkText rkType='primary3'>Take care to not confuse this kanji with other similar looking kanji like: </RkText><RkText rkType='center header3'>{info.item.similar.join(" ")}</RkText></View> : <View/> )
+      components = (hasComponents ? <View><RkText rkType='heading4 center'>Components</RkText><RkText rkType='center warning header2'>{info.item.components.join(" ")}</RkText><RkText rkType='primary3'>Can you see these component kanji within this new kanji?</RkText></View> : <View/> )
+      storyBlurb = (hasComponents ? <RkText rkType='primary1'>You may want to use this mnemonic (story) as a way of learning this kanji and what it means. [?]</RkText> : <RkText rkType='primary1'>You may want to use this mnemonic (story) as a way of learning this kanji and what it means. [?]</RkText> )
 
       card =         
       <RkCard style={styles.card}>
@@ -61,10 +66,14 @@ export class Feed extends React.Component {
           </View>
           <View rkCardContent>
             { kanjiCharacter }
-            <RkText rkType='heading4 center'>Meaning</RkText>
-            <RkText rkType='primary3 center italic'>{info.item.meaning}</RkText>
+            <View>
+              <RkText rkType='heading2 center'>Meaning</RkText>
+              <RkText rkType='heading1 center warning'>{info.item.meaning}</RkText>
+            </View>
+            { components }
             <View>
               <RkText rkType='heading4'>Story</RkText>
+              { storyBlurb }
               <RkText rkType='primary3'>{info.item.story}</RkText>
             </View>
             { similar }
