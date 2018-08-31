@@ -53,9 +53,7 @@ export class Feed extends React.Component {
       var hasComponents = !(info.item.components === undefined || info.item.components.length == 0)
 
       kanjiCharacter = (info.item.image ? <View style={styles.imageView}><Image source={info.item.image}/></View> : <RkText rkType='largekanji center warning'>{info.item.kanji}</RkText>)
-      similar = (hasSimilar ? <View><RkText rkType='heading4'>Similar Kanji</RkText><RkText rkType='primary3'>Take care to not confuse this kanji with other similar looking kanji like: </RkText><RkText rkType='center header3'>{info.item.similar.join(" ")}</RkText></View> : <View/> )
       components = (hasComponents ? <View><RkText rkType='heading4 center'>Components</RkText><RkText rkType='center warning header2'>{info.item.components.join(" ")}</RkText><RkText rkType='primary3'>Can you see these component kanji within this new kanji?</RkText></View> : <View/> )
-      storyBlurb = (hasComponents ? <RkText rkType='primary1'>You may want to use this mnemonic (story) as a way of learning this kanji and what it means. [?]</RkText> : <RkText rkType='primary1'>You may want to use this mnemonic (story) as a way of learning this kanji and what it means. [?]</RkText> )
 
       explanationWithTooltip = <PopoverTooltip ref='tooltip1'
           buttonComponent={
@@ -73,6 +71,44 @@ export class Feed extends React.Component {
           ]}
           />
 
+      storyBlurbWithTooltip = <PopoverTooltip ref='tooltip2'
+          buttonComponent={
+            <View>
+              <RkText rkType='primary3 helpLink'> ...More info</RkText>
+            </View>
+          }
+          items={[
+            {
+              label: 'Mnemonics - sometimes called Stories, can be extremely effective in assisting your brain to link a number of things together. Rapid Kanji stories link the component kanji together with the meaning of the resulting kanji.',
+              onPress: () => {}
+            },
+            {
+              label: 'This is a suggested story, but you are welcome to come up with your own if you prefer. Remember that the more memorable the story, and the more emotion it evokes when you think of it, the less likely you are to forget it. When learning kanji using a story, take time to clearly picture in your mind the detail of each of the key elements of the story (the words in CAPS). What colour? What texture? How do you feel?',
+              onPress: () => {}
+            },
+          ]}
+          />
+
+      var similarWithTooltip
+      if(hasSimilar){
+        similarWithTooltip = <PopoverTooltip ref='tooltip3'
+            buttonComponent={
+              <View>
+                <RkText rkType='heading4'>Similar Kanji</RkText>
+                <RkText rkType='primary3'>Take care to not confuse this kanji with other similar looking kanji like: </RkText>
+                <RkText rkType='primary3 helpLink'> ...More info</RkText>
+                <RkText rkType='center header3'>{info.item.similar.join(" ")}</RkText>
+              </View>
+            }
+            items={[
+              {
+                label: 'Two kanji can be confusingly similar when they have component kanji or radicals in common. To avoid getting confused, look closely at the kanji you are learning and the similar kanji and pick out what makes them different. Replay the story in your mind and make sure the aspects that make this kanji different are as vivid as possible.',
+                onPress: () => {}
+              },
+            ]}
+            />
+        }
+
       card =         
       <RkCard style={styles.card}>
           <View rkCardHeader>
@@ -89,11 +125,13 @@ export class Feed extends React.Component {
             </View>
             { components }
             <View>
+              <RkText rkType='heading4'> </RkText>
               <RkText rkType='heading4'>Story</RkText>
-              { storyBlurb }
-              <RkText rkType='primary3'>{info.item.story}</RkText>
+              { storyBlurbWithTooltip }
+              <RkText rkType='primary2 warning'>{info.item.story}</RkText>
+              <RkText rkType='primary3'> </RkText>
             </View>
-            { similar }
+            { hasSimilar ? similarWithTooltip : <View/> }
           </View>
           <View rkCardFooter>
             <SocialBar/>
