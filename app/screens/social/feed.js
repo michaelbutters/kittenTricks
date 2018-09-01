@@ -228,7 +228,7 @@ export class Feed extends React.Component {
             <View rkCardHeader>
               <View>
                 <RkText rkType='header4'>Revise</RkText>
-                <RkText rkType='primary3'>{'Can you read this entire sentence?'}</RkText>
+                <RkText rkType='primary3'>{'Can you read this entire sentence and understand what it means?'}</RkText>
               </View>
             </View>
             <View rkCardContent>
@@ -262,19 +262,54 @@ export class Feed extends React.Component {
 
       }
     }
+    else if(info.item.subtype == 'help'){
+
+      card =         
+      <RkCard style={styles.card}>
+          <View rkCardHeader>
+            <View>
+              <RkText rkType='header4'>{info.item.title}</RkText>
+              <RkText rkType='primary3'>{info.item.header}</RkText>
+            </View>
+          </View>
+          <View rkCardContent>
+            <Image rkCardImg source={info.item.photo}/>
+            <RkText> </RkText>
+            <RkText rkType='primary3'>{info.item.text}</RkText>
+          </View>
+          <View rkCardFooter>
+            <OkBar/>
+          </View >
+        </RkCard>
+    }
     else if(info.item.subtype == 'prime'){
+
+      explanationWithTooltip = <PopoverTooltip ref='tooltip1'
+          buttonComponent={
+            <View rkCardContent>
+              <RkText rkType='primary3'>Help the algorithm work effectively by indicating whether you already know this vocabulary.</RkText>
+              <RkText rkType='primary3 helpLink'> ...More info</RkText>
+              <View><RkText> </RkText></View>
+            </View>
+          }
+          items={[
+            {
+              label: 'Telling us what you already know helps prime the algorithm to teach you words in the best possible order.',
+              onPress: () => {}
+            }
+          ]}
+          />
 
       card =         
       <RkCard style={styles.card}>
           <View rkCardHeader>
             <View>
               <RkText rkType='header4'>Prime</RkText>
-              <RkText rkType='primary3'>Do you know this word?</RkText>
-              <RkText rkType='primary4'>Telling us what you already know helps prime the algorithm to teach you words in the best possible order.</RkText>
+              { explanationWithTooltip }
             </View>
           </View>
           <View rkCardContent>
-            <RkText rkType='largevocab center info'>{info.item.vocab}</RkText>
+            <RkText rkType='largevocab center warning'>{info.item.vocab}</RkText>
             <RkText rkType='heading4 center'>Meaning</RkText>
             <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
           </View>
