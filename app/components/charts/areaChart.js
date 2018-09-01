@@ -71,7 +71,7 @@ export class AreaChart extends RkComponent {
   render() {
     return (
       <View>
-        <VictoryChart padding={{top: 20, left: 40, right: 5, bottom: 5}} width={this.size - 60}>
+        <VictoryChart padding={{top: 10, left: 40, right: 5, bottom: 5}} width={this.size - 60}>
           <VictoryAxis
             tickValues={[]}
             style={{
@@ -80,7 +80,7 @@ export class AreaChart extends RkComponent {
           />
           <VictoryAxis
             dependentAxis
-            tickValues={['2', '4', '6', '8', '10', '12', '14', '15', '16', '18', '20']}
+            tickValues={['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11']}
             style={{
               axis: {stroke: 'transparent'},
               grid: {stroke: RkTheme.current.colors.disabled, strokeWidth: 0.5},

@@ -1,23 +1,23 @@
 Must Do:
- - Add Explanation cards for each card type (SRS, Mnemonics)
+ * Add Explanation cards for each card type (SRS, Mnemonics)
  - Finalise all data - improve existing and add HEAPS more to get the full infinite scroll effect
- - Come up with a contrived set of data that I will take people through as part of the demo - using vocab that everyone (from Tyler up to Tim) but where they are unlikely to know the kanji - to see if they actually enjoy learning some new, difficult kanji. Include those words at the beginning (and assume they will choose Yes). 
+ * Come up with a contrived set of data that I will take people through as part of the demo - using vocab that everyone (from Tyler up to Tim) but where they are unlikely to know the kanji - to see if they actually enjoy learning some new, difficult kanji. Include those words at the beginning (and assume they will choose Yes). 
 
 Should Do:
- - Add an expandable 'More Info' part to each card as a place to put more detailed explanations
+ * Add an expandable 'More Info' part to each card as a place to put more detailed explanations
  - Add an 'I already know it' button to a kanji so that it gets counted as a kanji they already knew rather than one they just learnt in their stats
  - Add something to the kanji story card, to engage the user, e.g. clicking 
  		- Read the story out loud
- 		- Close your eyes and picture each part of the story in vivid detail
+ 		* Close your eyes and picture each part of the story in vivid detail
  		- Picture/say the story backwards
- 		- Type in the story again from memory (or type in your own story)
+ 		* Type in the story again from memory (or type in your own story)
  		- Build your own story (somehow?)
  		- All the words of the story are made into cards and shuffled up. You have to click them in order to match the story exactly. (While the story is hidden). Then it shuffles again and you try again.
  		- All the words of the story is listed, they are encouraged to close their eyes and picture it, then read it again, then gradually the words disappear and they need to repeat the story out loud. Then after a little gap they get asked the question again, but this time the story is hidden by default.
  		- Learning the kanji is multiple cards, close together, but gradually further apart (SRS) within a minute or two, to properly test it. And you have to indicate if you got it right or wrong to decide whether you need more reminders (the same for the SRS stuff).
 
 Could Do:
- - Add another revise card game type
+ * Add another revise card game type
  - Improve Japanese font (haven't been able to find any that look good and are available for commercial use and easy to install...)
  - You've learnt X new kanji today. At this rate, you'll get to your goal by ...
  - A ching sound and animation when click OK or DONE to trigger dopamine.

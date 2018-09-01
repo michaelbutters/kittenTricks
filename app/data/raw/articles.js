@@ -1,165 +1,4 @@
 const articles = [{
-  'id': 1,
-  'icon': require('../img/photo1.png'),
-  'photo': require('../img/photo1.png'),
-  'type': 'article',
-  'time': -300,
-  'header': 'Plants Of Our Nature',
-  'text': 'Ferns are a very old group of plants. They first appeared on Earth in the middle Devonian Era about 360 million years ago, just before the Carboniferous Era. Most of the modern fern families we see today first appeared in the Late Cretaceous about 45 or 50 million years ago – during the age of the dinosaurs!',
-  'comments': [{
-    'id': 1,
-    'text': 'Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.',
-    'time': 0
-  }, {
-    'id': 2,
-    'text': 'Quisque ut erat. Curabitur gravida nisi at nibh.',
-    'time': -311
-  }, {
-    'id': 3,
-    'text': 'Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum.',
-    'time': -622
-  }, {
-    'id': 4,
-    'text': 'In est risus, auctor sed, tristique in, tempus sit amet, sem.',
-    'time': -933
-  }, {
-    'id': 5,
-    'text': 'In hac habitasse platea dictumst.',
-    'time': -1244
-  }, {
-    'id': 6,
-    'text': 'In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.',
-    'time': -1555
-  }, {
-    'id': 7,
-    'text': 'Vivamus vel nulla eget eros elementum pellentesque. Quisque porta volutpat erat.',
-    'time': -1866
-  }, {
-    'id': 8,
-    'text': 'Duis mattis egestas metus. Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.',
-    'time': -2177
-  }]
-}, {
-  'id': 2,
-  'icon': require('../img/photo2.png'),
-  'photo': require('../img/photo2.png'),
-  'type': 'article',
-  'time': -1373,
-  'header': 'Balloon Trip',
-  'text': 'Mostly it’s about hot air - for without that balloons are just big empty bags with baskets on the bottom. ' +
-  'The Montgolfier brothers had great hopes when they made the first manned flight. ' +
-  'They thought balloons would take off as an available means of commercial flight. ' +
-  'Instead, they have remained the province of sport, adventure and enjoyment. ' +
-  'Modern balloons are a lot more sophisticated than their ancestors, ' +
-  'but they still retain the essential characteristics which makes them so attractive. ' +
-  'A plane is claustrophobic and very noisy. Balloons are so gentle and majestic and silent when the burner’s not working.',
-  'comments': []
-}, {
-  'id': 3,
-  'icon': require('../img/photo3.png'),
-  'photo': require('../img/photo3.png'),
-  'type': 'article',
-  'time': -2446,
-  'header': 'Sea World',
-  'text': 'The worlds oceans cover two thirds of our planet. As we take a dive from the rocks or paddle out from the beach, we are entering a place which is teeming with marine life. ' +
-  'From fish to crabs to octopuses or even sea creatures that have not yet been discovered, the oceans and its coastlines are an amazing and interesting foray of water wildlife.',
-  'comments': []
-}, {
-  'id': 4,
-  'icon': require('../img/photo4.png'),
-  'photo': require('../img/photo4.png'),
-  'type': 'article',
-  'time': -3519,
-  'header': 'Flowers',
-  'text': 'Flowers did not always exist; they first appeared 140 million years ago. Before that, ferns and cone bearing trees dominated the earth. ' +
-  'Several centuries ago in Holland, tulips were more valuable than gold. ' +
-  'Broccoli is actually a flower. Some plants such as orchids do not need soil to grow-they get all of their nutrients from the air.',
-  'comments': []
-}, {
-  'id': 5,
-  'icon': require('../img/photo5.png'),
-  'photo': require('../img/photo5.png'),
-  'type': 'article',
-  'time': -4592,
-  'header': 'Birds Of Our Planet',
-  'text': 'Birds have feathers, wings, lay eggs and are warm blooded. There are around 10000 different species of birds worldwide. ' +
-  'The Ostrich is the largest bird in the world. It also lays the largest eggs and has the fastest maximum running speed (97 kph). ' +
-  'Scientists believe that birds evolved from theropod dinosaurs. Birds have hollow bones which help them fly. ' +
-  'Some bird species are intelligent enough to create and use tools.',
-  'comments': []
-}, {
-  'id': 6,
-  'icon': require('../img/photo6.png'),
-  'photo': require('../img/photo6.png'),
-  'type': 'article',
-  'time': -5665,
-  'header': 'Mountains',
-  'text': 'Mountains make up about one-fifth of the world\'s landscape, and provide homes to at least one-tenth of the world\'s people. ' +
-  'The tallest known mountain in the solar system is Olympus Mons, located on Mars. ' +
-  'There are mountains under the surface of the sea! ' +
-  'Mountains occur more often in oceans than on land; some islands are the peaks of mountains coming out of the water.',
-  'comments': []
-}, {
-  'id': 7,
-  'icon': require('../img/photo45.png'),
-  'photo': require('../img/photo45.png'),
-  'type': 'fact',
-  'time': -5665,
-  'header': 'Smile and Frown',
-  'text': 'It takes 17 muscles to smile and 43 to frown.',
-  'comments': []
-}, {
-  'id': 8,
-  'icon': require('../img/photo46.png'),
-  'photo': require('../img/photo46.png'),
-  'type': 'fact',
-  'time': -8373,
-  'header': 'Interesting Fact',
-  'text': 'Dolphins sleep with one eye open.',
-  'comments': []
-}, {
-  'id': 9,
-  'icon': require('../img/photo47.png'),
-  'photo': require('../img/photo47.png'),
-  'type': 'fact',
-  'time': -565,
-  'header': 'Elephant',
-  'text': 'Elephant is one of the few mammals that can\'t jump.',
-  'comments': []
-}, {
-  'id': 10,
-  'icon': require('../img/photo48.png'),
-  'photo': require('../img/photo48.png'),
-  'type': 'fact',
-  'time': -52365,
-  'header': 'Cold Water',
-  'text': 'Cold water weighs less than hot water.',
-  'comments': []
-}, {
-  'id': 11,
-  'icon': require('../img/photo49.png'),
-  'photo': require('../img/photo49.png'),
-  'type': 'fact',
-  'time': -1295,
-  'header': 'Our Eyes',
-  'text': 'You blink over 10,000,000 times a year.',
-  'comments': []
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}, {
   'id': 70,
   'type': 'post',
   'subtype': 'help',
@@ -188,15 +27,15 @@ const articles = [{
   'id': 21,
   'type': 'post',
   'subtype': 'prime',
-  'vocab': 'こうえん',
-  'meaning': 'park, playground',
+  'vocab': 'えんぴつ',
+  'meaning': 'pencil',
   'comments': []
 }, {
   'id': 22,
   'type': 'post',
   'subtype': 'prime',
-  'vocab': 'しんぶん',
-  'meaning': 'newspaper',
+  'vocab': 'げんかん',
+  'meaning': 'entrance to the house',
   'comments': []
 }, {
   'id': 23,
@@ -209,8 +48,8 @@ const articles = [{
   'id': 24,
   'type': 'post',
   'subtype': 'prime',
-  'vocab': 'きゅうりょう',
-  'meaning': 'salary, wage',
+  'vocab': 'としょかん',
+  'meaning': 'library',
   'comments': []
 }, {
   'id': 72,
@@ -235,11 +74,11 @@ const articles = [{
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
-  'kanji': '日',
-  'image': require('../img/sun_anim.gif'),
-  'meaning': 'sun, day',
-  'story': "This is exactly what a SUN would look like in extremely low resolution.",
-  'explanation': "This kanji doesn't break down any further so is simple enough to just learn on its own.",
+  'kanji': '聿',
+  // 'image': require('../img/sun_anim.gif'),
+  'meaning': 'brush (radical)',
+  'story': "Imagine a brush with bristles that come out both sides like this kanji.",
+  'explanation': "This is a radical so doesn't break down any further and is simple enough to just learn on its own.",
   'components': [],
   'comments': []
 }, {
@@ -282,6 +121,18 @@ const articles = [{
   'text': "You will have noticed in the previous section that you were shown some 'similar kanji'. These are kanji that people often get mixed up because they look similar.\n\nThe reason these get pointed out to you is so that you can avoid getting mixed up when you see them later on. It is a good idea to look at what makes the kanji different and ensure that that part of your story is extra vivid in your head.\n\nClick OK and scroll down to continue. You're starting to get the hang of it now!",
   'comments': []
 }, {
+  'id': 32,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '筆',
+  'meaning': 'writing brush',
+  'story': "It's a bit difficult to write with a big BRUSH so we've made the bristles from BAMBOO so that they're more stiff.",
+  'explanation': "Using only kanji and radicals that you already know, you can now learn this kanji. (NB: the kanji '竹' which you learned previously gets squashed at the top in this kanji).",
+  'components': ['竹', '聿'],
+  'similar': ['書','肇','箒'],
+  'comments': []
+}, {
   'id': 77,
   'type': 'post',
   'subtype': 'help',
@@ -291,12 +142,20 @@ const articles = [{
   'text': "When we learn a story we can feel like we know it well at that time, because it's in our short term memory. But it's no use to us if we forget it ten minutes later.\n\nSo, very soon after you've learnt a story you will be given the opportunity to recall it. This extra step of recall soon after learning, helps ensure it starts to take hold in your long term memory.\n\nYour brain is very efficient and will not bother storing new learnings in a way that they're easy to recall unless it thinks it needs to. By making yourself go through the effort to recall the story you will tell your brain that this is important information because you are using it again.\n\nYou guessed it - you'll now have the opportunity to do this for yourself. Click OK and scroll down (yep, you know the drill) to recall the story that you just learned before. The exact words of the story don't matter but its essential that you recall each of the 4 components (the 3 kanji and the 1 meaning). After you've typed it in, click 'Show Answer' to see what the story was and make sure you got it correct. If you can't recall all of it, go through it again in your head and work on making the parts that you forgot even more vivid by using emotion and picturing it in detail.",
   'comments': []
 }, {
-  'id': 32,
+  'id': 90,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'write',
   'kanji': '鉛',
   'story': 'It is not commonly known that if you put GOLD in your MOUTH and chew it EIGHT times, it will turn into LEAD. That is in fact why pencils are so expensive. Dont believe me? Have you ever tried it?',
+  'comments': []
+}, {
+  'id': 910,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'write',
+  'kanji': '筆',
+  'story': "It's a bit difficult to write with a big BRUSH so we've made the bristles from BAMBOO so that they're more stiff.",
   'comments': []
 }, {
   'id': 78,
@@ -308,12 +167,12 @@ const articles = [{
   'text': "As you learnt the two previous kanji, you may have thought 'Now I know how to recognize the kanji and what the kanji means (thanks to the story) but I don't know how to pronouce or 'read' the kanji'. Don't worry the Rapid Kanji system has got that covered using a very novel and effective approach.\n\nRemember when you were prompted to 'prime' the Rapid Kanji algorithm by telling it some of the vocabulary that you already know? As you know, this helps the algorithm know which kanji you should learn next. The kanji that you learn next will be the kanji that are used to write the vocabulary that you already know.\n\nRemember that the brain remembers new things best when it is able to link them in some ways to things that it already knows. Because you already indicated that you know that the Japanese word for 'today' is pronounced 'きょう', and because you have now learnt how to recognize the kanji for 'sun' and the kanji for 'now', a simple story that links 'sun', 'now', and 'today' together is enough to tell you how to read or pronounce the kanji for 'now' and the kanji for 'sun'.\n\nDoes that make sense? If not, scroll down and try it on the next section and see.",
   'comments': []
 }, {
-  'id': 40,
+  'id': 140,
   'type': 'post',
   'subtype': 'learn-vocab',
-  'vocab': '今日',
-  'meaning': 'today',
-  'story': "Put NOW and DAY together and it makes TODAY - makes sense, right?",
+  'vocab': '鉛筆',
+  'meaning': 'pencil',
+  'story': "Put LEAD and WRITING BRUSH together and it's easy to remember that it means PENCIL. And because you know that PENCIL is えんぴつ, you now know that one reading for '鉛' is 'えん' and one reading for '筆' is 'ぴつ' (or rather 'ひつ' but when it gets combined in this way it gets modified in this way).",
   'explanation': 'You know both of the kanji that you need to learn this word.',
   'comments': []
 }, {
@@ -353,10 +212,10 @@ const articles = [{
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'sentence',
-  'sentence': '今日はかようびです。',
-  'meaning': 'Today is Tuesday',
-  'kanji': '今日',
-  'furigana': 'きょう',
+  'sentence': 'わたしの鉛筆はどこですか。',
+  'meaning': 'Where is my pencil?',
+  'kanji': '鉛筆',
+  'furigana': 'えんぴつ',
   'comments': []
 }, {
   'id': 82,
@@ -377,7 +236,7 @@ const articles = [{
   'text': "Rapid Kanji uses various methods to help you revise what you've learned. Games can be great for this and below is an example of a simple memory game that you can use to test your knowledge of kanji that you have learned recently.\n\nClick OK, scroll down and give it a try!",
   'comments': []
 }, {
-  'id': 51,
+  'id': 5111,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'memory',
@@ -392,31 +251,259 @@ const articles = [{
   'text': "Well, you pretty much know all there is to know about how Rapid Kanji works now. So all that's left is to get going.\n\nActually, you are already going. You've been learning and practising along the way - there's no stopping you now!\n\nIf you do ever get stuck or can't remember how something works, click one of the '...More info' links in blue and you'll be reminded of things. Or go to the help menu to revisit these longer explanations.\n\nEnjoy! We'll check in again soon to let you know how you're progressing.",
   'comments': []
 }, {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  'id': 35,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '亠',
+  // 'image': require('../img/sun_anim.gif'),
+  'meaning': 'pot lid (radical)',
+  'story': "This radical looks like a lid that you put on a pot or a kettle. (NB: Don't get this confused with the similar but different radical '宀', which looks less like a pot lid.)",
+  'explanation': "This is a radical so doesn't break down any further and is simple enough to just learn on its own.",
+  'components': [],
+  'comments': []
+}, {
+  'id': 200,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'ねる',
+  'meaning': 'to sleep',
+  'comments': []
+}, {
+  'id': 36,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '幺',
+  // 'image': require('../img/sun_anim.gif'),
+  'meaning': 'short thread (radical)',
+  'story': "This radical looks like a stitch in some material. You're trying to un-pick the stitches but the thread is breaking into very short lengths.",
+  'explanation': "This is a radical so doesn't break down any further and is simple enough to just learn on its own.",
+  'components': [],
+  'comments': []
+}, {
+  'id': 201,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': '思う',
+  'meaning': 'to think',
+  'comments': []
+}, {
+  'id': 500,
+  'type': 'post',
+  'subtype': 'revise',
+  'gametype': 'sentence',
+  'sentence': 'ぼくはたくさんの鉛筆をもっている。',
+  'meaning': 'I have lots of pencils.',
+  'kanji': '鉛筆',
+  'furigana': 'えんぴつ',
+  'comments': []
+}, {
+  'id': 38,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '玄',
+  'meaning': 'mysterious',
+  'story': "You walk past a person who is looking very MYSTERIOUS using a POT LID to cover something. When you yank the pot lid away, you can see a very SHORT THREAD. Weird! So why are they acting so mysterious.",
+  'explanation': 'Using only kanji and radicals that you already know, you can now learn this kanji.',
+  'components': ['亠','幺'],
+  'similar': [''],
+  'comments': []
+}, {
+  'id': 202,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'じぶん',
+  'meaning': 'oneself',
+  'comments': []
+}, {
+  'id': 37,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '䒑',
+  'meaning': 'devil horns',
+  'story': "When you have DEVIL HORNS they stick out through your hat.",
+  'explanation': "This is a radical so doesn't break down any further and is simple enough to just learn on its own.",
+  'components': [],
+  'comments': []
+}, {
+  'id': 203,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'かお',
+  'meaning': 'face',
+  'comments': []
+}, {
+  'id': 39,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '関',
+  'meaning': 'gateway, connection',
+  'story': "You come up to the GATE entrance of a city but because you're wearing DEVIL HORNS on your head you can't fit because you're too BIG. So you have to go through another nearby BIGGER GATEWAY nearby.",
+  'explanation': "Using only kanji and radicals that you already know, you can now learn this kanji. (Do you recall learning '門' and '大' previously?)",
+  'components': ['門','䒑','大'],
+  'similar': ['開','闇','閑','閏','閃'],
+  'comments': []
+}, {
+  'id': 91,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'write',
+  'kanji': '玄',
+  'story': "You walk past a person who is looking very MYSTERIOUS using a POT LID to cover something. When you yank the pot lid away, you can see a very SHORT THREAD. Weird! So why are they acting so mysterious.",
+  'comments': []
+}, {
+  'id': 92,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'write',
+  'kanji': '関',
+  'story': "You come up to the GATE entrance of a city but because you're wearing DEVIL HORNS on your head you can't fit because you're too BIG. So you have to go through another nearby BIGGER GATEWAY nearby.",
+  'comments': []
+}, {
+  'id': 141,
+  'type': 'post',
+  'subtype': 'learn-vocab',
+  'vocab': '玄関',
+  'meaning': 'entrance to a house',
+  'story': "Picture coming inside the ENTRANCE TO YOUR HOUSE and finding a very MYSTERIOUS GATEWAY to another realm.",
+  'explanation': "You know both of the kanji that you need to learn this word. And because you know that the word for 'entrance to a house' is 'げんかん' you can figure out that one reading for '玄' is 'げん' and one reading for '関' is 'かん'.",
+  'comments': []
+}, {
+  'id': 51,
+  'type': 'post',
+  'subtype': 'revise',
+  'gametype': 'sentence',
+  'sentence': 'トムが玄関にいるので中に入るように言ってください。',
+  'meaning': 'Tom is at the door. Please ask him in.',
+  'kanji': '玄関',
+  'furigana': 'げんかん',
+  'comments': []
+}, {
+  'id': 204,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'できる',
+  'meaning': 'can do',
+  'comments': []
+}, {
+  'id': 40,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '斗',
+  // 'image': require('../img/sun_anim.gif'),
+  'meaning': 'sake dipper',
+  'story': "This represents a DIPPER used to scoop SAKE (Japanese rice wine). It doesn't seem to hold much though - there are only two drops in it. And no wonder! Since it's design means the sake will just run off the side.",
+  'explanation': "This is a simple kanji that doesn't break down any further and is simple enough to just learn on its own.",
+  'components': [],
+  'comments': []
+}, {
+  'id': 205,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'せんしゅう',
+  'meaning': 'last week',
+  'comments': []
+}, {
+  'id': 41,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '宀',
+  // 'image': require('../img/sun_anim.gif'),
+  'meaning': 'crown',
+  'story': "Different from the pot lid that you learned before, this one is shaped to fit on the head of a king or queen.",
+  'explanation': "This is a radical so doesn't break down any further and is simple enough to just learn on its own.",
+  'components': [],
+  'comments': []
+}, {
+  'id': 522,
+  'type': 'post',
+  'subtype': 'revise',
+  'gametype': 'sentence',
+  'sentence': '玄関でかさをささないように。',
+  'meaning': "Don't open your umbrella inside the entrance.",
+  'kanji': '玄関',
+  'furigana': 'げんかん',
+  'comments': []
+}, {
+  'id': 42,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '図',
+  'meaning': 'map, drawing, plan',
+  'story': "Did you know that the ancients used to DRAW their MAPS using a SAKE DIPPER held in their MOUTH.",
+  'explanation': 'Using only kanji and radicals that you already know, you can now learn this kanji.',
+  'components': ['囗', '斗'],
+  'similar': ['囲','団','困','因'],
+  'comments': []
+}, {
+  'id': 206,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'ところ',
+  'meaning': 'place',
+  'comments': []
+}, {
+  'id': 43,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '官',
+  'meaning': 'government service, bureaucracy',
+  'story': "A cynical view of GOVERNMENT BUREAUCRACY is that it is nothing but a bunch of loud-MOUTHS putting a CROWN on their heads in an act of self-bestowed authority.",
+  'explanation': 'Using only kanji and radicals that you already know, you can now learn this kanji.',
+  'components': ['宀','口'],
+  'similar': ['宮','営','管','菅'],
+  'comments': []
+}, {
+  'id': 207,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'かぞく',
+  'meaning': 'family',
+  'comments': []
+}, {
+  'id': 44,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'read',
+  'kanji': '館',
+  'meaning': 'building',
+  'story': "When all the GOVERNMENT BUREAUCRATS go out to EAT they book out an entire BUILDING.",
+  'explanation': "Using only kanji that you already know, including the kanji '食' which you have learned previously, you can now learn this kanji.",
+  'components': ['食','官'],
+  'similar': ['官','棺','舘'],
+  'comments': []
+}, {
+  'id': 93,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'write',
+  'kanji': '図',
+  'story': "Did you know that the ancients used to DRAW their MAPS using a SAKE DIPPER held in their MOUTH.",
+  'comments': []
+}, {
+  'id': 208,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'ことば',
+  'meaning': 'word',
+  'comments': []
+}, {
+  'id': 94,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'write',
+  'kanji': '官',
+  'story': "A cynical view of GOVERNMENT BUREAUCRACY is that it is nothing but a bunch of loud-MOUTHS putting a CROWN on their heads in an act of self-bestowed authority.",
+  'comments': []
+}, {
   'id': 52,
   'type': 'post',
   'subtype': 'revise',
@@ -428,6 +515,85 @@ const articles = [{
   'id': 61,
   'type': 'post',
   'subtype': 'progress-time',
+  'comments': []
+}, {
+  'id': 95,
+  'type': 'post',
+  'subtype': 'learn-kanji',
+  'learntype': 'write',
+  'kanji': '館',
+  'story': "When all the GOVERNMENT BUREAUCRATS go out to EAT they book out an entire BUILDING.",
+  'comments': []
+}, {
+  'id': 53,
+  'type': 'post',
+  'subtype': 'revise',
+  'gametype': 'memory',
+  'list': [['筆', 'brush'], ['鉛', 'えん'], ['関', 'かん'], ['玄関', 'げんかん'], ['図', 'と'], ['館', 'building']],
+  'comments': []
+}, {
+  'id': 209,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'おなじ',
+  'meaning': 'the same',
+  'comments': []
+}, {
+  'id': 142,
+  'type': 'post',
+  'subtype': 'learn-vocab',
+  'vocab': '図書館',
+  'meaning': 'library',
+  'story': "Imagine yourself going into a BUILDING, seeing a giant MAP on the walk, pulling out a marker pen and WRITING all over it. The marker pen squeeks loudly until all the people around you glare at you and tell you to 'Be quiet!' - at which point you realise you're in a LIBRARY. Oops! ",
+  'explanation': "You know all three of the kanji that you need to learn this word. And because you know that the word for 'library' is 'としょかん' you can figure out that one reading for '図' is 'と' and one reading for '書' is 'しょ' and one reading for '館' is 'かん'.",
+  'comments': []
+}, {
+  'id': 544,
+  'type': 'post',
+  'subtype': 'revise',
+  'gametype': 'memory',
+  'list': [['筆', 'ひつ'], ['鉛', 'lead'], ['鉛筆', 'pencil'], ['玄関', 'entrance'], ['玄', 'mysterious'], ['図書館', 'としょかん']],
+  'comments': []
+}, {
+  'id': 533,
+  'type': 'post',
+  'subtype': 'revise',
+  'gametype': 'sentence',
+  'sentence': 'かれはかりた本を図書館にかえすのをわすれることがある。',
+  'meaning': 'He sometimes forgets to take books back to the library.',
+  'kanji': '図書館',
+  'furigana': 'としょかん',
+  'comments': []
+}, {
+  'id': 210,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'じかん',
+  'meaning': 'time, hour',
+  'comments': []
+}, {
+  'id': 211,
+  'type': 'post',
+  'subtype': 'prime',
+  'vocab': 'あいて',
+  'meaning': 'companion, opponent',
+  'comments': []
+}, {
+  'id': 54,
+  'type': 'post',
+  'subtype': 'revise',
+  'gametype': 'sentence',
+  'sentence': 'かのじょは図書館で本を読んでいる。',
+  'meaning': 'She is reading a book in the library.',
+  'kanji': '図書館',
+  'furigana': 'としょかん',
+  'comments': []
+}, {
+  'id': 555,
+  'type': 'post',
+  'subtype': 'revise',
+  'gametype': 'memory',
+  'list': [['玄', 'げん'], ['鉛筆', 'えんぴつ'], ['関', 'gateway'], ['図', 'map'], ['図書館', 'library'], ['館', 'かん']],
   'comments': []
 },
 ];

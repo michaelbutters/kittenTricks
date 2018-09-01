@@ -345,7 +345,8 @@ export class Feed extends React.Component {
           <View rkCardHeader>
             <View>
               <RkText rkType='header4'>Your Progress</RkText>
-              <RkText rkType='primary3'>{'You have been putting in a great effort recently. Keep it up!'}</RkText>
+              <RkText rkType='primary3'>{"You have been putting in a great effort already. You may not have realised it but you have learned 10 completely new kanji today, although with a few radicals. Now that's rapid!"}</RkText>
+              <RkText rkType='primary3'>{"At this rate you would be able to easily achieve your goal of knowing 2,000 kanji in less than 6 months! And with Rapid Kanji only costing $3.99/month, that's less than 2 cents per kanji!"}</RkText>
             </View>
           </View>
           <View rkCardContent>
