@@ -1,5 +1,6 @@
 const articles = [{
   'id': 70,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/rocket01.jpg'),
@@ -9,6 +10,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 71,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/algorithm.png'),
@@ -18,6 +20,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 20,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'きょう',
@@ -25,6 +28,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 21,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'えんぴつ',
@@ -32,6 +36,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 22,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'げんかん',
@@ -39,6 +44,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 23,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'でんしゃ',
@@ -46,6 +52,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 24,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'としょかん',
@@ -53,6 +60,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 72,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/brain01.jpg'),
@@ -62,6 +70,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 73,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/radicals.jpg'),
@@ -71,6 +80,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 30,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -83,6 +93,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 74,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/shodo.jpg'),
@@ -92,6 +103,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 75,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/smiling.jpeg'),
@@ -101,6 +113,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 31,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -113,6 +126,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 76,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/similar.jpg'),
@@ -122,6 +136,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 32,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -134,6 +149,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 77,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/smartphone.jpg'),
@@ -143,6 +159,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 90,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'write',
@@ -151,6 +168,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 910,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'write',
@@ -159,6 +177,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 78,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/randomkanji.png'),
@@ -168,6 +187,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 140,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-vocab',
   'vocab': '鉛筆',
@@ -177,6 +197,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 79,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/randomkanji2.jpg'),
@@ -186,6 +207,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 80,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/progress.jpg'),
@@ -195,11 +217,13 @@ const articles = [{
   'comments': []
 }, {
   'id': 60,
+  'showing': true,
   'type': 'post',
   'subtype': 'progress-percentage',
   'comments': []
 }, {
   'id': 81,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/reading.jpg'),
@@ -209,6 +233,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 50,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'sentence',
@@ -219,6 +244,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 82,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/SpaceRepetition.png'),
@@ -228,6 +254,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 83,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/memorygame.jpg'),
@@ -237,6 +264,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 5111,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'memory',
@@ -244,6 +272,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 84,
+  'showing': true,
   'type': 'post',
   'subtype': 'help',
   'photo': require('../img/rocket2.jpg'),
@@ -252,6 +281,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 35,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -264,6 +294,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 200,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'ねる',
@@ -271,6 +302,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 36,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -283,6 +315,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 201,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': '思う',
@@ -290,6 +323,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 500,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'sentence',
@@ -300,6 +334,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 38,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -312,6 +347,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 202,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'じぶん',
@@ -319,6 +355,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 37,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -330,6 +367,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 203,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'かお',
@@ -337,6 +375,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 39,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -349,6 +388,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 91,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'write',
@@ -357,6 +397,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 92,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'write',
@@ -365,6 +406,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 141,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-vocab',
   'vocab': '玄関',
@@ -374,6 +416,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 51,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'sentence',
@@ -384,6 +427,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 204,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'できる',
@@ -391,6 +435,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 40,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -403,6 +448,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 205,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'せんしゅう',
@@ -410,6 +456,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 41,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -422,6 +469,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 522,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'sentence',
@@ -432,6 +480,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 42,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -444,6 +493,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 206,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'ところ',
@@ -451,6 +501,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 43,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -463,6 +514,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 207,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'かぞく',
@@ -470,6 +522,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 44,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'read',
@@ -482,6 +535,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 93,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'write',
@@ -490,6 +544,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 208,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'ことば',
@@ -497,6 +552,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 94,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'write',
@@ -505,6 +561,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 52,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'kanji': '鉛',
@@ -513,11 +570,13 @@ const articles = [{
   'comments': []
 }, {
   'id': 61,
+  'showing': true,
   'type': 'post',
   'subtype': 'progress-time',
   'comments': []
 }, {
   'id': 95,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-kanji',
   'learntype': 'write',
@@ -526,6 +585,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 53,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'memory',
@@ -533,6 +593,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 209,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'おなじ',
@@ -540,6 +601,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 142,
+  'showing': true,
   'type': 'post',
   'subtype': 'learn-vocab',
   'vocab': '図書館',
@@ -549,6 +611,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 544,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'memory',
@@ -556,6 +619,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 533,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'sentence',
@@ -566,6 +630,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 210,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'じかん',
@@ -573,6 +638,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 211,
+  'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'vocab': 'あいて',
@@ -580,6 +646,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 54,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'sentence',
@@ -590,6 +657,7 @@ const articles = [{
   'comments': []
 }, {
   'id': 555,
+  'showing': true,
   'type': 'post',
   'subtype': 'revise',
   'gametype': 'memory',

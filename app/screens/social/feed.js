@@ -38,12 +38,55 @@ export class Feed extends React.Component {
     super(props);
 
     this.data = data.getArticles('post');
-    this.state = { show_story: false }
+    this.data2 = data.getArticles('post');
+    this.state = {
+      show_story: false,
+      loading: false,
+      data: this.data2,
+      error: null,
+      refreshing: false,
+    };    
   }
 
   _keyExtractor(post, index) {
     return post.id;
   }
+
+  _onItemSelected = (selectedId) => {
+    // console.log("_onItemSelected(" + selectedId + ")" )
+    var array = this.state.data;
+    // console.log(array)
+    // var index = array.indexOf(selectedId)
+    var item = this._findItemById(array, selectedId)
+    var prevShowing = item.showing
+    item.showing = !prevShowing
+    // array.splice(index, 1); 
+    // console.log(array)
+    console.log("item changed showing from " + prevShowing + " to " + item.showing + ". Result: " + item)
+    this.setState({data: array });
+    // console.log("yeah",this.state.data)
+    // this._notifyItemSelected(selectedId);
+  }
+
+  _findItemById(array, id){
+    // console.log("_findItemIndexById(array, " + id + ")")
+    for(let item of array){
+      // console.log("item: " + item)
+      // console.log("subtype: " + item.subtype)
+      if(item.id === id){
+        // console.log("_findItemIndexById(array, " + id + ") found card '" + item.subtype + "'")
+        return item
+      }
+    }
+    // console.log("_findItemIndexById(array, " + id + ") found nothing!")
+    return null
+  }
+
+  // _notifyItemSelected(text) {
+  //   if(this.props.onItemSelected) {
+  //     this.props.onItemSelected(text)
+  //   }
+  // }
 
   _renderItem(info) {
 
@@ -284,6 +327,8 @@ export class Feed extends React.Component {
     }
     else if(info.item.subtype == 'prime'){
 
+      showingStyle = (info.item.showing ? 'largevocab center warning' : '')
+
       explanationWithTooltip = <PopoverTooltip ref='tooltip1'
           buttonComponent={
             <View rkCardContent>
@@ -309,12 +354,12 @@ export class Feed extends React.Component {
             </View>
           </View>
           <View rkCardContent>
-            <RkText rkType='largevocab center warning'>{info.item.vocab}</RkText>
+            <RkText rkType={ showingStyle }>{info.item.vocab}</RkText>
             <RkText rkType='heading4 center'>Meaning</RkText>
             <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
           </View>
           <View rkCardFooter>
-            <YesNoBar/>
+            <YesNoBar onPress={()=>this._onItemSelected(info.item.id)}/>
           </View >
         </RkCard>
     }
@@ -366,7 +411,8 @@ export class Feed extends React.Component {
   render() {
     return (
       <FlatList data={this.data}
-                renderItem={this._renderItem}
+                extraData={this.state}
+                renderItem={this._renderItem.bind(this)}
                 keyExtractor={this._keyExtractor}
                 style={styles.container}/>
     )
