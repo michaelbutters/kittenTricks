@@ -47,7 +47,7 @@ export class OkBar extends RkComponent {
     return (
       <View style={container}>
         <View style={section}>
-          <RkButton rkType='clear' onPress={updateDone}>
+          <RkButton rkType='clear' onPress={(event) => {updateDone(); this.props.onPress(this.props.value)}}>
             <RkText rkType={ (this.state.done ? 'awesome success' : 'awesome hintColor') } style={icon}>{FontAwesome.check}</RkText>
             <RkText rkType={ (this.state.done ? 'success small' : 'info small') }> OK</RkText>
           </RkButton>

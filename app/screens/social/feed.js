@@ -53,45 +53,31 @@ export class Feed extends React.Component {
   }
 
   _onItemSelected = (selectedId) => {
-    // console.log("_onItemSelected(" + selectedId + ")" )
     var array = this.state.data;
-    // console.log(array)
-    // var index = array.indexOf(selectedId)
     var item = this._findItemById(array, selectedId)
     var prevShowing = item.showing
     item.showing = !prevShowing
-    // array.splice(index, 1); 
-    // console.log(array)
-    console.log("item changed showing from " + prevShowing + " to " + item.showing + ". Result: " + item)
+    // console.log("item changed showing from " + prevShowing + " to " + item.showing + ". Result: " + item)
     this.setState({data: array });
     // console.log("yeah",this.state.data)
-    // this._notifyItemSelected(selectedId);
   }
 
   _findItemById(array, id){
-    // console.log("_findItemIndexById(array, " + id + ")")
     for(let item of array){
-      // console.log("item: " + item)
-      // console.log("subtype: " + item.subtype)
       if(item.id === id){
-        // console.log("_findItemIndexById(array, " + id + ") found card '" + item.subtype + "'")
         return item
       }
     }
-    // console.log("_findItemIndexById(array, " + id + ") found nothing!")
     return null
   }
-
-  // _notifyItemSelected(text) {
-  //   if(this.props.onItemSelected) {
-  //     this.props.onItemSelected(text)
-  //   }
-  // }
 
   _renderItem(info) {
 
     let chartBlockStyles = [styles.chartBlock, {backgroundColor: RkTheme.current.colors.control.background}];
     let card;
+
+    showing = info.item.showing
+    showingStyle = (showing ? styles.show : styles.hide)
 
     if(info.item.subtype === 'learn-kanji'){
 
@@ -307,28 +293,34 @@ export class Feed extends React.Component {
     }
     else if(info.item.subtype == 'help'){
 
-      card =         
-      <RkCard style={styles.card}>
-          <View rkCardHeader>
-            <View>
-              <RkText rkType='header4'>{info.item.title}</RkText>
-              <RkText rkType='primary3'>{info.item.header}</RkText>
-            </View>
-          </View>
+      mainContent = <View/>
+      if(showing){
+        mainContent = 
           <View rkCardContent>
             <Image rkCardImg source={info.item.photo}/>
             <RkText> </RkText>
             <RkText rkType='primary3'>{info.item.text}</RkText>
           </View>
+
+      }
+
+      card =         
+        <RkCard style={styles.card}>
+          <View style={ showingStyle }>
+            <View rkCardHeader>
+              <View>
+                <RkText rkType='header4'>{info.item.title}</RkText>
+                { showing ? <RkText rkType='primary3'>{info.item.header}</RkText> : <View/> }
+              </View>
+            </View>
+            { mainContent }
+            </View>
           <View rkCardFooter>
-            <OkBar/>
+            <OkBar onPress={()=>this._onItemSelected(info.item.id)}/>
           </View >
         </RkCard>
     }
     else if(info.item.subtype == 'prime'){
-
-      showing = info.item.showing
-      showingStyle = (showing ? styles.show : styles.hide)
 
       explanationWithTooltip = <PopoverTooltip ref='tooltip1'
           buttonComponent={
