@@ -327,7 +327,8 @@ export class Feed extends React.Component {
     }
     else if(info.item.subtype == 'prime'){
 
-      showingStyle = (info.item.showing ? 'largevocab center warning' : '')
+      showing = info.item.showing
+      showingStyle = (showing ? styles.show : styles.hide)
 
       explanationWithTooltip = <PopoverTooltip ref='tooltip1'
           buttonComponent={
@@ -345,18 +346,26 @@ export class Feed extends React.Component {
           ]}
           />
 
-      card =         
-      <RkCard style={styles.card}>
-          <View rkCardHeader>
-            <View>
-              <RkText rkType='header4'>Prime</RkText>
-              { explanationWithTooltip }
+      mainContent = <View/>
+      if(showing){
+        mainContent = 
+            <View rkCardContent>
+              <RkText rkType='largevocab center warning'>{info.item.vocab}</RkText>
+              <RkText rkType='heading4 center'>Meaning</RkText>
+              <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
             </View>
-          </View>
-          <View rkCardContent>
-            <RkText rkType={ showingStyle }>{info.item.vocab}</RkText>
-            <RkText rkType='heading4 center'>Meaning</RkText>
-            <RkText rkType='primary3 center'>{info.item.meaning}</RkText>
+      }
+
+      card =         
+        <RkCard style={styles.card}>
+          <View style={ showingStyle }>
+            <View rkCardHeader>
+              <View>
+                <RkText rkType='header4'>Prime</RkText>
+                { showing ? explanationWithTooltip : <View/> }
+              </View>
+            </View>
+            { mainContent }
           </View>
           <View rkCardFooter>
             <YesNoBar onPress={()=>this._onItemSelected(info.item.id)}/>
@@ -427,6 +436,9 @@ let styles = RkStyleSheet.create(theme => ({
   },
   card: {
     marginVertical: 8,
+  },
+  hide: {
+    backgroundColor: theme.colors.disabled,
   },
   imageView: {
     justifyContent: 'center',

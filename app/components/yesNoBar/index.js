@@ -68,7 +68,7 @@ export class YesNoBar extends RkComponent {
 
         { this.state.know ? <View/> :
           <View style={section}>
-            <RkButton rkType='clear' onPress={updatedontknow}>
+            <RkButton rkType='clear' onPress={(event) => {updatedontknow(); this.props.onPress(this.props.value)}}>
               <RkText rkType={ (this.state.dontknow ? 'awesome hintColor' : 'awesome hintColor') } style={icon}>{FontAwesome.cross}</RkText>
               <RkText rkType={ (this.state.dontknow ? 'hintColor small' : 'info small') }> { (this.state.dontknow ? 'Dont know it' : ' No, I dont know it') }</RkText>
             </RkButton>
@@ -77,8 +77,7 @@ export class YesNoBar extends RkComponent {
 
         { this.state.dontknow ? <View/> :
           <View style={section}>
-          <RkButton onPress={(event) => {this.props.onPress(this.props.value)}}><RkText>PUSH ME</RkText></RkButton>
-            <RkButton rkType='clear' onPress={updateknow}>
+            <RkButton rkType='clear' onPress={(event) => {updateknow(); this.props.onPress(this.props.value)}}>
               <RkText rkType={ (this.state.know ? 'awesome success' : 'awesome hintColor') } style={icon}>{ (this.state.know ? FontAwesome.check : FontAwesome.plus) }</RkText>
               <RkText rkType={ (this.state.know ? 'success small' : 'info small') }> { (this.state.know ? 'Know it' : 'Yes, I know it') }</RkText>
             </RkButton>
