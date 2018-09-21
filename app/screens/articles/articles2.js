@@ -21,7 +21,7 @@ export class Articles2 extends React.Component {
   constructor(props) {
     super(props);
 
-    this.data = data.getArticles();
+    this.data = data.getArticles('post');
     this.renderItem = this._renderItem.bind(this);
   }
 
