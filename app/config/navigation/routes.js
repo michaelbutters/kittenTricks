@@ -5,9 +5,9 @@ import _ from 'lodash';
 export const MainRoutes = [
   {
     id: 'SocialMenu',
-    title: 'Learn',
-    icon: FontIcons.profile,
-    screen: Screens.SocialMenu,
+    title: 'Version 0.1',
+    icon: FontIcons.dashboard,
+    screen: Screens.Feed,
     children: [
       // {
       //   id: 'ProfileV1',
@@ -45,90 +45,90 @@ export const MainRoutes = [
       //   screen: Screens.Contacts,
       //   children: []
       // },
-      {
-        id: 'Feed',
-        title: 'Learn Now',
-        screen: Screens.Feed,
-        children: []
-      },
+      // {
+      //   id: 'Feed',
+      //   title: 'Learn',
+      //   screen: Screens.Feed,
+      //   children: []
+      // },
     ]
   },
-  {
-    id: 'LoginMenu',
-    title: 'Account',
-    icon: FontIcons.login,
-    screen: Screens.LoginMenu,
-    children: [
-      {
-        id: 'SignUp',
-        title: 'Sign Up',
-        screen: Screens.SignUp,
-        children: []
-      },
-      {
-        id: 'Login1',
-        title: 'Login',
-        screen: Screens.LoginV1,
-        children: []
-      },
+  // {
+  //   id: 'LoginMenu',
+  //   title: 'Account',
+  //   icon: FontIcons.login,
+  //   screen: Screens.LoginMenu,
+  //   children: [
+  //     {
+  //       id: 'SignUp',
+  //       title: 'Sign Up',
+  //       screen: Screens.SignUp,
+  //       children: []
+  //     },
+  //     {
+  //       id: 'Login1',
+  //       title: 'Login',
+  //       screen: Screens.LoginV1,
+  //       children: []
+  //     },
       // {
       //   id: 'Login2',
       //   title: 'Login V2',
       //   screen: Screens.LoginV2,
       //   children: []
       // },
-      {
-        id: 'password',
-        title: 'Password Recovery',
-        screen: Screens.PasswordRecovery,
-        children: []
-      },
-    ]
-  },
-  // {
-  //   id: 'ArticlesMenu',
-  //   title: 'Articles',
-  //   icon: FontIcons.article,
-  //   screen: Screens.ArticleMenu,
-  //   children: [
   //     {
-  //       id: 'Articles1',
-  //       title: 'Article List V1',
-  //       screen: Screens.Articles1,
+  //       id: 'password',
+  //       title: 'Password Recovery',
+  //       screen: Screens.PasswordRecovery,
   //       children: []
   //     },
-  //     {
-  //       id: 'Articles2',
-  //       title: 'Article List V2',
-  //       screen: Screens.Articles2,
-  //       children: []
-  //     },
-  //     {
-  //       id: 'Articles3',
-  //       title: 'Article List V3',
-  //       screen: Screens.Articles3,
-  //       children: []
-  //     },
-  //     {
-  //       id: 'Articles4',
-  //       title: 'Article List V4',
-  //       screen: Screens.Articles4,
-  //       children: []
-  //     },
-  //     {
-  //       id: 'Blogposts',
-  //       title: 'Blogposts',
-  //       screen: Screens.Blogposts,
-  //       children: []
-  //     },
-  //     {
-  //       id: 'Article',
-  //       title: 'Article View',
-  //       screen: Screens.Article,
-  //       children: []
-  //     }
   //   ]
   // },
+  {
+    id: 'ArticlesMenu',
+    title: 'Version 0.2',
+    icon: FontIcons.dashboard,
+    screen: Screens.Articles2,
+    children: [
+      // {
+      //   id: 'Articles1',
+      //   title: 'Article List V1',
+      //   screen: Screens.Articles1,
+      //   children: []
+      // },
+      // {
+      //   id: 'Articles2',
+      //   title: 'Learn',
+      //   screen: Screens.Articles2,
+      //   children: []
+      // },
+      // {
+      //   id: 'Articles3',
+      //   title: 'Article List V3',
+      //   screen: Screens.Articles3,
+      //   children: []
+      // },
+      // {
+      //   id: 'Articles4',
+      //   title: 'Article List V4',
+      //   screen: Screens.Articles4,
+      //   children: []
+      // },
+      // {
+      //   id: 'Blogposts',
+      //   title: 'Blogposts',
+      //   screen: Screens.Blogposts,
+      //   children: []
+      // },
+      // {
+      //   id: 'Article',
+      //   title: 'Article View',
+      //   screen: Screens.Article,
+      //   children: []
+      // }
+    ]
+  },
   // {
   //   id: 'MessagingMenu',
   //   title: 'Messaging',
@@ -249,13 +249,13 @@ export const MainRoutes = [
   //     }
   //   ]
   // },
-  {
-    id: 'Themes',
-    title: 'Theme',
-    icon: FontIcons.theme,
-    screen: Screens.Themes,
-    children: []
-  },
+  // {
+  //   id: 'Themes',
+  //   title: 'Theme',
+  //   icon: FontIcons.theme,
+  //   screen: Screens.Themes,
+  //   children: []
+  // },
 ];
 
 let menuRoutes = _.cloneDeep(MainRoutes);

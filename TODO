@@ -1,6 +1,17 @@
+Improving navigation
+ - Switch over to Article V2 navigation approach, using the existing cards
+ - Replace images with other images (a nice one for each type of card)
+ - The buttons at the bottom of the card navigate the card back
+ - A processed card goes grey, but can still be clicked and changed
+ (ANOTHER DAY - Add the buttons to the bottom of the feed list as well?)
+
+
+
+================================
+
 Must Do:
  * Add Explanation cards for each card type (SRS, Mnemonics)
- - Finalise all data - improve existing and add HEAPS more to get the full infinite scroll effect
+ * Finalise all data - improve existing and add HEAPS more to get the full infinite scroll effect
  * Come up with a contrived set of data that I will take people through as part of the demo - using vocab that everyone (from Tyler up to Tim) but where they are unlikely to know the kanji - to see if they actually enjoy learning some new, difficult kanji. Include those words at the beginning (and assume they will choose Yes). 
 
 Should Do:

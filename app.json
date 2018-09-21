@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Kitten Tricks",
-    "slug": "kitten-tricks",
+    "name": "Rapid Kanji",
+    "slug": "rapid-kanji",
     "githubUrl": "https://github.com/akveo/kittenTricks",
     "sdkVersion": "24.0.0",
     "icon": "./icon.png",
