@@ -15,7 +15,7 @@ let moment = require('moment');
 
 export class Articles2 extends React.Component {
   static navigationOptions = {
-    title: 'Article List'.toUpperCase()
+    title: ''.toUpperCase()
   };
 
   constructor(props) {
@@ -39,12 +39,12 @@ export class Articles2 extends React.Component {
           <Image rkCardImg source={info.item.photo}/>
 
           <View rkCardImgOverlay rkCardContent style={styles.overlay}>
-            <RkText rkType='header4 inverseColor'>{info.item.header}</RkText>
-            <RkText style={styles.time}
-                    rkType='secondary2 inverseColor'>{moment().add(info.item.time, 'seconds').fromNow()}</RkText>
+            <RkText rkType='header4 inverseColor'>{info.item.title}</RkText>
+            { info.item.header ? <RkText rkType='header6 inverseColor'>{info.item.header}</RkText> : <View/> }
+            <RkText style={styles.time} rkType='secondary2 inverseColor'>Takes approximately {info.item.time}</RkText>
           </View>
           <View rkCardFooter>
-            <SocialBar rkType='space' showLabel={true}/>
+            <RkText rkType='space'>Go ></RkText>
           </View >
         </RkCard>
       </TouchableOpacity>
