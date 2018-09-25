@@ -466,7 +466,12 @@ export class Article extends React.Component {
         </RkCard>
     }
 
-    return (<ScrollView style={styles.root}>{ card }</ScrollView>);
+    return (
+        <ScrollView style={styles.root}>{ card }
+          <RkText> </RkText>
+          <RkText> </RkText>
+        </ScrollView>
+      );
   }
 
     // return (

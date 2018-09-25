@@ -4,7 +4,8 @@ import {
   Image,
   ImageBackground,
   View,
-  TouchableOpacity
+  TouchableOpacity,
+  ActivityIndicator
 } from 'react-native';
 import {
   RkText,
@@ -21,15 +22,54 @@ export class Articles2 extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.data = data.getArticles('post');
-    this.state = {
-      viewedItems: [],
-    };
-
     this.renderItem = this._renderItem.bind(this);
     this.registerViewedItem = this.registerViewedItem.bind(this);
     this.isItemViewed = this.isItemViewed.bind(this);
+    this.numCompleteItemsAtStart = this.numCompleteItemsAtStart.bind(this)
+    this.getCurrentWindow = this.getCurrentWindow.bind(this)
+
+    this.totalData = data.getArticles('post');
+    this.state = {
+      totalData: this.totalData,
+      // data: this.totalData.slice(0, 2),
+      viewedItems: [],
+    };
+  }
+
+  componentWillMount() {
+    var data = this.getCurrentWindow(this.state.totalData)
+    this.setState({
+      data: data
+    })    
+  }
+
+
+  getCurrentWindow(totalList){
+    var itemsToDisplay = totalList.slice()
+    // Display the last 3 items and the next 7 items (10 in total)
+    var numCompletesAtStart = this.numCompleteItemsAtStart(itemsToDisplay)
+    if(numCompletesAtStart < 3){
+      return itemsToDisplay.slice(0, numCompletesAtStart+2)
+    }
+    for(var i = 2; i < numCompletesAtStart; i++){
+      // Remove the earliest list item
+      itemsToDisplay.shift()
+    }
+
+    return itemsToDisplay.slice(0, 6)
+  }
+
+  numCompleteItemsAtStart(list){
+    var num = 0;
+    for(let item of list){
+      if(this.isItemViewed(item.id)){
+        num++;
+      }
+      else {
+        break;
+      }
+    }
+    return num;
   }
 
   _keyExtractor(post, index) {
@@ -38,33 +78,24 @@ export class Articles2 extends React.Component {
 
   registerViewedItem(itemId){
     newViewItems = this.state.viewedItems.slice()
-    // console.log("newViewItems from state:\n" + newViewItems)
-    // console.log("Registering viewed item: " + itemId)
     newViewItems.push(itemId)
-    // console.log("newViewItems now:\n" + newViewItems)
-    // console.log("Setting new state.")
-    // console.log("State before: " + this.state.viewedItems)
     setTimeout(() => {
       this.setState(
         { viewedItems: newViewItems }
       )
     }, 1000);
-    // console.log("State after: " + this.state.viewedItems)
+    this.setState({
+      data: this.getCurrentWindow(this.state.totalData)
+    })
     this.props.navigation.navigate('Article', {id: itemId})
   }
 
   isItemViewed(itemId){
-    // console.log("Has item " + itemId + " been viewed already?")
-    // console.log("Checking:\n" + this.state.viewedItems)
     for(let item of this.state.viewedItems){
-      // console.log(item + " (" + item.className + ") === " + itemId + " (" + itemId.className + ") ?")
       if(item === itemId){
-        // console.log(item + " === " + itemId + " (has been viewed).")
-        // console.log("Yes")
         return true
       }
     }
-    // console.log("No")
     return false
   }
 
@@ -102,13 +133,16 @@ export class Articles2 extends React.Component {
 
   render() {
     return (
-      <FlatList
-        data={this.data}
-        extraData={this.state}
-        renderItem={this.renderItem}
-        keyExtractor={this._keyExtractor}
-        style={styles.container}/>
-
+      <View>
+        <FlatList
+          data={this.state.data}
+          extraData={this.state}
+          renderItem={this.renderItem}
+          keyExtractor={this._keyExtractor}
+          ListFooterComponent={<View><ActivityIndicator size="large" color="#999999" animating = {true} /><RkText> </RkText><RkText> </RkText></View>}
+          style={styles.container}/>
+        
+      </View>
     )
   }
 }
@@ -121,6 +155,11 @@ let styles = RkStyleSheet.create(theme => ({
   },
   card: {
     marginVertical: 8,
+  },
+  horizontal: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 10
   },
   time: {
     marginTop: 5
