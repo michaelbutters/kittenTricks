@@ -23,9 +23,22 @@ export class SocialBar extends RkComponent {
 
     this.state = {
       done: false,
-      skip: false
+      skip: false,
+      isSaving: false,
     }
   }
+
+  finishSaving(){
+    setTimeout(() => {
+      this.setState((prevState, props) => {
+        if(prevState.isSaving === true){
+          return {
+            isSaving: false,
+          }
+        }
+      })              
+    }, 1000);
+  }    
 
   render() {
     let {container, section, icon, label} = this.defineStyles();
@@ -33,33 +46,47 @@ export class SocialBar extends RkComponent {
     let updateDone = () => {
       this.setState((prevState, props) => {
         if(prevState.done === false){
-          return {
-            done: true,
-            skip: false,
+          if(prevState.isSaving === false){
+            return {
+              done: true,
+              isSaving: true,
+              skip: false,
+            }
           }
         }
         else {
-          return {
-            done: false,
+          if(prevState.isSaving === false){
+            return {
+              done: false,
+              isSaving: true,
+            }
           }
         }
       });
+      this.finishSaving();
     }    
 
     let updateSkip = () => {
       this.setState((prevState, props) => {
         if(prevState.skip === false){
-          return {
-            skip: true,
-            done: false,
+          if(prevState.isSaving === false){
+            return {
+              skip: true,
+              done: false,
+              isSaving: true,
+            }
           }
         }
         else {
-          return {
-            skip: false,
+          if(prevState.isSaving === false){
+            return {
+              skip: false,
+              isSaving: true,
+            }
           }
         }
       });
+      this.finishSaving();
     }    
 
     return (
@@ -69,7 +96,7 @@ export class SocialBar extends RkComponent {
           <View style={section}>
             <RkButton rkType='clear' onPress={(event) => {updateSkip(); this.props.onPress(this.props.value)}}>
               <RkText rkType={ (this.state.skip ? 'awesome hintColor' : 'awesome hintColor') } style={icon}>{FontAwesome.forward}</RkText>
-              <RkText rkType={ (this.state.skip ? 'hintColor small' : 'info small') }> { (this.state.skip ? 'Skipped' : 'Skip for now') }</RkText>
+              <RkText rkType={ (this.state.skip ? 'hintColor small' : 'info small') }> { (this.state.isSaving ? 'Saving progress...' : (this.state.skip ? 'Skipped' : 'Skip for now')) }</RkText>
             </RkButton>
           </View>
         }
@@ -78,7 +105,7 @@ export class SocialBar extends RkComponent {
           <View style={section}>
             <RkButton rkType='clear' onPress={(event) => {updateDone(); this.props.onPress(this.props.value)}}>
               <RkText rkType={ (this.state.done ? 'awesome success' : 'awesome hintColor') } style={icon}>{FontAwesome.check}</RkText>
-              <RkText rkType={ (this.state.done ? 'success small' : 'info small') }> { (this.state.done ? 'Done' : 'Mark as Done') }</RkText>
+              <RkText rkType={ (this.state.done ? 'success small' : 'info small') }> { (this.state.isSaving ? 'Saving progress...' : (this.state.done ? 'Done' : 'Mark as Done')) }</RkText>
             </RkButton>
           </View>
         }
