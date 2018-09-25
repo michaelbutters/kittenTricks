@@ -52,8 +52,6 @@ export class Article extends React.Component {
   render() {
 
     var card_data = this.data
-    console.log("render(). this.data.subtype: " + this.data.subtype)
-    console.log(this.data)
 
     let chartBlockStyles = [styles.chartBlock, {backgroundColor: RkTheme.current.colors.control.background}];
     let card;

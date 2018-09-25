@@ -109,7 +109,7 @@ export class Articles2 extends React.Component {
         onPress={() => this.registerViewedItem(info.item.id)}>
         <RkCard rkType='imgBlock' style={styles.card}>
           <ImageBackground rkCardImg source={info.item.photo}>
-            <View style={{backgroundColor: (alreadyViewed ? 'rgba(124,252,0,0.7)' : 'rgba(256,256,256,0.0)'), flex: 1}}>
+            <View style={{backgroundColor: (alreadyViewed ? 'rgba(50,205,50,0.5)' : 'rgba(256,256,256,0.0)'), flex: 1}}>
 
               <View rkCardImgOverlay rkCardContent style={styles.overlay}>
                 <RkText rkType={'header4 inverseColor'}>{info.item.title}</RkText>
