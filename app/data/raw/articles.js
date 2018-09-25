@@ -366,6 +366,18 @@ const articles = [{
   'time': '10 seconds',
   'comments': []
 }, {
+  'id': 900,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'friend-shared-progress',
+  'title': "View Your Friends' Recent Activity",
+  'photo': require('../img/cheer.jpg'),
+  'avatar_photos': [require('../img/avatars/Image11.png'), require('../img/avatars/Image10.png'), require('../img/avatars/Image9.png'), require('../img/avatars/Image8.png')],
+  'friends': ['Daniel', 'Melissa', 'Jo', 'Michael'],
+  'learnt': ['高 売 感 寺', '香 釜 此', '肩 加 処 寺', '感 瀬'],
+  'time': '',
+  'comments': []
+}, {
   'id': 36,
   'showing': true,
   'type': 'post',

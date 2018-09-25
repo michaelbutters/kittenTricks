@@ -10,6 +10,7 @@ import {SwitchTypes} from '../components/switch/types';
 import {SocialBarTypes} from '../components/socialBar/types';
 import {RightWrongBarTypes} from '../components/rightWrongBar/types';
 import {YesNoBarTypes} from '../components/yesNoBar/types';
+import {CheerNoBarTypes} from '../components/cheerNoBar/types';
 import {OkBarTypes} from '../components/okBar/types';
 import {MemoryGameTypes} from '../components/memoryGame/types';
 import {SimilarGameTypes} from '../components/similarGame/types';
@@ -66,6 +67,11 @@ export let bootstrap = () => {
 
   RkTheme.setType('RkText', 'largekanji', {
     fontSize: scale(88)
+  });
+
+  RkTheme.setType('RkText', 'smallkanji', {
+    fontSize: scale(22),
+    fontFamily: theme => theme.fonts.family.bold
   });
 
   RkTheme.setType('RkText', 'menuIcon', {
@@ -576,6 +582,7 @@ export let bootstrap = () => {
   RkTheme.registerComponent('SocialBar', SocialBarTypes);
   RkTheme.registerComponent('RightWrongBar', RightWrongBarTypes);
   RkTheme.registerComponent('YesNoBar', YesNoBarTypes);
+  RkTheme.registerComponent('CheerNoBar', CheerNoBarTypes);
   RkTheme.registerComponent('OkBar', OkBarTypes);
   RkTheme.registerComponent('MemoryGame', MemoryGameTypes);
   RkTheme.registerComponent('SimilarGame', SimilarGameTypes);

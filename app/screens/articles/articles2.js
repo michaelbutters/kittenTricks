@@ -11,6 +11,7 @@ import {
   RkText,
   RkCard, RkStyleSheet, RkButton
 } from 'react-native-ui-kitten';
+import {Avatar} from '../../components';
 import {SocialBar} from '../../components';
 import {data} from '../../data';
 let moment = require('moment');
@@ -101,6 +102,15 @@ export class Articles2 extends React.Component {
   _renderItem(info) {
 
     var alreadyViewed = this.isItemViewed(info.item.id)
+    let avatarList = []
+    if(info.item.avatar_photos){
+      var i = 0
+      for(avatar of info.item.avatar_photos){
+        avatarList.push(<Avatar rkType='circle' img={avatar} key={i}/>)
+        i++
+      }
+    }
+
     return (
       <TouchableOpacity
         delayPressIn={70}
@@ -113,7 +123,8 @@ export class Articles2 extends React.Component {
               <View rkCardImgOverlay rkCardContent style={styles.overlay}>
                 <RkText rkType={'header4 inverseColor'}>{info.item.title}</RkText>
                 { info.item.header ? <RkText rkType='header6 inverseColor'>{info.item.header}</RkText> : <View/> }
-                <RkText style={styles.time} rkType='secondary2 inverseColor'>{ alreadyViewed ? '' : 'Takes approximately ' + info.item.time}</RkText>
+                <RkText style={styles.time} rkType='secondary2 inverseColor'>{ (alreadyViewed || info.item.time === '') ? '' : 'Takes approximately ' + info.item.time}</RkText>
+                <View style={{flexWrap: 'wrap', alignItems: 'flex-start', flexDirection:'row'}}>{ avatarList }</View>
               </View>
             </View>
           </ImageBackground>

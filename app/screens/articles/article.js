@@ -16,6 +16,7 @@ import {SocialBar} from '../../components/socialBar';
 import {RightWrongBar} from '../../components/rightWrongBar';
 import PopoverTooltip from 'react-native-popover-tooltip';
 import {YesNoBar} from '../../components/yesNoBar';
+import {CheerNoBar} from '../../components/cheerNoBar';
 import {OkBar} from '../../components/okBar';
 import {MemoryGame} from '../../components/memoryGame';
 import {SentencePractice} from '../../components/sentencePractice';
@@ -402,6 +403,48 @@ export class Article extends React.Component {
             { mainContent }
             <View rkCardFooter>
               <YesNoBar onPress={()=>this._onItemSelected(card_data.id)}/>
+            </View >
+          </View>
+        </RkCard>
+    }
+    else if(card_data.subtype == 'friend-shared-progress'){
+
+      let avatarList = []
+      if(card_data.avatar_photos){
+        var i = 0
+        for(avatar of card_data.avatar_photos){
+          avatarList.push(
+            <View key={i}>
+              <View style={{flexWrap: 'wrap', alignItems: 'flex-start', flexDirection:'row'}}>
+                <Avatar rkType='circle' img={avatar}/>
+                <RkText>{'  '}</RkText>
+                <RkText rkType='secondary4'>{card_data.friends[i]}</RkText>
+                <RkText>{'\t'}</RkText>
+                <RkText rkType='smallkanji warning'>{card_data.learnt[i]}</RkText>
+              </View>
+              <RkText> </RkText>
+            </View>
+          )
+          i++
+        }
+      }
+
+      card =         
+        <RkCard rkType='article' style={styles.card}>
+          <View style={ showingStyle }>
+            <View rkCardHeader>
+              <View>
+                <RkText rkType='header4'>{ "Your friends recently learned these kanji." }</RkText>
+                <RkText rkType='header4'>{ " " }</RkText>
+                <View>{ avatarList }</View>
+                <RkText> </RkText>
+                <View style={{alignItems: 'center'}}>
+                  <Image rkCardImg style={{width: 80, height: 80}} source={require('../../data/img/clapping-emoji.png')}/>
+                </View>
+              </View>
+            </View>
+            <View rkCardFooter>
+              <CheerNoBar onPress={()=>this._onItemSelected(card_data.id)}/>
             </View >
           </View>
         </RkCard>
