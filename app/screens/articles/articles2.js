@@ -79,15 +79,14 @@ export class Articles2 extends React.Component {
             <View style={{backgroundColor: (alreadyViewed ? 'rgba(124,252,0,0.7)' : 'rgba(256,256,256,0.0)'), flex: 1}}>
 
               <View rkCardImgOverlay rkCardContent style={styles.overlay}>
-                { alreadyViewed ? <RkText rkType='header4 inverseColor'>DONE</RkText> : <View/>}
-                <RkText rkType={alreadyViewed ? 'secondary2 inverseColor' : 'header4 inverseColor'}>{info.item.title}</RkText>
-                { alreadyViewed ? <View/> : (info.item.header ? <RkText rkType='header6 inverseColor'>{info.item.header}</RkText> : <View/>) }
-                { alreadyViewed ? <View/> : <RkText style={styles.time} rkType='secondary2 inverseColor'>Takes approximately {info.item.time}</RkText> }
+                <RkText rkType={'header4 inverseColor'}>{info.item.title}</RkText>
+                { info.item.header ? <RkText rkType='header6 inverseColor'>{info.item.header}</RkText> : <View/> }
+                <RkText style={styles.time} rkType='secondary2 inverseColor'>{ alreadyViewed ? '' : 'Takes approximately ' + info.item.time}</RkText>
               </View>
             </View>
           </ImageBackground>
           <View rkCardFooter>
-            { alreadyViewed ? <RkText rkType='space'></RkText> : <RkText rkType='space'>Go ></RkText> }
+            { alreadyViewed ? <RkText rkType='space'>DONE</RkText> : <RkText rkType='space'>Go ></RkText> }
           </View>
         </RkCard>
       </TouchableOpacity>
