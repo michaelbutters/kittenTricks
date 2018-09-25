@@ -43,12 +43,10 @@ export class Article extends React.Component {
   }
 
   _onItemSelected = (selectedId) => {
-    // Navigate back
-    // this.props.navigation.navigate('ArticlesMenu')
-    // this.props.navigation.navigate(this.props.navigation.BACK)
-
-    
-    
+    // Navigate back, after a short delay
+    setTimeout(() => {
+      this.props.navigation.goBack();
+    }, 1500);
   }
 
   render() {

@@ -44,9 +44,11 @@ export class Articles2 extends React.Component {
     // console.log("newViewItems now:\n" + newViewItems)
     // console.log("Setting new state.")
     // console.log("State before: " + this.state.viewedItems)
-    this.setState(
-      { viewedItems: newViewItems }
-    );
+    setTimeout(() => {
+      this.setState(
+        { viewedItems: newViewItems }
+      )
+    }, 1000);
     // console.log("State after: " + this.state.viewedItems)
     this.props.navigation.navigate('Article', {id: itemId})
   }
@@ -102,6 +104,7 @@ export class Articles2 extends React.Component {
     return (
       <FlatList
         data={this.data}
+        extraData={this.state}
         renderItem={this.renderItem}
         keyExtractor={this._keyExtractor}
         style={styles.container}/>
