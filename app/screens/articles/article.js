@@ -367,7 +367,7 @@ export class Article extends React.Component {
       explanationWithTooltip = <PopoverTooltip ref='tooltip1'
           buttonComponent={
             <View rkCardContent>
-              <RkText rkType='primary3'>Help the algorithm work effectively by indicating whether you already know this vocabulary.</RkText>
+              <RkText rkType='primary3'>{ "Help the Rapid Kanji algorithm work effectively by indicating whether you already know that this Japanese word has this English meaning.\n\n(Don't worry about whether or not you know how to write it using kanji)." }</RkText>
               <RkText rkType='primary3 helpLink'> ...More info</RkText>
               <View><RkText> </RkText></View>
             </View>
@@ -395,7 +395,7 @@ export class Article extends React.Component {
           <View style={ showingStyle }>
             <View rkCardHeader>
               <View>
-                <RkText rkType='header4'>Prime</RkText>
+                <RkText rkType='header4'>Do You Know This Vocab?</RkText>
                 { showing ? explanationWithTooltip : <View/> }
               </View>
             </View>
