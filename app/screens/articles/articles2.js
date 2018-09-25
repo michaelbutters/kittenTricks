@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import {
   RkText,
-  RkCard, RkStyleSheet
+  RkCard, RkStyleSheet, RkButton
 } from 'react-native-ui-kitten';
 import {SocialBar} from '../../components';
 import {data} from '../../data';
@@ -86,7 +86,12 @@ export class Articles2 extends React.Component {
             </View>
           </ImageBackground>
           <View rkCardFooter>
-            { alreadyViewed ? <RkText rkType='space'>DONE</RkText> : <RkText rkType='space'>Go ></RkText> }
+            <View style={{justifyContent: 'center', alignItems: 'center', flexDirection: 'row', flex: 1}}>
+              <View style={{justifyContent: 'center', flexDirection: 'row', flex: 1}}>
+                <RkText style={{textAlign: 'center'}} rkType={ (alreadyViewed ? 'success small' : 'info small') }>{ alreadyViewed ? 'COMPLETE ✓' : 'GO →'}</RkText>
+              </View>
+            </View>
+
           </View>
         </RkCard>
       </TouchableOpacity>
