@@ -8,6 +8,7 @@ import {AvatarTypes} from '../components/avatar/types';
 import {GradientButtonTypes} from '../components/gradientButton/types';
 import {SwitchTypes} from '../components/switch/types';
 import {SocialBarTypes} from '../components/socialBar/types';
+import {RightWrongBarTypes} from '../components/rightWrongBar/types';
 import {YesNoBarTypes} from '../components/yesNoBar/types';
 import {OkBarTypes} from '../components/okBar/types';
 import {MemoryGameTypes} from '../components/memoryGame/types';
@@ -573,6 +574,7 @@ export let bootstrap = () => {
   RkTheme.registerComponent('GradientButton', GradientButtonTypes);
   RkTheme.registerComponent('RkSwitch', SwitchTypes);
   RkTheme.registerComponent('SocialBar', SocialBarTypes);
+  RkTheme.registerComponent('RightWrongBar', RightWrongBarTypes);
   RkTheme.registerComponent('YesNoBar', YesNoBarTypes);
   RkTheme.registerComponent('OkBar', OkBarTypes);
   RkTheme.registerComponent('MemoryGame', MemoryGameTypes);

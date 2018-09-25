@@ -24,7 +24,7 @@ export class OkBar extends RkComponent {
     this.state = {
       done: false,
       isSaving: false,
-      text: 'OK'
+      text: 'Continue'
     }
   }
 
@@ -34,7 +34,7 @@ export class OkBar extends RkComponent {
         if(prevState.isSaving === true){
           return {
             isSaving: false,
-            text: 'OK'
+            text: 'Done'
           }
         }
       })              

@@ -9,8 +9,8 @@ import {
 } from 'react-native-ui-kitten';
 import {FontAwesome} from '../../assets/icons';
 
-export class YesNoBar extends RkComponent {
-  componentName = 'YesNoBar';
+export class RightWrongBar extends RkComponent {
+  componentName = 'RightWrongBar';
   typeMapping = {
     container: {},
     section: {},
@@ -22,8 +22,8 @@ export class YesNoBar extends RkComponent {
     super(props);
 
     this.state = {
-      know: false,
-      dontknow: false,
+      done: false,
+      skip: false,
       isSaving: false,
     }
   }
@@ -43,21 +43,21 @@ export class YesNoBar extends RkComponent {
   render() {
     let {container, section, icon, label} = this.defineStyles();
 
-    let updateknow = () => {
+    let updateRight = () => {
       this.setState((prevState, props) => {
-        if(prevState.know === false){
+        if(prevState.done === false){
           if(prevState.isSaving === false){
             return {
-              know: true,
-              dontknow: false,
+              done: true,
               isSaving: true,
+              skip: false,
             }
           }
         }
         else {
           if(prevState.isSaving === false){
             return {
-              know: false,
+              done: false,
               isSaving: true,
             }
           }
@@ -66,13 +66,13 @@ export class YesNoBar extends RkComponent {
       this.finishSaving();
     }    
 
-    let updatedontknow = () => {
+    let updateWrong = () => {
       this.setState((prevState, props) => {
-        if(prevState.dontknow === false){
+        if(prevState.skip === false){
           if(prevState.isSaving === false){
             return {
-              dontknow: true,
-              know: false,
+              skip: true,
+              done: false,
               isSaving: true,
             }
           }
@@ -80,7 +80,7 @@ export class YesNoBar extends RkComponent {
         else {
           if(prevState.isSaving === false){
             return {
-              dontknow: false,
+              skip: false,
               isSaving: true,
             }
           }
@@ -88,25 +88,24 @@ export class YesNoBar extends RkComponent {
       });
       this.finishSaving();
     }    
-
 
     return (
       <View style={container}>
 
-        { (this.state.know || this.state.isSaving) ? <View/> :
+        { (this.state.done || this.state.isSaving) ? <View/> :
           <View style={section}>
-            <RkButton rkType='clear' onPress={(event) => {updatedontknow(); this.props.onPress(this.props.value)}}>
-              <RkText rkType={ (this.state.dontknow ? 'awesome hintColor' : 'awesome hintColor') } style={icon}>{FontAwesome.cross}</RkText>
-              <RkText rkType={ (this.state.dontknow ? 'hintColor small' : 'info small') }> { (this.state.isSaving ? 'Saving progress...' : (this.state.dontknow ? "Don't know it" : " No, I don't know it")) }</RkText>
+            <RkButton rkType='clear' onPress={(event) => {updateWrong(); this.props.onPress(this.props.value)}}>
+              <RkText rkType={ (this.state.skip ? 'awesome hintColor' : 'awesome hintColor') } style={icon}>{FontAwesome.forward}</RkText>
+              <RkText rkType={ (this.state.skip ? 'hintColor small' : 'info small') }> { (this.state.isSaving ? 'Saving progress...' : (this.state.skip ? 'Incorrect' : 'Got It Wrong')) }</RkText>
             </RkButton>
           </View>
         }
 
-        { (this.state.dontknow && !this.state.isSaving) ? <View/> :
+        { (this.state.skip && !this.state.isSaving) ? <View/> :
           <View style={section}>
-            <RkButton rkType='clear' onPress={(event) => {updateknow(); this.props.onPress(this.props.value)}}>
-              <RkText rkType={ (this.state.know ? 'awesome success' : 'awesome hintColor') } style={icon}>{ (this.state.know ? FontAwesome.check : FontAwesome.plus) }</RkText>
-              <RkText rkType={ (this.state.know ? 'success small' : 'info small') }> { (this.state.isSaving ? 'Saving progress...' : (this.state.know ? 'Know it' : 'Yes, I know it')) }</RkText>
+            <RkButton rkType='clear' onPress={(event) => {updateRight(); this.props.onPress(this.props.value)}}>
+              <RkText rkType={ (this.state.done ? 'awesome success' : 'awesome hintColor') } style={icon}>{FontAwesome.check}</RkText>
+              <RkText rkType={ (this.state.done ? 'success small' : 'info small') }> { (this.state.isSaving ? 'Saving progress...' : (this.state.done ? 'Correct' : 'Got It Right')) }</RkText>
             </RkButton>
           </View>
         }

@@ -31,7 +31,6 @@ export class Articles2 extends React.Component {
     this.totalData = data.getArticles('post');
     this.state = {
       totalData: this.totalData,
-      // data: this.totalData.slice(0, 2),
       viewedItems: [],
     };
   }
