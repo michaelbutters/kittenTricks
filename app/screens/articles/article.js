@@ -14,8 +14,6 @@ import {data} from '../../data';
 import {Avatar} from '../../components';
 import {SocialBar} from '../../components';
 import PopoverTooltip from 'react-native-popover-tooltip';
-// import {Avatar} from '../../components/avatar';
-// import {SocialBar} from '../../components/socialBar';
 import {YesNoBar} from '../../components/yesNoBar';
 import {OkBar} from '../../components/okBar';
 import {MemoryGame} from '../../components/memoryGame';
@@ -34,7 +32,7 @@ let moment = require('moment');
 
 export class Article extends React.Component {
   static navigationOptions = {
-    title: 'Article View'.toUpperCase()
+    title: ''.toUpperCase()
   };
 
   constructor(props) {
@@ -42,6 +40,15 @@ export class Article extends React.Component {
     let {params} = this.props.navigation.state;
     let id = params ? params.id : 1;
     this.data = data.getArticle(id);
+  }
+
+  _onItemSelected = (selectedId) => {
+    // Navigate back
+    // this.props.navigation.navigate('ArticlesMenu')
+    // this.props.navigation.navigate(this.props.navigation.BACK)
+
+    
+    
   }
 
   render() {

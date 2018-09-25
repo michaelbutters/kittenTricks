@@ -23,8 +23,23 @@ export class OkBar extends RkComponent {
 
     this.state = {
       done: false,
+      isSaving: false,
+      text: 'OK'
     }
   }
+
+  finishSaving(){
+    setTimeout(() => {
+      this.setState((prevState, props) => {
+        if(prevState.isSaving === true){
+          return {
+            isSaving: false,
+            text: 'OK'
+          }
+        }
+      })              
+    }, 1000);
+  }    
 
   render() {
     let {container, section, icon, label} = this.defineStyles();
@@ -32,24 +47,33 @@ export class OkBar extends RkComponent {
     let updateDone = () => {
       this.setState((prevState, props) => {
         if(prevState.done === false){
-          return {
-            done: true,
+          if(prevState.isSaving === false){
+            return {
+              done: true,
+              isSaving: true,
+              text: 'Saving progress...'
+            }            
           }
         }
         else {
-          return {
-            done: false,
+          if(prevState.isSaving === false){
+            return {
+              done: false,
+              isSaving: true,
+              text: 'Saving progress...'
+            }
           }
         }
       });
-    }    
+      this.finishSaving();
+    }
 
     return (
       <View style={container}>
         <View style={section}>
           <RkButton rkType='clear' onPress={(event) => {updateDone(); this.props.onPress(this.props.value)}}>
             <RkText rkType={ (this.state.done ? 'awesome success' : 'awesome hintColor') } style={icon}>{FontAwesome.check}</RkText>
-            <RkText rkType={ (this.state.done ? 'success small' : 'info small') }> OK</RkText>
+            <RkText rkType={ (this.state.done ? 'success small' : 'info small') }> { this.state.text }</RkText>
           </RkButton>
         </View>
       </View>
