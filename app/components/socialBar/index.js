@@ -96,7 +96,7 @@ export class SocialBar extends RkComponent {
           <View style={section}>
             <RkButton rkType='clear' onPress={(event) => {updateSkip(); this.props.onPress(this.props.value)}}>
               <RkText rkType={ (this.state.skip ? 'awesome hintColor' : 'awesome hintColor') } style={icon}>{FontAwesome.forward}</RkText>
-              <RkText rkType={ (this.state.skip ? 'hintColor small' : 'info small') }> { (this.state.isSaving ? 'Saving progress...' : (this.state.skip ? 'Skipped' : 'Skip for now')) }</RkText>
+              <RkText rkType={ (this.state.skip ? 'hintColor small' : 'info small') }> { (this.state.isSaving ? 'Saving progress...' : (this.state.skip ? 'Already Knew It' : 'I Already Know This')) }</RkText>
             </RkButton>
           </View>
         }
