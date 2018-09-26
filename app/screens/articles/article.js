@@ -19,6 +19,7 @@ import {YesNoBar} from '../../components/yesNoBar';
 import {CheerNoBar} from '../../components/cheerNoBar';
 import {OkBar} from '../../components/okBar';
 import {MemoryGame} from '../../components/memoryGame';
+import {BuilderGame} from '../../components/builderGame';
 import {SentencePractice} from '../../components/sentencePractice';
 import {StoryPractice} from '../../components/storyPractice';
 import {SimilarGame} from '../../components/similarGame';
@@ -272,6 +273,33 @@ export class Article extends React.Component {
             </View >
           </RkCard>
       }
+      else if(card_data.gametype == 'builder'){
+
+        explanation = (showing ? <RkText rkType='primary3'>{'Test yourself on a kanji you learned recently by playing this game.'}</RkText> : <View/>)
+        mainContent = <View/>
+        if(showing){
+          mainContent = 
+            <View rkCardContent>
+              <BuilderGame corrects={card_data.corrects} incorrects={card_data.incorrects} kanji={card_data.kanji} meaning={card_data.meaning} />
+            </View>          
+        }
+
+        card =
+          <RkCard rkType='article' style={styles.card}>
+            <View style={showingStyle}>
+              <View rkCardHeader>
+                <View>
+                  <RkText rkType='header4'>Revise</RkText>
+                  { explanation}
+                </View>
+              </View>
+              { mainContent }
+              <View rkCardFooter>
+                <RightWrongBar onPress={()=>this._onItemSelected(card_data.id)}/>
+              </View >
+            </View >
+          </RkCard>
+      }
       else if(card_data.gametype == 'sentence'){
 
         explanation = (showing ? <RkText rkType='primary3'>{'Can you read this entire sentence and understand what it means?'}</RkText> : <View/>)
@@ -496,7 +524,7 @@ export class Article extends React.Component {
             <View rkCardHeader>
               <View>
                 <RkText rkType='header4'>Your Progress</RkText>
-                { showing ? <RkText rkType='primary3'>{"You have been putting in a great effort already. You may not have realised it but you have learned 10 completely new kanji today, although with a few radicals. Now that's rapid!"}</RkText> : <View/> }
+                { showing ? <RkText rkType='primary3'>{"You have been putting in a great effort already. You may not have realised it but you have learned 10 completely new kanji today, along with a few radicals. Now that's rapid!"}</RkText> : <View/> }
                 { showing ? <RkText rkType='primary3'>{"At this rate you would be able to easily achieve your goal of knowing 2,000 kanji in less than 6 months! And with Rapid Kanji only costing $3.99/month, that's less than 2 cents per kanji!"}</RkText> : <View/> }
               </View>
             </View>

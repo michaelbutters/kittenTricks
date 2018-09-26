@@ -13,6 +13,7 @@ import {YesNoBarTypes} from '../components/yesNoBar/types';
 import {CheerNoBarTypes} from '../components/cheerNoBar/types';
 import {OkBarTypes} from '../components/okBar/types';
 import {MemoryGameTypes} from '../components/memoryGame/types';
+import {BuilderGameTypes} from '../components/builderGame/types';
 import {SimilarGameTypes} from '../components/similarGame/types';
 import {scale, scaleModerate, scaleVertical} from '../utils/scale';
 
@@ -585,6 +586,7 @@ export let bootstrap = () => {
   RkTheme.registerComponent('CheerNoBar', CheerNoBarTypes);
   RkTheme.registerComponent('OkBar', OkBarTypes);
   RkTheme.registerComponent('MemoryGame', MemoryGameTypes);
+  RkTheme.registerComponent('BuilderGame', BuilderGameTypes);
   RkTheme.registerComponent('SimilarGame', SimilarGameTypes);
 
   StatusBar.setBarStyle('dark-content', true);

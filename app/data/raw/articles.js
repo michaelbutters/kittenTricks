@@ -54,28 +54,6 @@ const articles = [{
   'time': '10 seconds',
   'comments': []
 }, {
-  'id': 23,
-  'showing': true,
-  'type': 'post',
-  'subtype': 'prime',
-  'title': 'Indicate Vocab You Already Know',
-  'photo': require('../img/prime.jpeg'),
-  'vocab': 'でんしゃ',
-  'meaning': 'train',
-  'time': '10 seconds',
-  'comments': []
-}, {
-  'id': 24,
-  'showing': true,
-  'type': 'post',
-  'subtype': 'prime',
-  'title': 'Indicate Vocab You Already Know',
-  'photo': require('../img/prime.jpeg'),
-  'vocab': 'としょかん',
-  'meaning': 'library',
-  'time': '10 seconds',
-  'comments': []
-}, {
   'id': 72,
   'showing': true,
   'type': 'post',
@@ -153,6 +131,31 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 23,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'でんしゃ',
+  'meaning': 'train',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 5301,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'builder',
+  'kanji': '鉛',
+  'meaning': 'lead (the metal)',
+  'corrects': ['金', '八', '口'],
+  'incorrects': ['余','全','舍','会','人','回'],
+  'time': '1 minute',
+  'comments': []
+}, {
   'id': 76,
   'showing': true,
   'type': 'post',
@@ -179,6 +182,31 @@ const articles = [{
   'components': ['竹', '聿'],
   'similar': ['書','肇','箒'],
   'time': '2 minutes',
+  'comments': []
+}, {
+  'id': 24,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'としょかん',
+  'meaning': 'library',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 5300,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'builder',
+  'kanji': '筆',
+  'meaning': 'brush',
+  'corrects': ['竹', '聿'],
+  'incorrects': ['冖', '市', '日', '戸', '又', '帯', '書'],
+  'time': '1 minute',
   'comments': []
 }, {
   'id': 77,
@@ -302,7 +330,7 @@ const articles = [{
   'subtype': 'help',
   'photo': require('../img/SpaceRepetition.png'),
   'title': 'Learn How It Works (12 of 13)',
-  'header': "Practise reading",
+  'header': "Spaced Repetition",
   'text': "Rapid Kanji uses a Space Repetition System (SRS) to periodically test your recollection of the things that you learn. You don't have to be an expert on how this works because the Rapid Kanji system will guide you through it effortlessly. But in short:\n\nIn order to move some new knowledge from your short term memory (where you will forget it very quickly) to your long term memory (where you will be able to recall it forever) SRS prompts you to recall the information at progressively increasing intervals. For example, after learning a new kanji using a story, you will be tested again after a couple of minutes, then again in about 5 minutes, and then again about 10 minutes later. You might then be tested the next day and if you recall it correctly each time you will then be prompted to recall it in a few days' time. This will continue to 10 days, then 1 month, then a few months and so on.\n\nAt any point if you aren't able to recall the new kanji and you have to look at the answer for example, the length of the intervals will shorten again until you become more comfortable with that kanji.\n\nAgain, you don't have to worry about this or remember to revise things - you just have to spend time on this Rapid Kanji app and follow each section that pops up and without fully realizing it, you'll be gaining in kanji proficiency at a truly rapid pace.",
   'time': '1 minute',
   'comments': []
@@ -435,6 +463,42 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 212,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'たいいく',
+  'meaning': 'physical education',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 213,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'おんがく',
+  'meaning': 'music',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 5302,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'builder',
+  'kanji': '玄',
+  'meaning': 'mysterious',
+  'corrects': ['亠','幺'],
+  'incorrects': ['一','会','ム','系','宀','係','二'],
+  'time': '1 minute',
+  'comments': []
+}, {
   'id': 202,
   'showing': true,
   'type': 'post',
@@ -487,6 +551,42 @@ const articles = [{
   'components': ['門','䒑','大'],
   'similar': ['開','闇','閑','閏','閃'],
   'time': '2 minutes',
+  'comments': []
+}, {
+  'id': 214,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'こうちょう',
+  'meaning': 'principal',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 215,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'せいふく',
+  'meaning': 'school uniform',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 5303,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'builder',
+  'kanji': '関',
+  'meaning': 'gateway, connection',
+  'corrects': ['門','䒑','大'],
+  'incorrects': ['間','人','一','二','問','口'],
+  'time': '1 minute',
   'comments': []
 }, {
   'id': 91,
@@ -625,6 +725,42 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 216,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'いす',
+  'meaning': 'chair',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 217,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'こうざ',
+  'meaning': 'bank account',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 5304,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'builder',
+  'kanji': '図',
+  'meaning': 'map, drawing, plan',
+  'corrects': ['囗', '斗'],
+  'incorrects': ['料','科','品','目','団','困','囲'],
+  'time': '1 minute',
+  'comments': []
+}, {
   'id': 206,
   'showing': true,
   'type': 'post',
@@ -652,6 +788,42 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 218,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'ばんごう',
+  'meaning': 'number',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 219,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'げんきん',
+  'meaning': 'cash',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 5305,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'builder',
+  'kanji': '官',
+  'meaning': 'government service, bureaucracy',
+  'corrects': ['宀','口'],
+  'incorrects': ['䒑','八','図','品','呂','目','⼍'],
+  'time': '1 minute',
+  'comments': []
+}, {
   'id': 207,
   'showing': true,
   'type': 'post',
@@ -677,6 +849,42 @@ const articles = [{
   'components': ['食','官'],
   'similar': ['官','棺','舘'],
   'time': '2 minutes',
+  'comments': []
+}, {
+  'id': 220,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'ざんだか',
+  'meaning': 'account balance',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 221,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'prime',
+  'title': 'Indicate Vocab You Already Know',
+  'photo': require('../img/prime.jpeg'),
+  'vocab': 'きもの',
+  'meaning': 'kimono',
+  'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 5306,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'builder',
+  'kanji': '館',
+  'meaning': 'building',
+  'corrects': ['食','官'],
+  'incorrects': ['呂','余','合','喰','良','宀','口'],
+  'time': '1 minute',
   'comments': []
 }, {
   'id': 93,
@@ -747,15 +955,17 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
-  'id': 53,
+  'id': 142,
   'showing': true,
   'type': 'post',
-  'subtype': 'revise',
-  'title': "Revise What You've Learned",
-  'photo': require('../img/quiz.jpg'),
-  'gametype': 'memory',
-  'list': [['筆', 'brush'], ['鉛', 'えん'], ['関', 'かん'], ['玄関', 'げんかん'], ['図', 'と'], ['館', 'building']],
-  'time': '2 minutes',
+  'subtype': 'learn-vocab',
+  'title': 'Learn How To Pronounce Kanji',
+  'photo': require('../img/read_book.jpg'),
+  'vocab': '図書館',
+  'meaning': 'library',
+  'story': "Imagine yourself going into a BUILDING, seeing a giant MAP on the walk, pulling out a marker pen and WRITING all over it. The marker pen squeeks loudly until all the people around you glare at you and tell you to 'Be quiet!' - at which point you realise you're in a LIBRARY. Oops! ",
+  'explanation': "You know all three of the kanji that you need to learn this word. And because you know that the word for 'library' is 'としょかん' you can figure out that one reading for '図' is 'と' and one reading for '書' is 'しょ' and one reading for '館' is 'かん'.",
+  'time': '1 minute',
   'comments': []
 }, {
   'id': 209,
@@ -769,17 +979,15 @@ const articles = [{
   'time': '10 seconds',
   'comments': []
 }, {
-  'id': 142,
+  'id': 53,
   'showing': true,
   'type': 'post',
-  'subtype': 'learn-vocab',
-  'title': 'Learn How To Pronounce Kanji',
-  'photo': require('../img/read_book.jpg'),
-  'vocab': '図書館',
-  'meaning': 'library',
-  'story': "Imagine yourself going into a BUILDING, seeing a giant MAP on the walk, pulling out a marker pen and WRITING all over it. The marker pen squeeks loudly until all the people around you glare at you and tell you to 'Be quiet!' - at which point you realise you're in a LIBRARY. Oops! ",
-  'explanation': "You know all three of the kanji that you need to learn this word. And because you know that the word for 'library' is 'としょかん' you can figure out that one reading for '図' is 'と' and one reading for '書' is 'しょ' and one reading for '館' is 'かん'.",
-  'time': '1 minute',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'memory',
+  'list': [['筆', 'brush'], ['鉛', 'えん'], ['関', 'かん'], ['玄関', 'げんかん'], ['図', 'と'], ['館', 'building']],
+  'time': '2 minutes',
   'comments': []
 }, {
   'id': 544,
