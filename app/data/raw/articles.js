@@ -174,7 +174,6 @@ const articles = [{
   'title': 'Learn a New Kanji',
   'photo': require('../img/connections.jpg'),
   'learntype': 'read',
-  // 'image': require('../img/brush_anim.gif'), // poor quality image
   'kanji': '筆',
   'meaning': 'writing brush',
   'story': "It's a bit difficult to write with a big BRUSH so we've made the bristles from BAMBOO so that they're more stiff.",
@@ -203,7 +202,7 @@ const articles = [{
   'photo': require('../img/quiz.jpg'),
   'gametype': 'builder',
   'kanji': '筆',
-  'meaning': 'brush',
+  'meaning': 'writing brush',
   'corrects': ['竹', '聿'],
   'incorrects': ['冖', '市', '日', '戸', '又', '帯', '書'],
   'time': '1 minute',
@@ -367,6 +366,47 @@ const articles = [{
   'time': '1 minute',
   'comments': []
 }, {
+  'id': 600,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'other-word',
+  'meaning': "unleaded (gasoline, petrol)",
+  'kanji': "無鉛",
+  'furigana': "むえん",
+  'time': '30 seconds',
+  'comments': []
+}, {
+  'id': 601,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'other-word',
+  'meaning': "writer, author",
+  'kanji': "筆者",
+  'furigana': "ひっしゃ",
+  'time': '30 seconds',
+  'comments': []
+
+}, {
+  'id': 602,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'other-word',
+  'meaning': "editor-in-chief",
+  'kanji': "主筆",
+  'furigana': "しゅひつ",
+  'time': '30 seconds',
+  'comments': []
+
+}, {
   'id': 35,
   'showing': true,
   'type': 'post',
@@ -383,14 +423,28 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 545,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': '無鉛レギュラーを十ドルぶん入れてください。',
+  'meaning': 'Please put in $10 worth of unleaded petrol.',
+  'kanji': '無鉛',
+  'furigana': 'むえん',
+  'time': '20 seconds',
+  'comments': []
+}, {
   'id': 200,
   'showing': true,
   'type': 'post',
   'subtype': 'prime',
   'title': 'Indicate Vocab You Already Know',
   'photo': require('../img/prime.jpeg'),
-  'vocab': 'ねる',
-  'meaning': 'to sleep',
+  'vocab': 'かんさい',
+  'meaning': 'Kansai region (consisting of Osaka, Kobe, Kyoto and surrounding prefectures).',
   'time': '10 seconds',
   'comments': []
 }, {
@@ -510,6 +564,20 @@ const articles = [{
   'time': '10 seconds',
   'comments': []
 }, {
+  'id': 546,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': '筆者が言っていることをりかいできますか。',
+  'meaning': 'Do you understand what the author is saying?',
+  'kanji': '筆者',
+  'furigana': 'ひっしゃ',
+  'time': '20 seconds',
+  'comments': []
+}, {
   'id': 37,
   'showing': true,
   'type': 'post',
@@ -534,6 +602,20 @@ const articles = [{
   'vocab': 'かお',
   'meaning': 'face',
   'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 547,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': 'そのしんぶんは新しい主筆のプロフィールをのせた。',
+  'meaning': 'The newspaper published a profile on the new editor-in-chief',
+  'kanji': '主筆',
+  'furigana': 'しゅひつ',
+  'time': '20 seconds',
   'comments': []
 }, {
   'id': 39,
@@ -651,6 +733,19 @@ const articles = [{
   'time': '10 seconds',
   'comments': []
 }, {
+  'id': 603,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'other-word',
+  'meaning': "entrance, front door",
+  'kanji': "玄関口",
+  'furigana': "げんかんぐち",
+  'time': '30 seconds',
+  'comments': []
+}, {
   'id': 40,
   'showing': true,
   'type': 'post',
@@ -659,12 +754,37 @@ const articles = [{
   'photo': require('../img/connections.jpg'),
   'learntype': 'read',
   'kanji': '斗',
-  // 'image': require('../img/sun_anim.gif'),
   'meaning': 'sake dipper',
   'story': "This represents a DIPPER used to scoop SAKE (Japanese rice wine). It doesn't seem to hold much though - there are only two drops in it. And no wonder! Since it's design means the sake will just run off the side.",
   'explanation': "This is a simple kanji that doesn't break down any further and is simple enough to just learn on its own.",
   'components': [],
   'time': '2 minutes',
+  'comments': []
+}, {
+  'id': 604,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'other-word',
+  'meaning': "concern, interest",
+  'kanji': "関心",
+  'furigana': "かんしん",
+  'time': '30 seconds',
+  'comments': []
+}, {
+  'id': 605,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'other-word',
+  'meaning': "Kansai region, consisting of Osaka, Kobe, Kyoto and surrounding prefectures",
+  'kanji': "関西",
+  'furigana': "かんさい",
+  'time': '30 seconds',
   'comments': []
 }, {
   'id': 205,
@@ -745,6 +865,20 @@ const articles = [{
   'vocab': 'こうざ',
   'meaning': 'bank account',
   'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 548,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': '私はびじゅつにひじょうな関心をいだいています。',
+  'meaning': 'I am deeply interested in art.',
+  'kanji': '関心',
+  'furigana': 'かんしん',
+  'time': '20 seconds',
   'comments': []
 }, {
   'id': 5304,
@@ -833,6 +967,20 @@ const articles = [{
   'vocab': 'かぞく',
   'meaning': 'family',
   'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 549,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': 'そのひこうきはいまごろは関西くうこうにとうぜんついているはずだ。',
+  'meaning': 'The plane should have arrived at Kansai airport.',
+  'kanji': '関西',
+  'furigana': 'かんさい',
+  'time': '20 seconds',
   'comments': []
 }, {
   'id': 44,
@@ -988,6 +1136,32 @@ const articles = [{
   'gametype': 'memory',
   'list': [['筆', 'brush'], ['鉛', 'えん'], ['関', 'かん'], ['玄関', 'げんかん'], ['図', 'と'], ['館', 'building']],
   'time': '2 minutes',
+  'comments': []
+}, {
+  'id': 606,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'other-word',
+  'meaning': "main building",
+  'kanji': "本館",
+  'furigana': "ほんかん",
+  'time': '30 seconds',
+  'comments': []
+}, {
+  'id': 607,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'other-word',
+  'meaning': "closure (of a library, museum, etc)",
+  'kanji': "休館",
+  'furigana': "きゅうかん",
+  'time': '30 seconds',
   'comments': []
 }, {
   'id': 544,

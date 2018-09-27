@@ -21,6 +21,7 @@ import {OkBar} from '../../components/okBar';
 import {MemoryGame} from '../../components/memoryGame';
 import {BuilderGame} from '../../components/builderGame';
 import {SentencePractice} from '../../components/sentencePractice';
+import {OtherWordPractice} from '../../components/otherWordPractice';
 import {StoryPractice} from '../../components/storyPractice';
 import {SimilarGame} from '../../components/similarGame';
 import {FontAwesome} from '../../assets/icons';
@@ -329,6 +330,36 @@ export class Article extends React.Component {
           </RkCard>
 
       }
+      else if(card_data.gametype == 'other-word'){
+
+        explanation = (showing ? <RkText rkType='primary3'>{"Revise these kanji that you've learned by trying to guess the reading and meaning of this brand new word.\n\nDon't panic. You may have never seen this word before, and you certainly haven't learned this word. But, did you realise that you have learned all of the kanji that make up this word and you know the reading for each of the kanji that are used in this word. So take your time and see if you can guess. If you get it wrong, it's no biggie.\n\nBut this is good practice for when you come across new words using kanji that you've learned when you are reading books, a newspaper or whatever. And this is how you will learn new vocabulary easily in your every day reading.\n\nTry and guess the both the reading and the meaning."}</RkText> : <View/>)
+
+        mainContent = <View/>
+        if(showing){
+          mainContent = 
+              <View rkCardContent>
+                <OtherWordPractice kanji={card_data.kanji} furigana={card_data.furigana} meaning={card_data.meaning} />
+              </View>
+        }
+
+        card =         
+          <RkCard rkType='article' style={styles.card}>
+            <View style={showingStyle}>
+              <View rkCardHeader>
+                <View>
+                  <RkText rkType='header4'>Guess The New Word</RkText>
+                  <RkText> </RkText>
+                  { explanation }
+                </View>
+              </View>
+              { mainContent }
+              <View rkCardFooter>
+                <RightWrongBar onPress={()=>this._onItemSelected(card_data.id)}/>
+              </View >
+            </View >
+          </RkCard>
+
+      }
       else if(card_data.gametype == 'similar'){
 
         explanation = (showing ? <RkText rkType='primary3'>{'Test your knowledge of this kanji. Based on your knowledge of the meaning of this kanji, determine the words that use this kanji vs. the words that use other similar-looking kanji.'}</RkText> : <View/>)
@@ -524,7 +555,7 @@ export class Article extends React.Component {
             <View rkCardHeader>
               <View>
                 <RkText rkType='header4'>Your Progress</RkText>
-                { showing ? <RkText rkType='primary3'>{"You have been putting in a great effort already. You may not have realised it but you have learned 10 completely new kanji today, along with a few radicals. Now that's rapid!"}</RkText> : <View/> }
+                { showing ? <RkText rkType='primary3'>{"You have been putting in a great effort already. You may not have realised it but you have learned 9 completely new kanji today, along with a few radicals. Now that's rapid!"}</RkText> : <View/> }
                 { showing ? <RkText rkType='primary3'>{"At this rate you would be able to easily achieve your goal of knowing 2,000 kanji in less than 6 months! And with Rapid Kanji only costing $3.99/month, that's less than 2 cents per kanji!"}</RkText> : <View/> }
               </View>
             </View>
