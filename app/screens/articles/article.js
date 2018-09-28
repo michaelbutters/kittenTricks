@@ -20,6 +20,7 @@ import {CheerNoBar} from '../../components/cheerNoBar';
 import {OkBar} from '../../components/okBar';
 import {MemoryGame} from '../../components/memoryGame';
 import {BuilderGame} from '../../components/builderGame';
+import {BlankGame} from '../../components/blankGame';
 import {SentencePractice} from '../../components/sentencePractice';
 import {OtherWordPractice} from '../../components/otherWordPractice';
 import {StoryPractice} from '../../components/storyPractice';
@@ -291,6 +292,33 @@ export class Article extends React.Component {
               <View rkCardHeader>
                 <View>
                   <RkText rkType='header4'>Revise</RkText>
+                  { explanation}
+                </View>
+              </View>
+              { mainContent }
+              <View rkCardFooter>
+                <RightWrongBar onPress={()=>this._onItemSelected(card_data.id)}/>
+              </View >
+            </View >
+          </RkCard>
+      }
+      else if(card_data.gametype == 'blanks'){
+
+        explanation = (showing ? <View><RkText> </RkText><RkText rkType='primary3'>{'Test how well you remember the kanji story you just learned by playing this game.'}</RkText></View> : <View/>)
+        mainContent = <View/>
+        if(showing){
+          mainContent = 
+            <View rkCardContent>
+              <BlankGame story={card_data.story} corrects={card_data.corrects} incorrects={card_data.incorrects} kanji={card_data.kanji} meaning={card_data.meaning} />
+            </View>          
+        }
+
+        card =
+          <RkCard rkType='article' style={styles.card}>
+            <View style={showingStyle}>
+              <View rkCardHeader>
+                <View>
+                  <RkText rkType='header4'>Revise Story</RkText>
                   { explanation}
                 </View>
               </View>

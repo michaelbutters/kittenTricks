@@ -131,6 +131,21 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 15301,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'blanks',
+  'kanji': '鉛',
+  'meaning': 'lead (the metal)',
+  'story': "It's not commonly known that if you put ______ in your ______ and chew it ______ times, it will turn into ______. ",
+  'corrects': ['金', '八', '口'],
+  'incorrects': ['余','全','舍','会','人','回'],
+  'time': '1 minute',
+  'comments': []
+}, {
   'id': 23,
   'showing': true,
   'type': 'post',
@@ -181,6 +196,21 @@ const articles = [{
   'components': ['竹', '聿'],
   'similar': ['書','肇','箒'],
   'time': '2 minutes',
+  'comments': []
+}, {
+  'id': 15300,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'blanks',
+  'kanji': '筆',
+  'story': "It's a bit difficult to write with a big _____ so we've made the bristles from _____ so that they're more stiff.",
+  'meaning': 'writing brush',
+  'corrects': ['竹', '聿'],
+  'incorrects': ['冖', '市', '日', '戸', '又', '帯', '書'],
+  'time': '1 minute',
   'comments': []
 }, {
   'id': 24,
@@ -517,6 +547,21 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 15302,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'blanks',
+  'kanji': '玄',
+  'story': "You walk past a person who is looking very _____ using a _____ to cover something. When you yank it away, you can see a _____. Weird!",
+  'meaning': 'mysterious',
+  'corrects': ['亠','幺'],
+  'incorrects': ['一','会','ム','系','宀','係','二'],
+  'time': '1 minute',
+  'comments': []
+}, {
   'id': 212,
   'showing': true,
   'type': 'post',
@@ -633,6 +678,21 @@ const articles = [{
   'components': ['門','䒑','大'],
   'similar': ['開','闇','閑','閏','閃'],
   'time': '2 minutes',
+  'comments': []
+}, {
+  'id': 15303,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'blanks',
+  'kanji': '関',
+  'story': "You come up to the _____ of a city but because you're wearing _____ on your head you can't fit because you're too _____. So you have to go through another nearby _____.",
+  'meaning': 'gateway, connection',
+  'corrects': ['門','䒑','大'],
+  'incorrects': ['間','人','一','二','問','口'],
+  'time': '1 minute',
   'comments': []
 }, {
   'id': 214,
@@ -845,6 +905,21 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 15304,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'blanks',
+  'kanji': '図',
+  'story': "Did you know that the ancients used to _____ their _____ using a _____ held in their _____.",
+  'meaning': 'map, drawing, plan',
+  'corrects': ['囗', '斗'],
+  'incorrects': ['料','科','品','目','団','困','囲'],
+  'time': '1 minute',
+  'comments': []
+}, {
   'id': 216,
   'showing': true,
   'type': 'post',
@@ -922,6 +997,21 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 15305,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'blanks',
+  'kanji': '官',
+  'story': "A cynical view of _____ is that it is nothing but a bunch of _____ putting a _____ on their heads in an act of self-bestowed authority.",
+  'meaning': 'government service, bureaucracy',
+  'corrects': ['宀','口'],
+  'incorrects': ['䒑','八','図','品','呂','目','⼍'],
+  'time': '1 minute',
+  'comments': []
+}, {
   'id': 218,
   'showing': true,
   'type': 'post',
@@ -997,6 +1087,21 @@ const articles = [{
   'components': ['食','官'],
   'similar': ['官','棺','舘'],
   'time': '2 minutes',
+  'comments': []
+}, {
+  'id': 15306,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'blanks',
+  'kanji': '館',
+  'story': "When all the _____ go out to _____ they book out an entire _____.",
+  'meaning': 'building',
+  'corrects': ['食','官'],
+  'incorrects': ['呂','余','合','喰','良','宀','口'],
+  'time': '1 minute',
   'comments': []
 }, {
   'id': 220,
