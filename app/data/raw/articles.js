@@ -364,6 +364,20 @@ const articles = [{
   'time': '1 minute',
   'comments': []
 }, {
+  'id': 550,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': 'ペンか鉛筆をもっていますか。',
+  'meaning': 'Do you have a pen or pencil?',
+  'kanji': '鉛筆',
+  'furigana': 'えんぴつ',
+  'time': '20 seconds',
+  'comments': []
+}, {
   'id': 83,
   'showing': true,
   'type': 'post',
@@ -638,6 +652,20 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 559,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': '無線レギュラーをまんタンにしてください。',
+  'meaning': 'Please fill it up with unleaded.',
+  'kanji': '無線',
+  'furigana': 'むえん',
+  'time': '20 seconds',
+  'comments': []
+}, {
   'id': 203,
   'showing': true,
   'type': 'post',
@@ -793,6 +821,20 @@ const articles = [{
   'time': '10 seconds',
   'comments': []
 }, {
+  'id': 553,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': 'かれは玄関のちかくでいっぴきの犬を見た。',
+  'meaning': 'He saw a dog near the entrance way.',
+  'kanji': '玄関',
+  'furigana': 'げんかん',
+  'time': '20 seconds',
+  'comments': []
+}, {
   'id': 603,
   'showing': true,
   'type': 'post',
@@ -821,6 +863,20 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 560,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': 'この本で筆者は日本をアメリカとくらべている。',
+  'meaning': 'In this book the author compares Japan with America.',
+  'kanji': '筆者',
+  'furigana': 'ひっしゃ',
+  'time': '20 seconds',
+  'comments': []
+}, {
   'id': 604,
   'showing': true,
   'type': 'post',
@@ -832,6 +888,20 @@ const articles = [{
   'kanji': "関心",
   'furigana': "かんしん",
   'time': '30 seconds',
+  'comments': []
+}, {
+  'id': 554,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': 'ちょうど出かけてみようとしていたところに玄関のベルがなった。',
+  'meaning': 'I was just about to leave when the door bell rang.',
+  'kanji': '玄関',
+  'furigana': 'げんかん',
+  'time': '20 seconds',
   'comments': []
 }, {
   'id': 605,
@@ -1152,6 +1222,20 @@ const articles = [{
   'time': '2 minutes',
   'comments': []
 }, {
+  'id': 551,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': '鉛筆でなまえを書いてください。',
+  'meaning': 'Please write your name in pencil.',
+  'kanji': '鉛筆',
+  'furigana': 'えんぴつ',
+  'time': '20 seconds',
+  'comments': []
+}, {
   'id': 208,
   'showing': true,
   'type': 'post',
@@ -1161,6 +1245,20 @@ const articles = [{
   'vocab': 'ことば',
   'meaning': 'word',
   'time': '10 seconds',
+  'comments': []
+}, {
+  'id': 554,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': 'ちょうど出かけてみようとしていたところに玄関のベルがなった。',
+  'meaning': 'I was just about to leave when the door bell rang.',
+  'kanji': '玄関',
+  'furigana': 'げんかん',
+  'time': '20 seconds',
   'comments': []
 }, {
   'id': 94,
@@ -1185,6 +1283,20 @@ const articles = [{
   'gametype': 'similar',
   'list': [['漁船','ぎょせん','fishing boat', false],['鉛毒','えんどく','lead poisoning', true],['鉛筆','えんぴつ','pencil', true],['船員','せんいん','sailor', false],['亜鉛','あえん','zinc', true],['船体','せんたい','ship’s hull', false],['鉛管','えんかん','lead pipe', true],['沿線','えんせん','along railway line', false],['色鉛筆','いろえんぴつ','colored pencil', true],['沿路','えんろ','route', false],['鉛板','えんばん','lead plate', true]],
   'time': '1 minute',
+  'comments': []
+}, {
+  'id': 556,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': '私たちの学校はりっぱな図書館があります。',
+  'meaning': 'Our school has a magnificent library.',
+  'kanji': '図書館',
+  'furigana': 'としょかん',
+  'time': '20 seconds',
   'comments': []
 }, {
   'id': 61,
@@ -1256,6 +1368,20 @@ const articles = [{
   'time': '30 seconds',
   'comments': []
 }, {
+  'id': 557,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': '私がかれを見たとき、かれは図書館にすわっていました。',
+  'meaning': 'He was sitting in the library when I saw him.',
+  'kanji': '図書館',
+  'furigana': 'としょかん',
+  'time': '20 seconds',
+  'comments': []
+}, {
   'id': 607,
   'showing': true,
   'type': 'post',
@@ -1316,6 +1442,48 @@ const articles = [{
   'time': '10 seconds',
   'comments': []
 }, {
+  'id': 558,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': '私はぜんぜん図書館には行かない。',
+  'meaning': 'I never go to the library.',
+  'kanji': '図書館',
+  'furigana': 'としょかん',
+  'time': '20 seconds',
+  'comments': []
+}, {
+  'id': 552,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': 'すみません、あなたの鉛筆をつかってもいいですか。',
+  'meaning': 'Excuse me but may I use your pencil?',
+  'kanji': '鉛筆',
+  'furigana': 'えんぴつ',
+  'time': '20 seconds',
+  'comments': []
+}, {
+  'id': 555,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': 'かのじょは玄関のかぎをかけないままにしていた。',
+  'meaning': 'She left the front door unlocked.',
+  'kanji': '玄関',
+  'furigana': 'げんかん',
+  'time': '20 seconds',
+  'comments': []
+}, {
   'id': 54,
   'showing': true,
   'type': 'post',
@@ -1339,6 +1507,20 @@ const articles = [{
   'gametype': 'memory',
   'list': [['玄', 'げん'], ['鉛筆', 'えんぴつ'], ['関', 'gateway'], ['図', 'map'], ['図書館', 'library'], ['館', 'かん']],
   'time': '2 minutes',
+  'comments': []
+}, {
+  'id': 561,
+  'showing': true,
+  'type': 'post',
+  'subtype': 'revise',
+  'title': "Revise What You've Learned",
+  'photo': require('../img/quiz.jpg'),
+  'gametype': 'sentence',
+  'sentence': '私はほかの人のいけんには無関心です。',
+  'meaning': "I don't care about other people's opinions.",
+  'kanji': '無関心',
+  'furigana': 'むかんしん',
+  'time': '20 seconds',
   'comments': []
 },
 ];
