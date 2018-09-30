@@ -5,6 +5,19 @@ Improving navigation
 
 ================================
 
+
+Each kanji has:
+ - Initial Story
+ - Blank Game (select missing keywords - components and meaning)
+ - Write the whole story
+ - Builder Game (build a kanji by its components)
+ - Memory Game (match kanji/meaning or vocab/reading/meaning combos)
+ - 5 x practice sentences for each vocab (not kanji)
+ - Tick and cross game (just for one of the kanji)
+ - Test reading of kanji found in different words with the same reading
+
+
+
 Must Do:
  * Add Explanation cards for each card type (SRS, Mnemonics)
  * Finalise all data - improve existing and add HEAPS more to get the full infinite scroll effect

@@ -36,22 +36,26 @@ export class SentencePractice extends React.Component {
        });
      }
 
-    var display_sentence = ( this.state.show_furigana ? this.state.alt_sentence : this.state.default_sentence )
+    var default_sentence = this.state.default_sentence
+    var display_sentence = ( this.state.show_furigana ? this.state.alt_sentence : ' ' )
     var display_meaning = ( this.state.show_furigana ? this.state.meaning : ' ' )
 
     return (
-      <View style={styles.container}>
+      <View>
         <View>
-          <RkText rkType='primary1'>{ display_sentence }</RkText>
-          <RkText rkType='primary1'>{ display_meaning }</RkText>
+          <RkText rkType='primary1 center warning'>{ default_sentence }</RkText>
+          <RkText rkType='primary1 center'> </RkText>
+          <View>
+            <RkButton rkType='clear center' onPress={toggleShowFurigana}>
+              <RkText rkType={ (this.state.skip ? 'hintColor small center' : 'info small center') }> { (this.state.show_furigana ? 'Hide Answer' : 'Show Answer') }</RkText>
+            </RkButton>
+          </View>
+          <RkText rkType='primary1 center'> </RkText>
+          <RkText rkType='primary1 center'>{ display_sentence }</RkText>
+          <RkText rkType='primary1 center'> </RkText>
+          <RkText rkType='primary1 center'>{ display_meaning }</RkText>
+          <RkText rkType='primary1 center'> </RkText>
         </View>
-        <View>
-          <RkButton rkType='clear' onPress={toggleShowFurigana}>
-            <RkText rkType={ (this.state.skip ? 'awesome hintColor' : 'awesome hintColor') } style={styles.icon}>{FontAwesome.slashEye}</RkText>
-            <RkText rkType={ (this.state.skip ? 'hintColor small' : 'info small') }> { (this.state.show_furigana ? 'Hide Answer' : 'Show Answer') }</RkText>
-          </RkButton>
-        </View>
-
       </View>
     )
   }

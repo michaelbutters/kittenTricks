@@ -331,7 +331,7 @@ export class Article extends React.Component {
       }
       else if(card_data.gametype == 'sentence'){
 
-        explanation = (showing ? <RkText rkType='primary3'>{'Can you read this entire sentence and understand what it means?'}</RkText> : <View/>)
+        explanation = (showing ? <View><RkText>{' '}</RkText><RkText rkType='primary3'>{'Can you read this entire sentence and understand what it means?'}</RkText></View> : <View/>)
 
         mainContent = <View/>
         if(showing){
@@ -346,9 +346,12 @@ export class Article extends React.Component {
             <View style={showingStyle}>
               <View rkCardHeader>
                 <View>
-                  <RkText rkType='header4'>Revise</RkText>
+                  <RkText rkType='header4'>Practice Sentence</RkText>
                   { explanation }
                 </View>
+              </View>
+              <View rkCardContent>
+                <Image rkCardImg source={card_data.photo}/>
               </View>
               { mainContent }
               <View rkCardFooter>
