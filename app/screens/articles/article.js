@@ -250,7 +250,7 @@ export class Article extends React.Component {
     else if(card_data.subtype == 'revise'){
       if(card_data.gametype == 'memory'){  
 
-        explanation = (showing ? <RkText rkType='primary3'>{'Practice kanji you learnt recently by playing this game of memory.'}</RkText> : <View/>)
+        explanation = (showing ? <RkText rkType='primary3'>{'Practice kanji you learned recently by playing this game of memory.'}</RkText> : <View/>)
         mainContent = <View/>
         if(showing){
           mainContent = 
