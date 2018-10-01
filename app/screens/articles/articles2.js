@@ -125,7 +125,7 @@ export class Articles2 extends React.Component {
                 { info.item.header ? <RkText rkType='header6 inverseColor'>{info.item.header}</RkText> : <View/> }
                 { info.item.waslearnt ? <RkText rkType='secondary2 inverseColor'>{ "Learned: " + info.item.waslearnt }</RkText> : <View/> }
                 { info.item.wasrevised ? <RkText rkType='secondary2 inverseColor'>{ "Last revised: " + info.item.wasrevised }</RkText> : <View/> }
-                <RkText style={styles.time} rkType='secondary2 inverseColor'>{ (alreadyViewed || info.item.time === '') ? '' : 'Takes approximately ' + info.item.time}</RkText>
+                <RkText style={styles.time} rkType='secondary2 inverseColor'>{ (alreadyViewed || info.item.time === '') ? '' : 'Takes: approximately ' + info.item.time}</RkText>
                 <View style={{flexWrap: 'wrap', alignItems: 'flex-start', flexDirection:'row'}}>{ avatarList }</View>
               </View>
             </View>

@@ -167,6 +167,90 @@ export class Article extends React.Component {
           </RkCard>
       }
       else if(card_data.learntype === 'write'){
+        // NO LONGER USED
+        // explanationWithTooltip = <PopoverTooltip ref='tooltip1'
+        //     buttonComponent={
+        //       <View>
+        //         <RkText rkType='primary3'>Test how well you know the story that you just recently learned by typing it from memory. Then click the button to see how well you did.</RkText>
+        //         <RkText rkType='primary3 helpLink'> ...More info</RkText>
+        //         <View><RkText> </RkText></View>
+        //       </View>
+        //     }
+        //     items={[
+        //       {
+        //         label: 'Writing down the story that you recently learned will help solidify it in your mind, over and above simply reading the story. As you write the story down, use this as a chance to replay the story in your mind in vivid detail. Remember that the more vivid the colors, textures, sounds and emotions, the better your brain will retain it.',
+        //         onPress: () => {}
+        //       }
+        //     ]}
+        //     />
+
+        // mainContent = <View/>
+        // if(showing){
+        //   mainContent = 
+        //     <View rkCardContent>
+        //       { kanjiCharacter }
+        //       <StoryPractice story={card_data.story}/>
+        //     </View>
+
+        // }
+
+        // card =         
+        //   <RkCard rkType='article' style={styles.card}>
+        //     <View style={showingStyle}>
+        //       <View rkCardHeader>
+        //         <View>
+        //           <RkText rkType='header4'>Learn Kanji</RkText>
+        //           { showing ? explanationWithTooltip : <View/> }
+        //         </View>
+        //       </View>
+        //       { mainContent }
+        //       <View rkCardFooter>
+        //         <RightWrongBar onPress={()=>this._onItemSelected(card_data.id)}/>
+        //       </View >
+        //     </View >
+        //   </RkCard>        
+      }
+    }
+    else if(card_data.subtype == 'learn-vocab'){
+
+      explanation = (showing ? <RkText rkType='primary3'>{ card_data.explanation }</RkText> : <View/>)
+
+      mainContent = <View/>
+      if(showing){
+        mainContent = 
+        <View>
+            <View rkCardContent>
+              <RkText rkType='largervocab center warning'>{card_data.vocab}</RkText>
+              <RkText rkType='heading4 center'>Meaning</RkText>
+              <RkText rkType='primary3 center'>{card_data.meaning}</RkText>
+            </View>
+            <View>
+              <RkText rkType='heading4'>Story</RkText>
+              <RkText rkType='primary3'>{card_data.story}</RkText>
+            </View>        
+          </View>        
+      }
+
+      card =         
+        <RkCard rkType='article' style={styles.card}>
+          <View style={showingStyle}>
+            <View rkCardHeader>
+              <View>
+                <RkText rkType='header4'>Learn Word</RkText>
+                { explanation }
+              </View>
+            </View>
+            { mainContent }
+            <View rkCardFooter>
+              <SocialBar onPress={()=>this._onItemSelected(card_data.id)}/>
+            </View >
+          </View >
+        </RkCard>
+    }
+    else if(card_data.subtype == 'revise'){
+      if(card_data.gametype == 'write'){
+        
+        kanjiCharacter = (card_data.image ? <View style={styles.imageView}><Image source={card_data.image}/></View> : <RkText rkType='largekanji center warning'>{card_data.kanji}</RkText>)
 
         explanationWithTooltip = <PopoverTooltip ref='tooltip1'
             buttonComponent={
@@ -209,46 +293,9 @@ export class Article extends React.Component {
               </View >
             </View >
           </RkCard>        
+
       }
-    }
-    else if(card_data.subtype == 'learn-vocab'){
-
-      explanation = (showing ? <RkText rkType='primary3'>{ card_data.explanation }</RkText> : <View/>)
-
-      mainContent = <View/>
-      if(showing){
-        mainContent = 
-        <View>
-            <View rkCardContent>
-              <RkText rkType='largervocab center warning'>{card_data.vocab}</RkText>
-              <RkText rkType='heading4 center'>Meaning</RkText>
-              <RkText rkType='primary3 center'>{card_data.meaning}</RkText>
-            </View>
-            <View>
-              <RkText rkType='heading4'>Story</RkText>
-              <RkText rkType='primary3'>{card_data.story}</RkText>
-            </View>        
-          </View>        
-      }
-
-      card =         
-        <RkCard rkType='article' style={styles.card}>
-          <View style={showingStyle}>
-            <View rkCardHeader>
-              <View>
-                <RkText rkType='header4'>Learn Word</RkText>
-                { explanation }
-              </View>
-            </View>
-            { mainContent }
-            <View rkCardFooter>
-              <SocialBar onPress={()=>this._onItemSelected(card_data.id)}/>
-            </View >
-          </View >
-        </RkCard>
-    }
-    else if(card_data.subtype == 'revise'){
-      if(card_data.gametype == 'memory'){  
+      else if(card_data.gametype == 'memory'){  
 
         explanation = (showing ? <RkText rkType='primary3'>{'Practice kanji you learned recently by playing this game of memory.'}</RkText> : <View/>)
         mainContent = <View/>
